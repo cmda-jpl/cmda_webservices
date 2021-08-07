@@ -1,0 +1,1 @@
+/mnt/data/data_2016/cmip5/nasa/airs/tas_AIRS_200209-201609.nc

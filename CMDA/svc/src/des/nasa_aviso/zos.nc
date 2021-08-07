@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/nasa/aviso/./zos_AVISO_L4_199210-201012.nc

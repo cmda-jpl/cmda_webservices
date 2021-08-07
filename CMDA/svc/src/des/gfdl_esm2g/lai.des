@@ -1,0 +1,319 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'NOAA GFDL GFDL-ESM2G, historical (run 1) experiment output for CMIP5 AR5',
+   D_T0TIME      = '01-Jan-1861 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = 'NOLEAP',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_186101-186512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    15.5000,
+   S_END         =  1809.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_186601-187012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1840.5000,
+   S_END         =  3634.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_187101-187512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3665.5000,
+   S_END         =  5459.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_187601-188012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5490.5000,
+   S_END         =  7284.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_188101-188512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7315.5000,
+   S_END         =  9109.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_188601-189012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  9140.5000,
+   S_END         = 10934.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_189101-189512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 10965.5000,
+   S_END         = 12759.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_189601-190012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 12790.5000,
+   S_END         = 14584.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_190101-190512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 14615.5000,
+   S_END         = 16409.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_190601-191012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 16440.5000,
+   S_END         = 18234.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_191101-191512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 18265.5000,
+   S_END         = 20059.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_191601-192012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 20090.5000,
+   S_END         = 21884.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_192101-192512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 21915.5000,
+   S_END         = 23709.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_192601-193012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 23740.5000,
+   S_END         = 25534.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_193101-193512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 25565.5000,
+   S_END         = 27359.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_193601-194012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 27390.5000,
+   S_END         = 29184.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_194101-194512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 29215.5000,
+   S_END         = 31009.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_194601-195012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 31040.5000,
+   S_END         = 32834.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_195101-195512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 32865.5000,
+   S_END         = 34659.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_195601-196012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 34690.5000,
+   S_END         = 36484.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_196101-196512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 36515.5000,
+   S_END         = 38309.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_196601-197012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 38340.5000,
+   S_END         = 40134.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_197101-197512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 40165.5000,
+   S_END         = 41959.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_197601-198012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 41990.5000,
+   S_END         = 43784.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_198101-198512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 43815.5000,
+   S_END         = 45609.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_198601-199012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 45640.5000,
+   S_END         = 47434.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_199101-199512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 47465.5000,
+   S_END         = 49259.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_199601-200012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 49290.5000,
+   S_END         = 51084.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./lai_Lmon_GFDL-ESM2G_historical_r1i1p1_200101-200512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 51115.5000,
+   S_END         = 52909.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

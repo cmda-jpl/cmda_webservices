@@ -1,0 +1,1 @@
+/mnt/data/data_2016/cmip5/nasa/trmm/pr_TRMM_199801-201803.nc

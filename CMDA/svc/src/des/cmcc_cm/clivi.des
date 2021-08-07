@@ -1,0 +1,59 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'CMCC-CM model output prepared for CMIP5 AMIP',
+   D_T0TIME      = '01-Jan-1979 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = 'STANDARD',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/cmcc/cm/./clivi_Amon_CMCC-CM_amip_r1i1p1_197901-198812.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    15.5000,
+   S_END         =  3637.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/cmcc/cm/./clivi_Amon_CMCC-CM_amip_r1i1p1_198901-199812.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3668.5000,
+   S_END         =  7289.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/cmcc/cm/./clivi_Amon_CMCC-CM_amip_r1i1p1_199901-200812.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7320.5000,
+   S_END         = 10942.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

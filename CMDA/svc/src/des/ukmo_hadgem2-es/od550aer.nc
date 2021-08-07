@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/ukmo/hadgem2-es/./od550aer_aero_HadGEM2-ES_historical_r1i1p1_198412-200511.nc

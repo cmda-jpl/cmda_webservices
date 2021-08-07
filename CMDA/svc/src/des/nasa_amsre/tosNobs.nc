@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/nasa/amsre/./tosNobs_AMSRE_L3_v7_200206-201012.nc

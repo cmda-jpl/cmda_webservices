@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/ukmo/hadgem2-es/./sic_OImon_HadGEM2-ES_historical_r1i1p1_195912-200512.nc

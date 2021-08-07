@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/fub-dwd/ssmi-meris/./prw_SSMI-MERIS_L3_v1-00_200301-200812.nc

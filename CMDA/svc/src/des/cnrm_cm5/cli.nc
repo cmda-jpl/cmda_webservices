@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/cnrm/cm5/regridded/cli_Amon_CNRM-CM5_amip_r1i1p1_plevRegridded_197901-200812.nc

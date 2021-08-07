@@ -1,0 +1,1 @@
+/mnt/data/data_2016/cmip5/ncep/gldas/mrso1_GLDAS_197901-201806.nc

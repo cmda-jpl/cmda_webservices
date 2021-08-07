@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/ncc/noresm/./sic_OImon_NorESM1-M_historical_r1i1p1_185001-200512.nc

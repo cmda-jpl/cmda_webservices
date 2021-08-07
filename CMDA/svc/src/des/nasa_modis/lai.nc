@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/nasa/modis/./lai_MODIS-level_3_v5_200002-200912.nc

@@ -1,0 +1,179 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'MRI-CGCM3 model output prepared for CMIP5 historical',
+   D_T0TIME      = '01-Jan-1850 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = 'STANDARD',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_185001-185912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    15.5000,
+   S_END         =  3636.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_186001-186912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3667.5000,
+   S_END         =  7289.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_187001-187912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7320.5000,
+   S_END         = 10941.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_188001-188912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 10972.5000,
+   S_END         = 14594.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_189001-189912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 14625.5000,
+   S_END         = 18246.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_190001-190912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 18277.5000,
+   S_END         = 21898.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_191001-191912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 21929.5000,
+   S_END         = 25550.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_192001-192912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 25581.5000,
+   S_END         = 29203.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_193001-193912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 29234.5000,
+   S_END         = 32855.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_194001-194912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 32886.5000,
+   S_END         = 36508.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_195001-195912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 36539.5000,
+   S_END         = 40160.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_196001-196912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 40191.5000,
+   S_END         = 43813.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_198001-198912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 47496.5000,
+   S_END         = 51118.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_199001-199912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 51149.5000,
+   S_END         = 54770.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/mri/cgcm3/./hus_Amon_MRI-CGCM3_historical_r2i1p1_200001-200512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 54801.5000,
+   S_END         = 56962.5000,
+   S_DELTA       =    30.4366,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

@@ -1,0 +1,89 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'HadGEM2-ES model output prepared for CMIP5 historical',
+   D_T0TIME      = '01-Dec-1859 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = '360_DAY',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/ukmo/hadgem2-es/./uas_Amon_HadGEM2-ES_historical_r1i1p1_185912-188411.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    15.0000,
+   S_END         =  8985.0000,
+   S_DELTA       =    30.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/ukmo/hadgem2-es/./uas_Amon_HadGEM2-ES_historical_r1i1p1_188412-190911.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  9015.0000,
+   S_END         = 17985.0000,
+   S_DELTA       =    30.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/ukmo/hadgem2-es/./uas_Amon_HadGEM2-ES_historical_r1i1p1_190912-193411.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 18015.0000,
+   S_END         = 26985.0000,
+   S_DELTA       =    30.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/ukmo/hadgem2-es/./uas_Amon_HadGEM2-ES_historical_r1i1p1_193412-195911.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 27015.0000,
+   S_END         = 35985.0000,
+   S_DELTA       =    30.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/ukmo/hadgem2-es/./uas_Amon_HadGEM2-ES_historical_r1i1p1_195912-198411.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 36015.0000,
+   S_END         = 44985.0000,
+   S_DELTA       =    30.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/ukmo/hadgem2-es/./uas_Amon_HadGEM2-ES_historical_r1i1p1_198412-200511.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 45015.0000,
+   S_END         = 52545.0000,
+   S_DELTA       =    30.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/wrf/ra-cam/./va_Amon_wrf_ra-cam_200401-200412.nc

@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/ecmwf/interim/./vas_Amon_ERA_interim_197901-201605.nc

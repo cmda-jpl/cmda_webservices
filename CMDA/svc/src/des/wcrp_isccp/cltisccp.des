@@ -1,0 +1,3029 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'ISCCP level 3 data prepared for obs4MIPs observation',
+   D_T0TIME      = '01-Jul-1983 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = 'GREGORIAN',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198307-198307.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    15.5000,
+   S_END         =    15.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198308-198308.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    46.5000,
+   S_END         =    46.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198309-198309.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    77.0000,
+   S_END         =    77.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198310-198310.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   107.5000,
+   S_END         =   107.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198311-198311.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   138.0000,
+   S_END         =   138.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198312-198312.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   168.5000,
+   S_END         =   168.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198401-198401.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   199.5000,
+   S_END         =   199.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198402-198402.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   229.5000,
+   S_END         =   229.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198403-198403.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   259.5000,
+   S_END         =   259.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198404-198404.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   290.0000,
+   S_END         =   290.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198405-198405.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   320.5000,
+   S_END         =   320.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198406-198406.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   351.0000,
+   S_END         =   351.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198407-198407.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   381.5000,
+   S_END         =   381.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198408-198408.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   412.5000,
+   S_END         =   412.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198409-198409.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   443.0000,
+   S_END         =   443.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198410-198410.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   473.5000,
+   S_END         =   473.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198411-198411.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   504.0000,
+   S_END         =   504.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198412-198412.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   534.5000,
+   S_END         =   534.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198501-198501.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   565.5000,
+   S_END         =   565.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198502-198502.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   595.0000,
+   S_END         =   595.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198503-198503.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   624.5000,
+   S_END         =   624.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198504-198504.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   655.0000,
+   S_END         =   655.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198505-198505.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   685.5000,
+   S_END         =   685.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198506-198506.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   716.0000,
+   S_END         =   716.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198507-198507.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   746.5000,
+   S_END         =   746.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198508-198508.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   777.5000,
+   S_END         =   777.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198509-198509.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   808.0000,
+   S_END         =   808.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198510-198510.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   838.5000,
+   S_END         =   838.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198511-198511.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   869.0000,
+   S_END         =   869.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198512-198512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   899.5000,
+   S_END         =   899.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198601-198601.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   930.5000,
+   S_END         =   930.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198602-198602.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   960.0000,
+   S_END         =   960.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198603-198603.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =   989.5000,
+   S_END         =   989.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198604-198604.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1020.0000,
+   S_END         =  1020.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198605-198605.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1050.5000,
+   S_END         =  1050.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198606-198606.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1081.0000,
+   S_END         =  1081.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198607-198607.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1111.5000,
+   S_END         =  1111.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198608-198608.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1142.5000,
+   S_END         =  1142.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198609-198609.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1173.0000,
+   S_END         =  1173.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198610-198610.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1203.5000,
+   S_END         =  1203.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198611-198611.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1234.0000,
+   S_END         =  1234.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198612-198612.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1264.5000,
+   S_END         =  1264.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198701-198701.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1295.5000,
+   S_END         =  1295.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198702-198702.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1325.0000,
+   S_END         =  1325.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198703-198703.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1354.5000,
+   S_END         =  1354.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198704-198704.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1385.0000,
+   S_END         =  1385.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198705-198705.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1415.5000,
+   S_END         =  1415.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198706-198706.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1446.0000,
+   S_END         =  1446.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198707-198707.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1476.5000,
+   S_END         =  1476.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198708-198708.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1507.5000,
+   S_END         =  1507.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198709-198709.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1538.0000,
+   S_END         =  1538.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198710-198710.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1568.5000,
+   S_END         =  1568.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198711-198711.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1599.0000,
+   S_END         =  1599.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198712-198712.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1629.5000,
+   S_END         =  1629.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198801-198801.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1660.5000,
+   S_END         =  1660.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198802-198802.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1690.5000,
+   S_END         =  1690.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198803-198803.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1720.5000,
+   S_END         =  1720.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198804-198804.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1751.0000,
+   S_END         =  1751.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198805-198805.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1781.5000,
+   S_END         =  1781.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198806-198806.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1812.0000,
+   S_END         =  1812.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198807-198807.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1842.5000,
+   S_END         =  1842.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198808-198808.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1873.5000,
+   S_END         =  1873.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198809-198809.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1904.0000,
+   S_END         =  1904.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198810-198810.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1934.5000,
+   S_END         =  1934.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198811-198811.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1965.0000,
+   S_END         =  1965.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198812-198812.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1995.5000,
+   S_END         =  1995.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198901-198901.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2026.5000,
+   S_END         =  2026.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198902-198902.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2056.0000,
+   S_END         =  2056.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198903-198903.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2085.5000,
+   S_END         =  2085.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198904-198904.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2116.0000,
+   S_END         =  2116.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198905-198905.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2146.5000,
+   S_END         =  2146.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198906-198906.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2177.0000,
+   S_END         =  2177.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198907-198907.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2207.5000,
+   S_END         =  2207.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198908-198908.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2238.5000,
+   S_END         =  2238.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198909-198909.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2269.0000,
+   S_END         =  2269.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198910-198910.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2299.5000,
+   S_END         =  2299.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198911-198911.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2330.0000,
+   S_END         =  2330.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_198912-198912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2360.5000,
+   S_END         =  2360.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199001-199001.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2391.5000,
+   S_END         =  2391.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199002-199002.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2421.0000,
+   S_END         =  2421.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199003-199003.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2450.5000,
+   S_END         =  2450.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199004-199004.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2481.0000,
+   S_END         =  2481.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199005-199005.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2511.5000,
+   S_END         =  2511.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199006-199006.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2542.0000,
+   S_END         =  2542.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199007-199007.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2572.5000,
+   S_END         =  2572.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199008-199008.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2603.5000,
+   S_END         =  2603.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199009-199009.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2634.0000,
+   S_END         =  2634.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199010-199010.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2664.5000,
+   S_END         =  2664.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199011-199011.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2695.0000,
+   S_END         =  2695.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199012-199012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2725.5000,
+   S_END         =  2725.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199101-199101.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2756.5000,
+   S_END         =  2756.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199102-199102.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2786.0000,
+   S_END         =  2786.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199103-199103.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2815.5000,
+   S_END         =  2815.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199104-199104.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2846.0000,
+   S_END         =  2846.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199105-199105.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2876.5000,
+   S_END         =  2876.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199106-199106.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2907.0000,
+   S_END         =  2907.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199107-199107.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2937.5000,
+   S_END         =  2937.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199108-199108.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2968.5000,
+   S_END         =  2968.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199109-199109.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2999.0000,
+   S_END         =  2999.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199110-199110.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3029.5000,
+   S_END         =  3029.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199111-199111.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3060.0000,
+   S_END         =  3060.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199112-199112.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3090.5000,
+   S_END         =  3090.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199201-199201.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3121.5000,
+   S_END         =  3121.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199202-199202.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3151.5000,
+   S_END         =  3151.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199203-199203.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3181.5000,
+   S_END         =  3181.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199204-199204.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3212.0000,
+   S_END         =  3212.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199205-199205.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3242.5000,
+   S_END         =  3242.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199206-199206.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3273.0000,
+   S_END         =  3273.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199207-199207.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3303.5000,
+   S_END         =  3303.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199208-199208.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3334.5000,
+   S_END         =  3334.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199209-199209.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3365.0000,
+   S_END         =  3365.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199210-199210.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3395.5000,
+   S_END         =  3395.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199211-199211.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3426.0000,
+   S_END         =  3426.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199212-199212.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3456.5000,
+   S_END         =  3456.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199301-199301.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3487.5000,
+   S_END         =  3487.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199302-199302.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3517.0000,
+   S_END         =  3517.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199303-199303.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3546.5000,
+   S_END         =  3546.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199304-199304.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3577.0000,
+   S_END         =  3577.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199305-199305.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3607.5000,
+   S_END         =  3607.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199306-199306.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3638.0000,
+   S_END         =  3638.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199307-199307.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3668.5000,
+   S_END         =  3668.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199308-199308.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3699.5000,
+   S_END         =  3699.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199309-199309.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3730.0000,
+   S_END         =  3730.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199310-199310.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3760.5000,
+   S_END         =  3760.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199311-199311.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3791.0000,
+   S_END         =  3791.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199312-199312.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3821.5000,
+   S_END         =  3821.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199401-199401.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3852.5000,
+   S_END         =  3852.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199402-199402.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3882.0000,
+   S_END         =  3882.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199403-199403.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3911.5000,
+   S_END         =  3911.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199404-199404.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3942.0000,
+   S_END         =  3942.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199405-199405.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3972.5000,
+   S_END         =  3972.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199406-199406.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4003.0000,
+   S_END         =  4003.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199407-199407.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4033.5000,
+   S_END         =  4033.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199408-199408.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4064.5000,
+   S_END         =  4064.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199409-199409.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4095.0000,
+   S_END         =  4095.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199410-199410.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4125.5000,
+   S_END         =  4125.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199411-199411.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4156.0000,
+   S_END         =  4156.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199412-199412.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4186.5000,
+   S_END         =  4186.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199501-199501.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4217.5000,
+   S_END         =  4217.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199502-199502.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4247.0000,
+   S_END         =  4247.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199503-199503.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4276.5000,
+   S_END         =  4276.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199504-199504.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4307.0000,
+   S_END         =  4307.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199505-199505.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4337.5000,
+   S_END         =  4337.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199506-199506.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4368.0000,
+   S_END         =  4368.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199507-199507.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4398.5000,
+   S_END         =  4398.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199508-199508.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4429.5000,
+   S_END         =  4429.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199509-199509.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4460.0000,
+   S_END         =  4460.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199510-199510.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4490.5000,
+   S_END         =  4490.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199511-199511.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4521.0000,
+   S_END         =  4521.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199512-199512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4551.5000,
+   S_END         =  4551.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199601-199601.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4582.5000,
+   S_END         =  4582.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199602-199602.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4612.5000,
+   S_END         =  4612.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199603-199603.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4642.5000,
+   S_END         =  4642.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199604-199604.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4673.0000,
+   S_END         =  4673.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199605-199605.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4703.5000,
+   S_END         =  4703.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199606-199606.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4734.0000,
+   S_END         =  4734.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199607-199607.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4764.5000,
+   S_END         =  4764.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199608-199608.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4795.5000,
+   S_END         =  4795.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199609-199609.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4826.0000,
+   S_END         =  4826.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199610-199610.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4856.5000,
+   S_END         =  4856.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199611-199611.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4887.0000,
+   S_END         =  4887.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199612-199612.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4917.5000,
+   S_END         =  4917.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199701-199701.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4948.5000,
+   S_END         =  4948.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199702-199702.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4978.0000,
+   S_END         =  4978.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199703-199703.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5007.5000,
+   S_END         =  5007.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199704-199704.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5038.0000,
+   S_END         =  5038.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199705-199705.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5068.5000,
+   S_END         =  5068.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199706-199706.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5099.0000,
+   S_END         =  5099.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199707-199707.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5129.5000,
+   S_END         =  5129.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199708-199708.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5160.5000,
+   S_END         =  5160.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199709-199709.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5191.0000,
+   S_END         =  5191.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199710-199710.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5221.5000,
+   S_END         =  5221.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199711-199711.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5252.0000,
+   S_END         =  5252.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199712-199712.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5282.5000,
+   S_END         =  5282.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199801-199801.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5313.5000,
+   S_END         =  5313.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199802-199802.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5343.0000,
+   S_END         =  5343.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199803-199803.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5372.5000,
+   S_END         =  5372.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199804-199804.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5403.0000,
+   S_END         =  5403.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199805-199805.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5433.5000,
+   S_END         =  5433.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199806-199806.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5464.0000,
+   S_END         =  5464.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199807-199807.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5494.5000,
+   S_END         =  5494.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199808-199808.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5525.5000,
+   S_END         =  5525.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199809-199809.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5556.0000,
+   S_END         =  5556.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199810-199810.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5586.5000,
+   S_END         =  5586.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199811-199811.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5617.0000,
+   S_END         =  5617.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199812-199812.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5647.5000,
+   S_END         =  5647.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199901-199901.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5678.5000,
+   S_END         =  5678.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199902-199902.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5708.0000,
+   S_END         =  5708.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199903-199903.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5737.5000,
+   S_END         =  5737.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199904-199904.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5768.0000,
+   S_END         =  5768.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199905-199905.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5798.5000,
+   S_END         =  5798.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199906-199906.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5829.0000,
+   S_END         =  5829.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199907-199907.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5859.5000,
+   S_END         =  5859.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199908-199908.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5890.5000,
+   S_END         =  5890.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199909-199909.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5921.0000,
+   S_END         =  5921.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199910-199910.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5951.5000,
+   S_END         =  5951.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199911-199911.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5982.0000,
+   S_END         =  5982.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_199912-199912.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6012.5000,
+   S_END         =  6012.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200001-200001.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6043.5000,
+   S_END         =  6043.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200002-200002.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6073.5000,
+   S_END         =  6073.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200003-200003.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6103.5000,
+   S_END         =  6103.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200004-200004.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6134.0000,
+   S_END         =  6134.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200005-200005.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6164.5000,
+   S_END         =  6164.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200006-200006.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6195.0000,
+   S_END         =  6195.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200007-200007.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6225.5000,
+   S_END         =  6225.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200008-200008.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6256.5000,
+   S_END         =  6256.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200009-200009.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6287.0000,
+   S_END         =  6287.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200010-200010.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6317.5000,
+   S_END         =  6317.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200011-200011.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6348.0000,
+   S_END         =  6348.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200012-200012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6378.5000,
+   S_END         =  6378.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200101-200101.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6409.5000,
+   S_END         =  6409.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200102-200102.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6439.0000,
+   S_END         =  6439.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200103-200103.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6468.5000,
+   S_END         =  6468.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200104-200104.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6499.0000,
+   S_END         =  6499.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200105-200105.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6529.5000,
+   S_END         =  6529.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200106-200106.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6560.0000,
+   S_END         =  6560.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200107-200107.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6590.5000,
+   S_END         =  6590.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200108-200108.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6621.5000,
+   S_END         =  6621.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200109-200109.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6652.0000,
+   S_END         =  6652.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200110-200110.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6682.5000,
+   S_END         =  6682.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200111-200111.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6713.0000,
+   S_END         =  6713.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200112-200112.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6743.5000,
+   S_END         =  6743.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200201-200201.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6774.5000,
+   S_END         =  6774.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200202-200202.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6804.0000,
+   S_END         =  6804.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200203-200203.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6833.5000,
+   S_END         =  6833.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200204-200204.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6864.0000,
+   S_END         =  6864.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200205-200205.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6894.5000,
+   S_END         =  6894.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200206-200206.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6925.0000,
+   S_END         =  6925.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200207-200207.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6955.5000,
+   S_END         =  6955.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200208-200208.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  6986.5000,
+   S_END         =  6986.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200209-200209.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7017.0000,
+   S_END         =  7017.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200210-200210.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7047.5000,
+   S_END         =  7047.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200211-200211.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7078.0000,
+   S_END         =  7078.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200212-200212.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7108.5000,
+   S_END         =  7108.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200301-200301.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7139.5000,
+   S_END         =  7139.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200302-200302.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7169.0000,
+   S_END         =  7169.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200303-200303.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7198.5000,
+   S_END         =  7198.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200304-200304.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7229.0000,
+   S_END         =  7229.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200305-200305.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7259.5000,
+   S_END         =  7259.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200306-200306.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7290.0000,
+   S_END         =  7290.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200307-200307.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7320.5000,
+   S_END         =  7320.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200308-200308.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7351.5000,
+   S_END         =  7351.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200309-200309.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7382.0000,
+   S_END         =  7382.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200310-200310.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7412.5000,
+   S_END         =  7412.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200311-200311.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7443.0000,
+   S_END         =  7443.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200312-200312.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7473.5000,
+   S_END         =  7473.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200401-200401.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7504.5000,
+   S_END         =  7504.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200402-200402.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7534.5000,
+   S_END         =  7534.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200403-200403.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7564.5000,
+   S_END         =  7564.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200404-200404.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7595.0000,
+   S_END         =  7595.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200405-200405.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7625.5000,
+   S_END         =  7625.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200406-200406.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7656.0000,
+   S_END         =  7656.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200407-200407.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7686.5000,
+   S_END         =  7686.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200408-200408.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7717.5000,
+   S_END         =  7717.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200409-200409.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7748.0000,
+   S_END         =  7748.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200410-200410.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7778.5000,
+   S_END         =  7778.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200411-200411.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7809.0000,
+   S_END         =  7809.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200412-200412.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7839.5000,
+   S_END         =  7839.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200501-200501.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7870.5000,
+   S_END         =  7870.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200502-200502.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7900.0000,
+   S_END         =  7900.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200503-200503.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7929.5000,
+   S_END         =  7929.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200504-200504.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7960.0000,
+   S_END         =  7960.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200505-200505.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7990.5000,
+   S_END         =  7990.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200506-200506.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8021.0000,
+   S_END         =  8021.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200507-200507.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8051.5000,
+   S_END         =  8051.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200508-200508.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8082.5000,
+   S_END         =  8082.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200509-200509.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8113.0000,
+   S_END         =  8113.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200510-200510.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8143.5000,
+   S_END         =  8143.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200511-200511.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8174.0000,
+   S_END         =  8174.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200512-200512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8204.5000,
+   S_END         =  8204.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200601-200601.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8235.5000,
+   S_END         =  8235.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200602-200602.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8265.0000,
+   S_END         =  8265.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200603-200603.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8294.5000,
+   S_END         =  8294.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200604-200604.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8325.0000,
+   S_END         =  8325.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200605-200605.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8355.5000,
+   S_END         =  8355.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200606-200606.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8386.0000,
+   S_END         =  8386.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200607-200607.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8416.5000,
+   S_END         =  8416.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200608-200608.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8447.5000,
+   S_END         =  8447.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200609-200609.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8478.0000,
+   S_END         =  8478.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200610-200610.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8508.5000,
+   S_END         =  8508.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200611-200611.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8539.0000,
+   S_END         =  8539.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200612-200612.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8569.5000,
+   S_END         =  8569.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200701-200701.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8600.5000,
+   S_END         =  8600.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200702-200702.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8630.0000,
+   S_END         =  8630.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200703-200703.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8659.5000,
+   S_END         =  8659.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200704-200704.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8690.0000,
+   S_END         =  8690.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200705-200705.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8720.5000,
+   S_END         =  8720.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200706-200706.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8751.0000,
+   S_END         =  8751.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200707-200707.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8781.5000,
+   S_END         =  8781.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200708-200708.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8812.5000,
+   S_END         =  8812.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200709-200709.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8843.0000,
+   S_END         =  8843.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200710-200710.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8873.5000,
+   S_END         =  8873.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200711-200711.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8904.0000,
+   S_END         =  8904.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200712-200712.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8934.5000,
+   S_END         =  8934.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200801-200801.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8965.5000,
+   S_END         =  8965.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200802-200802.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  8995.5000,
+   S_END         =  8995.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200803-200803.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  9025.5000,
+   S_END         =  9025.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200804-200804.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  9056.0000,
+   S_END         =  9056.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200805-200805.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  9086.5000,
+   S_END         =  9086.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/wcrp/isccp/./cltisccp_obs4MIPs_ISCCP_L3_V1.0_200806-200806.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  9117.0000,
+   S_END         =  9117.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

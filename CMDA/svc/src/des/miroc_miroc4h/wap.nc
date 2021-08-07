@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/miroc/miroc4h/./wap_Amon_MIROC4h_historical_r1i1p1_200101-200512.nc

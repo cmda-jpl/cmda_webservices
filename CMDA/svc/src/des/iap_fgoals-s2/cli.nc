@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/iap/fgoals-s2/regridded/cli_Amon_FGOALS-s2_amip_r1i1p1_plevRegridded_197901-200812.nc

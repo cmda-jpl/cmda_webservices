@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/nasa/airs/./husNobs_AIRS_L3_RetStd-v5_200209-201105.nc

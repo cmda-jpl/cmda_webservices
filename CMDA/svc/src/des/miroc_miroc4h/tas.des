@@ -1,0 +1,59 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'MIROC4h model output prepared for CMIP5 historical',
+   D_T0TIME      = '01-Jan-1950 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = 'GREGORIAN',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/miroc/miroc4h/./tas_Amon_MIROC4h_historical_r1i1p1_198101-199012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 11338.5000,
+   S_END         = 14959.5000,
+   S_DELTA       =    30.4286,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/miroc/miroc4h/./tas_Amon_MIROC4h_historical_r1i1p1_199101-200012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 14990.5000,
+   S_END         = 18612.5000,
+   S_DELTA       =    30.4370,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/miroc/miroc4h/./tas_Amon_MIROC4h_historical_r1i1p1_200101-200512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 18643.5000,
+   S_END         = 20438.5000,
+   S_DELTA       =    30.4237,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

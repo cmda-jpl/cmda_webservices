@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/giss/e2-r/./hur_Amon_GISS-E2-R_historical_r1i1p1_195101-200512.nc

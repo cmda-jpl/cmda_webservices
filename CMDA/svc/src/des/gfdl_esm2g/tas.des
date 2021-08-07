@@ -1,0 +1,219 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'NOAA GFDL GFDL-ESM2G, RCP4.5 (run 1) experiment output for CMIP5 AR5',
+   D_T0TIME      = '01-Jan-2006 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = 'NOLEAP',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_200601-201012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =    15.5000,
+   S_END         =  1809.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_201101-201512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  1840.5000,
+   S_END         =  3634.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_201601-202012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3665.5000,
+   S_END         =  5459.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_202101-202512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  5490.5000,
+   S_END         =  7284.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_202601-203012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  7315.5000,
+   S_END         =  9109.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_203101-203512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  9140.5000,
+   S_END         = 10934.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_203601-204012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 10965.5000,
+   S_END         = 12759.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_204101-204512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 12790.5000,
+   S_END         = 14584.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_204601-205012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 14615.5000,
+   S_END         = 16409.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_205101-205512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 16440.5000,
+   S_END         = 18234.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_205601-206012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 18265.5000,
+   S_END         = 20059.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_206101-206512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 20090.5000,
+   S_END         = 21884.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_206601-207012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 21915.5000,
+   S_END         = 23709.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_207101-207512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 23740.5000,
+   S_END         = 25534.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_207601-208012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 25565.5000,
+   S_END         = 27359.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_208101-208512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 27390.5000,
+   S_END         = 29184.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_208601-209012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 29215.5000,
+   S_END         = 31009.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_209101-209512.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 31040.5000,
+   S_END         = 32834.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/gfdl/esm2g/./tas_Amon_GFDL-ESM2G_rcp45_r1i1p1_209601-210012.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       = 32865.5000,
+   S_END         = 34659.5000,
+   S_DELTA       =    30.4068,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

@@ -1,0 +1,579 @@
+
+*
+* Created by mkdes v1.0
+* 
+ &FORMAT_RECORD
+   D_TYPE        = '  MC',
+   D_FORMAT      = '  1A',
+ /
+
+ &BACKGROUND_RECORD
+   D_TITLE       = 'CALIPSO-GOCCP level 3 output prepared for obs4MIPs observation',
+   D_T0TIME      = '01-Jan-2000 00:00:00',
+   D_TIME_UNIT   = 86400.0,
+   D_TIME_MODULO = .false.,
+   D_CALTYPE = 'GREGORIAN',
+ /
+
+ &MESSAGE_RECORD
+      D_MESSAGE     = ' ',
+      D_ALERT_ON_OPEN      = F,
+      D_ALERT_ON_OUTPUT    = F,
+ /  
+
+ &EXTRA_RECORD
+ /  
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20060601-20060630.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2358.0000,
+   S_END         =  2358.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20060701-20060731.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2388.5000,
+   S_END         =  2388.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20060801-20060831.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2419.5000,
+   S_END         =  2419.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20060901-20060930.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2450.0000,
+   S_END         =  2450.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20061001-20061031.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2480.5000,
+   S_END         =  2480.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20061101-20061130.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2511.0000,
+   S_END         =  2511.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20061201-20061231.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2541.5000,
+   S_END         =  2541.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070101-20070131.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2572.5000,
+   S_END         =  2572.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070201-20070228.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2602.0000,
+   S_END         =  2602.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070301-20070331.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2631.5000,
+   S_END         =  2631.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070401-20070430.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2662.0000,
+   S_END         =  2662.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070501-20070531.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2692.5000,
+   S_END         =  2692.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070601-20070630.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2723.0000,
+   S_END         =  2723.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070701-20070731.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2753.5000,
+   S_END         =  2753.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070801-20070831.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2784.5000,
+   S_END         =  2784.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20070901-20070930.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2815.0000,
+   S_END         =  2815.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20071001-20071031.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2845.5000,
+   S_END         =  2845.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20071101-20071130.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2876.0000,
+   S_END         =  2876.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20071201-20071231.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2906.5000,
+   S_END         =  2906.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080101-20080131.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2937.5000,
+   S_END         =  2937.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080201-20080229.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2967.5000,
+   S_END         =  2967.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080301-20080331.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  2997.5000,
+   S_END         =  2997.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080401-20080430.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3028.0000,
+   S_END         =  3028.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080501-20080531.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3058.5000,
+   S_END         =  3058.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080601-20080630.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3089.0000,
+   S_END         =  3089.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080701-20080731.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3119.5000,
+   S_END         =  3119.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080801-20080831.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3150.5000,
+   S_END         =  3150.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20080901-20080930.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3181.0000,
+   S_END         =  3181.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20081001-20081031.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3211.5000,
+   S_END         =  3211.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20081101-20081130.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3242.0000,
+   S_END         =  3242.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20081201-20081231.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3272.5000,
+   S_END         =  3272.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090101-20090131.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3303.5000,
+   S_END         =  3303.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090201-20090228.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3333.0000,
+   S_END         =  3333.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090301-20090331.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3362.5000,
+   S_END         =  3362.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090401-20090430.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3393.0000,
+   S_END         =  3393.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090501-20090531.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3423.5000,
+   S_END         =  3423.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090601-20090630.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3454.0000,
+   S_END         =  3454.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090701-20090731.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3484.5000,
+   S_END         =  3484.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090801-20090831.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3515.5000,
+   S_END         =  3515.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20090901-20090930.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3546.0000,
+   S_END         =  3546.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20091001-20091031.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3576.5000,
+   S_END         =  3576.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20091101-20091130.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3607.0000,
+   S_END         =  3607.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20091201-20091231.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3637.5000,
+   S_END         =  3637.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100101-20100131.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3668.5000,
+   S_END         =  3668.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100201-20100228.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3698.0000,
+   S_END         =  3698.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100301-20100331.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3727.5000,
+   S_END         =  3727.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100401-20100430.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3758.0000,
+   S_END         =  3758.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100501-20100531.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3788.5000,
+   S_END         =  3788.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100601-20100630.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3819.0000,
+   S_END         =  3819.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100701-20100731.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3849.5000,
+   S_END         =  3849.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100801-20100831.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3880.5000,
+   S_END         =  3880.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20100901-20100930.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3911.0000,
+   S_END         =  3911.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20101001-20101031.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3941.5000,
+   S_END         =  3941.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20101101-20101130.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  3972.0000,
+   S_END         =  3972.0000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '/mnt/data_2016/cmip5/nasa/calipso/./cltcalipso_obs4MIPs_CALIOP_L3_CALIPSO-GOCCP-v2.1_20101201-20101231.nc',
+   S_AUX_SET_NUM = 0,
+   S_START       =  4002.5000,
+   S_END         =  4002.5000,
+   S_DELTA       =     1.0000,
+   S_NUM_OF_FILES       = 1,
+   S_REGVARFLAG  = ' ',
+ /
+
+ &STEPFILE_RECORD
+   S_FILENAME    = '**END OF STEPFILES**'
+ /

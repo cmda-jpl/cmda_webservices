@@ -1,0 +1,29 @@
+20210715:
+- remember to change to env FERRET before start.sh
+
+== universalPlotting3
+- universalPlotting6c.html, not need to change 
+-- common-v5b.js -- need to change http or https, and port,
+- pythonWrapper
+-- don't use getRootDir.
+-- load pickle, add 'rb'
+-- read in dataList.js, use ' '.join()
+-- In dataDir to do glob.glob, changed the hardcoded
+-- add int() in time2YearMonth()
+-- np.mask: the mask is zero size if no mask, instead of None
+-- eof cannot save tser. to be solved (
+
+== correlationMap:
+- .html: change http
+- common-v4.js: no change
+-- don't use getRootDir.
+-- load pickle, add 'rb'
+-- hardcoded /mnt/data_2016 in des files. to be solved (
+
+
+20210715:
+- created env octave. 
+-- conda install mesa-libgl-cos6-x86_64  # to solve libGL not found problem. Not working
+-- cannot start octave with the followings:
+    octave, octave-cli, octave -W
+-- no solution so far.

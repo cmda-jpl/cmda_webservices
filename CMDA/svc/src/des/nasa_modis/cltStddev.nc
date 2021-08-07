@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/nasa/modis/./cltStddev_MODIS_L3_C5_200003-201109.nc

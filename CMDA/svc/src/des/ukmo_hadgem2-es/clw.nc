@@ -1,0 +1,1 @@
+/mnt/data_2016/cmip5/ukmo/hadgem2-es/regridded/clw_Amon_HadGEM2-ES_historical_r1i1p1_plevRegridded_198412-200511.nc
