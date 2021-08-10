@@ -8,4 +8,6 @@ __pycache__/
 *$py.class
 
 /CMDA/svc/static/
+/CMDA/output.log
+/CMDA/access.log
 

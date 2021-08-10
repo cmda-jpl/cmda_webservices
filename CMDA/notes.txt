@@ -27,3 +27,8 @@
 -- cannot start octave with the followings:
     octave, octave-cli, octave -W
 -- no solution so far.
+
+20210807:
+- Did a system octave install. Good:
+sudo apt install octave
+
