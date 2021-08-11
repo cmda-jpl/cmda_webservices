@@ -3,14 +3,13 @@
 
 start.sh
 app.py
+notes.txt
+
 app.py.bak
 count
 entry.py
-html
-notes.txt
 output.log
 run.py
-svc
 svc.pid
 temp1
 access.log
