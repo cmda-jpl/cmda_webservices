@@ -1,1 +1,116 @@
-1
+/home/ubuntu/cmda1/CMDA/app.py:358: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if imgFileName is '' or not os.path.exists(output_dir+'/'+imgFileName):
+/home/ubuntu/cmda1/CMDA/app.py:362: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if dataFileName is '' or not os.path.exists(output_dir+'/'+dataFileName):
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 220-260-557
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[36mGET /cmda.html HTTP/1.1[0m" 304 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[36mGET /js2/bootstrap.min.css HTTP/1.1[0m" 304 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/chosen/chosen.css HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/mychosen.css HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[36mGET /common.css HTTP/1.1[0m" 304 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[36mGET /js2/style_uploadr.css HTTP/1.1[0m" 304 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/jquery.min.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/chosen/chosen.jquery.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/jq-ajax-progress.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/bootstrap.min.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/js.cookie-2.1.3.min.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/vue.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/lodash.min.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/varList.js HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/fileList.js?002a HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/common-v6c.js?32 HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:26] "[37mGET /js2/uploadr.js HTTP/1.1[0m" 200 -
+2021-08-11 19:34:38
+####################### count=1 #############################xxxx
+running universalPlotting6b
+current_dir:  /home/ubuntu/CMDA0
+('output_dir: ', '/home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5')
+./wrapper /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/p.pickle
+stdout_value:  zzzz "a new run
+vars: SST
+datasets: /mnt/data/data_clean/cmip5/others/coads_climatology.cdf
+lonMethod: 3
+lonS: 0
+lonE: 360
+latMethod: 3
+latS: -90
+latE: 90
+presMethod: 0
+presS: 500
+presE: 800
+timeMethod: 1
+timeS: 2000-01-15
+timeE: 2000-12-15
+ferretLevel: 10
+colorMap: rainbow
+plotTitle: 
+anomaly: 0
+climatology: undefined
+timeMean: 
+purpose: 
+service: plot
+basin: 
+userId: 
+serviceId: 
+fromPage: http://54.193.239.191:8080/cmda.html
+outDir: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5
+number of datasets: 1
+a.vars:  "SST"
+wwww var1:  ['SST']
+time1, time1a,  time2, year, month, day:  2000-01-15 20000115 20000115 2000.0115 1 15
+time1, time1a,  time2, year, month, day:  2000-12-15 20001215 20001215 2000.1215 12 15
+a.lon:  [0.0] [360.0] [500.0] [800.0]
+figFile: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/plot.png
+dataFile: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/data.nc
+dimMethod:  1033
+set region/x=0.00:360.00/y=-90.00:90.00
+yyyy model1: ['/mnt/data/data_clean/cmip5/others/coads_climatology.cdf']
+yyyy fList: ['/mnt/data/data_clean/cmip5/others/coads_climatology.cdf']
+openStr:  use "/mnt/data/data_clean/cmip5/others/coads_climatology.cdf"
+a.getOpenDatasetStr:  <bound method SUBSET_REGION.getOpenDatasetStr of <__main__.SUBSET_REGION object at 0x7efeb29e3ac0>>
+use "/mnt/data/data_clean/cmip5/others/coads_climatology.cdf"
+call getSubsetIndex3:  0
+<__main__.SUBSET_REGION object at 0x7efeb29e3ac0>
+[2000.0115]
+[1]
+[15]
+define var/bad=-9999.0 DATA01=SST[t="15-JAN-2000", d=1]
+save/clobber/file="/home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/data.nc" DATA01
+plotType:  shade
+aspect1:  0.5
+set window/outline=0.5/aspect=0.643 
+def vi/axes/xli=0.1429,0.8571/yli=0.2222,0.7778 newasp
+set vi newasp
+palette rainbow
+shade/level=10 DATA01
+go land
+frame /file="/home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/plot.png"
+
+stderr_value:   LISTing to file /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/data.nc
+
+***** line:  figFile: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/plot.png
+***** line:  dataFile: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/data.nc
+image_filename:  plot.png
+data_filename:  data.nc
+('userId: ', 0)
+('hostname: ', '54.193.239.191')
+('port: ', '8080')
+('imgFileName: ', 'plot.png')
+('plotUrl: ', 'http://54.193.239.191:8080/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/plot.png')
+('dataUrl: ', 'http://54.193.239.191:8080/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/data.nc')
+('message: ', 'zzzz "a new run\nvars: SST\ndatasets: /mnt/data/data_clean/cmip5/others/coads_climatology.cdf\nlonMethod: 3\nlonS: 0\nlonE: 360\nlatMethod: 3\nlatS: -90\nlatE: 90\npresMethod: 0\npresS: 500\npresE: 800\ntimeMethod: 1\ntimeS: 2000-01-15\ntimeE: 2000-12-15\nferretLevel: 10\ncolorMap: rainbow\nplotTitle: \nanomaly: 0\nclimatology: undefined\ntimeMean: \npurpose: \nservice: plot\nbasin: \nuserId: \nserviceId: \nfromPage: http://54.193.239.191:8080/cmda.html\noutDir: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5\nnumber of datasets: 1\na.vars:  "SST"\nwwww var1:  [\'SST\']\ntime1, time1a,  time2, year, month, day:  2000-01-15 20000115 20000115 2000.0115 1 15\ntime1, time1a,  time2, year, month, day:  2000-12-15 20001215 20001215 2000.1215 12 15\na.lon:  [0.0] [360.0] [500.0] [800.0]\nfigFile: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/plot.png\ndataFile: /home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/data.nc\ndimMethod:  1033\nset region/x=0.00:360.00/y=-90.00:90.00\nyyyy model1: [\'/mnt/data/data_clean/cmip5/others/coads_climatology.cdf\']\nyyyy fList: [\'/mnt/data/data_clean/cmip5/others/coads_climatology.cdf\']\nopenStr:  use "/mnt/data/data_clean/cmip5/others/coads_climatology.cdf"\na.getOpenDatasetStr:  <bound method SUBSET_REGION.getOpenDatasetStr of <__main__.SUBSET_REGION object at 0x7efeb29e3ac0>>\nuse "/mnt/data/data_clean/cmip5/others/coads_climatology.cdf"\ncall getSubsetIndex3:  0\n<__main__.SUBSET_REGION object at 0x7efeb29e3ac0>\n[2000.0115]\n[1]\n[15]\ndefine var/bad=-9999.0 DATA01=SST[t="15-JAN-2000", d=1]\nsave/clobber/file="/home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/data.nc" DATA01\nplotType:  shade\naspect1:  0.5\nset window/outline=0.5/aspect=0.643 \ndef vi/axes/xli=0.1429,0.8571/yli=0.2222,0.7778 newasp\nset vi newasp\npalette rainbow\nshade/level=10 DATA01\ngo land\nframe /file="/home/ubuntu/CMDA0/svc/static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/plot.png"\n')
+<class 'bool'>
+<class 'str'>
+<class 'str'>
+<class 'str'>
+======================== end_Route =============================
+68.251.58.43 - - [11/Aug/2021 19:34:39] "[37mGET /svc/universalPlotting6b?vars=SST&datasets=/mnt/data/data_clean/cmip5/others/coads_climatology.cdf&lonMethod=3&lonS=0&lonE=360&latMethod=3&latS=-90&latE=90&presMethod=0&presS=500&presE=800&timeMethod=1&timeS=2000-01-15&timeE=2000-12-15&ferretLevel=10&colorMap=rainbow&plotTitle=&anomaly=0&climatology=undefined&timeMean=&purpose=&service=plot&basin=&userId=&serviceId=&fromPage=http://54.193.239.191:8080/cmda.html HTTP/1.1[0m" 200 -
+68.251.58.43 - - [11/Aug/2021 19:34:39] "[37mGET /static/universalPlotting6b/3fa156405ee70ad78d0293ec65a8e3a5/plot.png?1628710479605 HTTP/1.1[0m" 200 -

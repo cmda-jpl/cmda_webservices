@@ -154,36 +154,36 @@ def assignUrl(service1, tag, imgFileName, dataFileName):
 
       return backend_url, plotUrl, dataUrl, failedImgUrl
 
-def get_host_port(cfg_file):
-    myvars = {}
-    myfile =  open(cfg_file)
-    for line in myfile:
-        name, var = line.partition("=")[::2]
-        name = name.strip()
-        var = var.strip('\n').strip()
-        if name is not '' and var is not '':
-            myvars[name] = var
-
-    return myvars["HOSTNAME"], myvars["PORT"]
-
-#== def_get_host_port2(cfg_file):
-def get_host_port2(cfg_file):
-  hostname0, port = get_host_port(cfg_file)
-  if hostname0 == 'EC2':
-    try:
-      req = urllib.request.Request('http://169.254.169.254/latest/meta-data/public-ipv4')
-      response = urllib.request.urlopen(req)
-# ://ec2-13-56-67-192.us-west-1.compute.amazonaws.com
-      temp1 = response.read().split('.')
-      temp2 = '-'.join(temp1)
-      hostname = 'ec2-%s.us-west-1.compute.amazonaws.com'%temp2
-    except Exception as e:   
-      print(('e: ', e))
-
-  else: 
-    hostname = hostname0
-
-  return hostname, port
+#def get_host_port(cfg_file):
+#    myvars = {}
+#    myfile =  open(cfg_file)
+#    for line in myfile:
+#        name, var = line.partition("=")[::2]
+#        name = name.strip()
+#        var = var.strip('\n').strip()
+#        if name is not '' and var is not '':
+#            myvars[name] = var
+#
+#    return myvars["HOSTNAME"], myvars["PORT"]
+#
+##== def_get_host_port2(cfg_file):
+#def get_host_port2(cfg_file):
+#  hostname0, port = get_host_port(cfg_file)
+#  if hostname0 == 'EC2':
+#    try:
+#      req = urllib.request.Request('http://169.254.169.254/latest/meta-data/public-ipv4')
+#      response = urllib.request.urlopen(req)
+## ://ec2-13-56-67-192.us-west-1.compute.amazonaws.com
+#      temp1 = response.read().split('.')
+#      temp2 = '-'.join(temp1)
+#      hostname = 'ec2-%s.us-west-1.compute.amazonaws.com'%temp2
+#    except Exception as e:   
+#      print(('e: ', e))
+#
+#  else: 
+#    hostname = hostname0
+#
+#  return hostname, port
 
 def url_is_alive(url):
   request = urllib.request.Request(url)
@@ -313,8 +313,8 @@ def serviceFunc(service):
       #hostname, port = get_host_port2("host.cfg")
       #hostname, port = '127.0.0.1', '5000'
       #hostname, port = 'EC2', '8080'
-      #hostname, port = '54.193.239.191', '8080'
-      hostname, port = '54.193.239.191', ''
+      hostname, port = '54.193.239.191', '8080'
+      #hostname, port = '54.193.239.191', ''
       if hostname == 'EC2':
         try:
           req = urllib.request.Request('http://169.254.169.254/latest/meta-data/public-ipv4')

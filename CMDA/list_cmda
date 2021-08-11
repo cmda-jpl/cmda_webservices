@@ -6,6 +6,9 @@ app.py
 notes.txt
 
 app.py.bak
+host.cfg_80
+host.cfg_8080
+
 count
 entry.py
 output.log
