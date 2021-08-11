@@ -1,11 +1,13 @@
 #!/bin/bash
 /home/ubuntu/miniconda3/envs/FERRET/bin/gunicorn   \
---log-file output.log \
 --capture-output \
---access-logfile access.log \
 --log-level debug \
+--access-logfile access.log \
+--log-file output.log \
 --daemon \
--w6 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:80 app:app
+-w6 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:8080 app:app
+
+#-w6 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:8080 app:app
 
 #--log-file output.log \  -- same as --error-logfile
 #--error-logfile error.log \
