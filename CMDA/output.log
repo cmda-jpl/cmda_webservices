@@ -6788,3 +6788,499 @@ data_filename:  data.nc
 [2021-08-07 19:03:22 +0000] [8057] [DEBUG] Ignoring connection reset
 [2021-08-07 19:03:24 +0000] [8057] [DEBUG] GET /
 [2021-08-07 19:03:24 +0000] [8057] [DEBUG] GET /
+[2021-08-11 16:31:24 +0000] [6702] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:80']
+  backlog: 2048
+  workers: 6
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 300
+  graceful_timeout: 600
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/CMDA0
+  daemon: True
+  raw_env: []
+  pidfile: app.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: output.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fc40f45b8b0>
+  on_reload: <function OnReload.on_reload at 0x7fc40f45b9d0>
+  when_ready: <function WhenReady.when_ready at 0x7fc40f45baf0>
+  pre_fork: <function Prefork.pre_fork at 0x7fc40f45bc10>
+  post_fork: <function Postfork.post_fork at 0x7fc40f45bd30>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc40f45be50>
+  worker_int: <function WorkerInt.worker_int at 0x7fc40f45bf70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc40f46d0d0>
+  pre_exec: <function PreExec.pre_exec at 0x7fc40f46d1f0>
+  pre_request: <function PreRequest.pre_request at 0x7fc40f46d310>
+  post_request: <function PostRequest.post_request at 0x7fc40f46d3a0>
+  child_exit: <function ChildExit.child_exit at 0x7fc40f46d4c0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc40f46d5e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc40f46d700>
+  on_exit: <function OnExit.on_exit at 0x7fc40f46d820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-08-11 16:31:24 +0000] [6702] [INFO] Starting gunicorn 20.1.0
+[2021-08-11 16:31:24 +0000] [6702] [DEBUG] connection to ('0.0.0.0', 80) failed: [Errno 13] Permission denied
+[2021-08-11 16:31:24 +0000] [6702] [ERROR] Retrying in 1 second.
+[2021-08-11 16:31:25 +0000] [6702] [DEBUG] connection to ('0.0.0.0', 80) failed: [Errno 13] Permission denied
+[2021-08-11 16:31:25 +0000] [6702] [ERROR] Retrying in 1 second.
+[2021-08-11 16:31:26 +0000] [6702] [DEBUG] connection to ('0.0.0.0', 80) failed: [Errno 13] Permission denied
+[2021-08-11 16:31:26 +0000] [6702] [ERROR] Retrying in 1 second.
+[2021-08-11 16:31:27 +0000] [6702] [DEBUG] connection to ('0.0.0.0', 80) failed: [Errno 13] Permission denied
+[2021-08-11 16:31:27 +0000] [6702] [ERROR] Retrying in 1 second.
+[2021-08-11 16:31:28 +0000] [6702] [DEBUG] connection to ('0.0.0.0', 80) failed: [Errno 13] Permission denied
+[2021-08-11 16:31:28 +0000] [6702] [ERROR] Retrying in 1 second.
+[2021-08-11 16:31:29 +0000] [6702] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-08-11 16:36:24 +0000] [6753] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0']
+  backlog: 2048
+  workers: 6
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 300
+  graceful_timeout: 600
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/CMDA0
+  daemon: True
+  raw_env: []
+  pidfile: app.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: output.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f8227ecc8b0>
+  on_reload: <function OnReload.on_reload at 0x7f8227ecc9d0>
+  when_ready: <function WhenReady.when_ready at 0x7f8227eccaf0>
+  pre_fork: <function Prefork.pre_fork at 0x7f8227eccc10>
+  post_fork: <function Postfork.post_fork at 0x7f8227eccd30>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f8227ecce50>
+  worker_int: <function WorkerInt.worker_int at 0x7f8227eccf70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f8227ede0d0>
+  pre_exec: <function PreExec.pre_exec at 0x7f8227ede1f0>
+  pre_request: <function PreRequest.pre_request at 0x7f8227ede310>
+  post_request: <function PostRequest.post_request at 0x7f8227ede3a0>
+  child_exit: <function ChildExit.child_exit at 0x7f8227ede4c0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f8227ede5e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f8227ede700>
+  on_exit: <function OnExit.on_exit at 0x7f8227ede820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-08-11 16:36:24 +0000] [6753] [INFO] Starting gunicorn 20.1.0
+[2021-08-11 16:36:24 +0000] [6753] [DEBUG] Arbiter booted
+[2021-08-11 16:36:24 +0000] [6753] [INFO] Listening at: http://0.0.0.0:8000 (6753)
+[2021-08-11 16:36:24 +0000] [6753] [INFO] Using worker: sync
+[2021-08-11 16:36:24 +0000] [6754] [INFO] Booting worker with pid: 6754
+[2021-08-11 16:36:24 +0000] [6755] [INFO] Booting worker with pid: 6755
+[2021-08-11 16:36:24 +0000] [6756] [INFO] Booting worker with pid: 6756
+[2021-08-11 16:36:24 +0000] [6759] [INFO] Booting worker with pid: 6759
+[2021-08-11 16:36:24 +0000] [6761] [INFO] Booting worker with pid: 6761
+[2021-08-11 16:36:24 +0000] [6763] [INFO] Booting worker with pid: 6763
+[2021-08-11 16:36:24 +0000] [6753] [DEBUG] 6 workers
+[2021-08-11 16:37:07 +0000] [6763] [DEBUG] GET /cmda.html
+[2021-08-11 16:37:08 +0000] [6761] [DEBUG] GET /js2/bootstrap.min.css
+[2021-08-11 16:37:08 +0000] [6759] [DEBUG] GET /js2/chosen/chosen.css
+[2021-08-11 16:37:08 +0000] [6763] [DEBUG] GET /js2/mychosen.css
+[2021-08-11 16:37:08 +0000] [6761] [DEBUG] GET /js2/style_uploadr.css
+[2021-08-11 16:37:08 +0000] [6759] [DEBUG] GET /common.css
+[2021-08-11 16:37:08 +0000] [6756] [DEBUG] GET /js2/jquery.min.js
+[2021-08-11 16:37:08 +0000] [6755] [DEBUG] GET /js2/chosen/chosen.jquery.js
+[2021-08-11 16:37:08 +0000] [6759] [DEBUG] GET /js2/jq-ajax-progress.js
+[2021-08-11 16:37:08 +0000] [6754] [DEBUG] GET /js2/bootstrap.min.js
+[2021-08-11 16:37:08 +0000] [6755] [DEBUG] GET /js2/js.cookie-2.1.3.min.js
+[2021-08-11 16:37:08 +0000] [6754] [DEBUG] GET /js2/vue.js
+[2021-08-11 16:37:08 +0000] [6759] [DEBUG] GET /js2/lodash.min.js
+[2021-08-11 16:37:08 +0000] [6756] [DEBUG] GET /js2/varList.js
+[2021-08-11 16:37:08 +0000] [6755] [DEBUG] GET /js2/fileList.js
+[2021-08-11 16:37:08 +0000] [6759] [DEBUG] GET /js2/common-v6c.js
+[2021-08-11 16:37:08 +0000] [6763] [DEBUG] GET /js2/uploadr.js
+[2021-08-11 16:37:08 +0000] [6761] [DEBUG] GET /cmda1.ico
+[2021-08-11 16:39:43 +0000] [6795] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0']
+  backlog: 2048
+  workers: 6
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 300
+  graceful_timeout: 600
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/cmda1/CMDA
+  daemon: True
+  raw_env: []
+  pidfile: app.pid
+  worker_tmp_dir: None
+  user: 0
+  group: 0
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: output.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f8af5da28b0>
+  on_reload: <function OnReload.on_reload at 0x7f8af5da29d0>
+  when_ready: <function WhenReady.when_ready at 0x7f8af5da2af0>
+  pre_fork: <function Prefork.pre_fork at 0x7f8af5da2c10>
+  post_fork: <function Postfork.post_fork at 0x7f8af5da2d30>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f8af5da2e50>
+  worker_int: <function WorkerInt.worker_int at 0x7f8af5da2f70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f8af5db50d0>
+  pre_exec: <function PreExec.pre_exec at 0x7f8af5db51f0>
+  pre_request: <function PreRequest.pre_request at 0x7f8af5db5310>
+  post_request: <function PostRequest.post_request at 0x7f8af5db53a0>
+  child_exit: <function ChildExit.child_exit at 0x7f8af5db54c0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f8af5db55e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f8af5db5700>
+  on_exit: <function OnExit.on_exit at 0x7f8af5db5820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-08-11 16:39:43 +0000] [6795] [INFO] Starting gunicorn 20.1.0
+[2021-08-11 16:39:43 +0000] [6795] [DEBUG] Arbiter booted
+[2021-08-11 16:39:43 +0000] [6795] [INFO] Listening at: http://0.0.0.0:8000 (6795)
+[2021-08-11 16:39:43 +0000] [6795] [INFO] Using worker: sync
+[2021-08-11 16:39:43 +0000] [6796] [INFO] Booting worker with pid: 6796
+[2021-08-11 16:39:43 +0000] [6797] [INFO] Booting worker with pid: 6797
+[2021-08-11 16:39:44 +0000] [6799] [INFO] Booting worker with pid: 6799
+[2021-08-11 16:39:44 +0000] [6801] [INFO] Booting worker with pid: 6801
+[2021-08-11 16:39:44 +0000] [6802] [INFO] Booting worker with pid: 6802
+[2021-08-11 16:39:44 +0000] [6803] [INFO] Booting worker with pid: 6803
+[2021-08-11 16:39:44 +0000] [6795] [DEBUG] 6 workers
+[2021-08-11 16:42:19 +0000] [6839] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:80']
+  backlog: 2048
+  workers: 6
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 300
+  graceful_timeout: 600
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/cmda1/CMDA
+  daemon: True
+  raw_env: []
+  pidfile: app.pid
+  worker_tmp_dir: None
+  user: 0
+  group: 0
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: output.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f0740d668b0>
+  on_reload: <function OnReload.on_reload at 0x7f0740d669d0>
+  when_ready: <function WhenReady.when_ready at 0x7f0740d66af0>
+  pre_fork: <function Prefork.pre_fork at 0x7f0740d66c10>
+  post_fork: <function Postfork.post_fork at 0x7f0740d66d30>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f0740d66e50>
+  worker_int: <function WorkerInt.worker_int at 0x7f0740d66f70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f0740d790d0>
+  pre_exec: <function PreExec.pre_exec at 0x7f0740d791f0>
+  pre_request: <function PreRequest.pre_request at 0x7f0740d79310>
+  post_request: <function PostRequest.post_request at 0x7f0740d793a0>
+  child_exit: <function ChildExit.child_exit at 0x7f0740d794c0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f0740d795e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f0740d79700>
+  on_exit: <function OnExit.on_exit at 0x7f0740d79820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-08-11 16:42:19 +0000] [6839] [INFO] Starting gunicorn 20.1.0
+[2021-08-11 16:42:19 +0000] [6839] [DEBUG] Arbiter booted
+[2021-08-11 16:42:19 +0000] [6839] [INFO] Listening at: http://0.0.0.0:80 (6839)
+[2021-08-11 16:42:19 +0000] [6839] [INFO] Using worker: sync
+[2021-08-11 16:42:19 +0000] [6840] [INFO] Booting worker with pid: 6840
+[2021-08-11 16:42:19 +0000] [6841] [INFO] Booting worker with pid: 6841
+[2021-08-11 16:42:20 +0000] [6843] [INFO] Booting worker with pid: 6843
+[2021-08-11 16:42:20 +0000] [6845] [INFO] Booting worker with pid: 6845
+[2021-08-11 16:42:20 +0000] [6847] [INFO] Booting worker with pid: 6847
+[2021-08-11 16:42:20 +0000] [6848] [INFO] Booting worker with pid: 6848
+[2021-08-11 16:42:20 +0000] [6839] [DEBUG] 6 workers
+[2021-08-11 16:42:46 +0000] [6845] [DEBUG] GET /cmda.html
+[2021-08-11 16:42:47 +0000] [6847] [DEBUG] GET /js2/bootstrap.min.css
+[2021-08-11 16:42:47 +0000] [6845] [DEBUG] GET /js2/chosen/chosen.css
+[2021-08-11 16:42:47 +0000] [6841] [DEBUG] GET /js2/mychosen.css
+[2021-08-11 16:42:47 +0000] [6840] [DEBUG] GET /js2/style_uploadr.css
+[2021-08-11 16:42:47 +0000] [6845] [DEBUG] GET /common.css
+[2021-08-11 16:42:47 +0000] [6847] [DEBUG] GET /js2/jquery.min.js
+[2021-08-11 16:42:47 +0000] [6845] [DEBUG] GET /js2/chosen/chosen.jquery.js
+[2021-08-11 16:42:47 +0000] [6848] [DEBUG] GET /js2/jq-ajax-progress.js
+[2021-08-11 16:42:47 +0000] [6845] [DEBUG] GET /js2/bootstrap.min.js
+[2021-08-11 16:42:47 +0000] [6841] [DEBUG] GET /js2/js.cookie-2.1.3.min.js
+[2021-08-11 16:42:47 +0000] [6841] [DEBUG] GET /js2/vue.js
+[2021-08-11 16:42:47 +0000] [6843] [DEBUG] GET /js2/varList.js
+[2021-08-11 16:42:47 +0000] [6848] [DEBUG] GET /js2/lodash.min.js
+[2021-08-11 16:42:47 +0000] [6845] [DEBUG] GET /js2/fileList.js
+[2021-08-11 16:42:47 +0000] [6848] [DEBUG] GET /js2/uploadr.js
+[2021-08-11 16:42:47 +0000] [6847] [DEBUG] GET /js2/common-v6c.js
+[2021-08-11 16:42:47 +0000] [6841] [DEBUG] GET /cmda1.ico
+[2021-08-11 16:49:26 +0000] [6841] [DEBUG] GET /svc/universalPlotting6b
+2021-08-11 16:49:26
+####################### count=1 #############################xxxx
+running universalPlotting6b
+current_dir:  /home/ubuntu/CMDA0
+('output_dir: ', '/home/ubuntu/CMDA0/svc/static/universalPlotting6b/7a3d7582531262fbc462a1fb21048e1d')
+./wrapper /home/ubuntu/CMDA0/svc/static/universalPlotting6b/7a3d7582531262fbc462a1fb21048e1d/p.pickle
+stdout_value:  
+stderr_value:  Traceback (most recent call last):
+  File "/home/ubuntu/cmda1/CMDA/svc/src/universalPlotting6b/./pythonWrapper", line 142, in <module>
+    import cmac
+  File "../py/cmac.py", line 27, in <module>
+    from mpl_toolkits.basemap import Basemap
+  File "/home/ubuntu/miniconda3/envs/FERRET/lib/python3.9/site-packages/mpl_toolkits/basemap/__init__.py", line 152, in <module>
+    pyproj_datadir = os.environ['PROJ_LIB']
+  File "/home/ubuntu/miniconda3/envs/FERRET/lib/python3.9/os.py", line 679, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'PROJ_LIB'
+
+image_filename:  
+data_filename:  
+('userId: ', 0)
+('hostname: ', '54.193.239.191')
+('port: ', '')
+('imgFileName: ', '')
+('plotUrl: ', 'http://54.193.239.191/static/universalPlotting6b/7a3d7582531262fbc462a1fb21048e1d/')
+('dataUrl: ', 'http://54.193.239.191/static/universalPlotting6b/7a3d7582531262fbc462a1fb21048e1d/')
+****** Error:  not exist
+****** Error:  not exist
+('message: ', '')
+<class 'bool'>
+<class 'str'>
+<class 'str'>
+<class 'str'>
+======================== end_Route =============================
+[2021-08-11 16:49:30 +0000] [6847] [DEBUG] GET /svc/universalPlotting6b
+2021-08-11 16:49:30
+####################### count=2 #############################xxxx
+running universalPlotting6b
+current_dir:  /home/ubuntu/CMDA0
+('output_dir: ', '/home/ubuntu/CMDA0/svc/static/universalPlotting6b/69432a62bb51af8c72ee7fd387d20ccc')
+./wrapper /home/ubuntu/CMDA0/svc/static/universalPlotting6b/69432a62bb51af8c72ee7fd387d20ccc/p.pickle
+stdout_value:  
+stderr_value:  Traceback (most recent call last):
+  File "/home/ubuntu/cmda1/CMDA/svc/src/universalPlotting6b/./pythonWrapper", line 142, in <module>
+    import cmac
+  File "../py/cmac.py", line 27, in <module>
+    from mpl_toolkits.basemap import Basemap
+  File "/home/ubuntu/miniconda3/envs/FERRET/lib/python3.9/site-packages/mpl_toolkits/basemap/__init__.py", line 152, in <module>
+    pyproj_datadir = os.environ['PROJ_LIB']
+  File "/home/ubuntu/miniconda3/envs/FERRET/lib/python3.9/os.py", line 679, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'PROJ_LIB'
+
+image_filename:  
+data_filename:  
+('userId: ', 0)
+('hostname: ', '54.193.239.191')
+('port: ', '')
+('imgFileName: ', '')
+('plotUrl: ', 'http://54.193.239.191/static/universalPlotting6b/69432a62bb51af8c72ee7fd387d20ccc/')
+('dataUrl: ', 'http://54.193.239.191/static/universalPlotting6b/69432a62bb51af8c72ee7fd387d20ccc/')
+****** Error:  not exist
+****** Error:  not exist
+('message: ', '')
+<class 'bool'>
+<class 'str'>
+<class 'str'>
+<class 'str'>
+======================== end_Route =============================
+[2021-08-11 17:02:12 +0000] [6847] [DEBUG] GET /

@@ -10,4 +10,7 @@ __pycache__/
 /CMDA/svc/static/
 /CMDA/output.log
 /CMDA/access.log
+/CMDA/host.cfg
+/CMDA/count
+/CMDA/app.pid
 

@@ -1,0 +1,3 @@
+# no space around '='
+HOSTNAME=54.193.239.191
+PORT=80
