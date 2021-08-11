@@ -313,8 +313,9 @@ def serviceFunc(service):
       #hostname, port = get_host_port2("host.cfg")
       #hostname, port = '127.0.0.1', '5000'
       #hostname, port = 'EC2', '8080'
-      hostname, port = '54.193.239.191', '8080'
-      #hostname, port = '54.193.239.191', ''
+      #hostname, port = '54.193.239.191', '8080'
+      #hostname, port = '54.193.239.191', '8080'
+      hostname, port = 'jpl-cmda.org', ''
       if hostname == 'EC2':
         try:
           req = urllib.request.Request('http://169.254.169.254/latest/meta-data/public-ipv4')
@@ -331,16 +332,12 @@ def serviceFunc(service):
 
       
       httpStr = 'https'
-      hostname1 = 'api.jpl-cmda.org'
 
-      httpStr = 'http'
+      #httpStr = 'http'
       if port:
         portSep = ':'
       else:
         portSep = ''
-
-      #hostname1 = '127.0.0.1'
-      #port = '5000'
 
       #backend_url = '%s://'%httpStr + hostname + ':' + port + '/svc/%s'%service
       #print(('backend_url: ', backend_url))
