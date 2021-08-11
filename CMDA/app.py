@@ -311,9 +311,10 @@ def serviceFunc(service):
         print((message1a[1]))
      
       #hostname, port = get_host_port2("host.cfg")
-      hostname, port = '127.0.0.1', '5000'
-      hostname, port = 'EC2', '8080'
-      hostname, port = '54.193.239.191', '8080'
+      #hostname, port = '127.0.0.1', '5000'
+      #hostname, port = 'EC2', '8080'
+      #hostname, port = '54.193.239.191', '8080'
+      hostname, port = '54.193.239.191', ''
       if hostname == 'EC2':
         try:
           req = urllib.request.Request('http://169.254.169.254/latest/meta-data/public-ipv4')

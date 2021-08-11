@@ -5,7 +5,7 @@
 --access-logfile access.log \
 --log-level debug \
 --daemon \
--w6 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:8080 app:app
+-w6 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:80 app:app
 
 #--log-file output.log \  -- same as --error-logfile
 #--error-logfile error.log \
