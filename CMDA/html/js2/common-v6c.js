@@ -373,10 +373,10 @@ function ajaxCall(service) {
   //$("#image").html("Image will appear here.");
 
   // for localhost:
-  var url = "http://" + window.location.hostname + ":" + window.location.port + "/svc/" + service + "?";
+  //var url = "http://" + window.location.hostname + ":" + window.location.port + "/svc/" + service + "?";
 
   // for deployment
-  //var url = "https://" + window.location.hostname + "/svc/" + service + "?";
+  var url = "https://" + window.location.hostname + "/svc/" + service + "?";
   var argList = makeQueryStr(true);
   url = url + argList;
   console.log("server url:");
