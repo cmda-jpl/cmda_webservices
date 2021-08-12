@@ -332,7 +332,6 @@ def serviceFunc(service):
 
       
       httpStr = 'https'
-
       #httpStr = 'http'
       if port:
         portSep = ':'
