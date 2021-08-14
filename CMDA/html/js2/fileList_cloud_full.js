@@ -39488,7 +39488,6 @@ fileDict =
     "run":"_",
     "title":"",
     "varList":[
-      "expver",
       "sst"
     ],
     "summary":"",
@@ -39503,7 +39502,6 @@ fileDict =
       "time"
     ],
     "varListLong":[
-      "expver",
       "Sea surface temperature"
     ],
     "experiment":"_",
@@ -39536,12 +39534,6 @@ fileDict =
           "lon"
         ],
         "longName":"Sea surface temperature"
-      },
-      "expver":{
-        "units":"",
-        "dim":[],
-        "dim2":[],
-        "longName":"expver"
       },
       "longitude":{
         "dim":[
@@ -148698,7 +148690,6 @@ varL =
   "effective_cloud_height_misr_total_record_1x1",
   "effective_emitting_height_misr_total_record_1x1",
   "evspsbl",
-  "expver",
   "fco2antt",
   "fco2nat",
   "FNOCX",
@@ -148881,7 +148872,6 @@ varLongL =
   "Equivalent Water Height Over Land",
   "Equivalent Water Height Over Ocean",
   "Evaporation",
-  "expver",
   "Fraction of cloud cover",
   "Fraction of Time Convection Occurs",
   "Fraction of Time Shallow Convection Occurs",
