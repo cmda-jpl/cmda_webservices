@@ -49,8 +49,8 @@ class call_universalPlotting:
           print('stdout_value: ', stdout_value)
           print('stderr_value: ', stderr_value)
 
-          if stderr_value.find('error:') >= 0:
-             return (stderr_value, '', '')
+          #if stderr_value.find('error:') >= 0:
+          #   return (stderr_value, '', '')
 
           fst = 'figFile: '
           l1 = len(fst)

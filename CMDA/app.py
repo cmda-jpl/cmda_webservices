@@ -360,7 +360,9 @@ def serviceFunc(service):
         dataUrl = failedImgUrl
 
       print(('message: ', message))
-      if len(message) == 0 or message.find('Error') >= 0 or message.find('error:') >= 0 or message.find('No Data') >= 0:
+
+      #if len(message) == 0 or message.find('Error') >= 0 or message.find('error:') >= 0 or message.find('No Data') >= 0:
+      if len(message) == 0 or message.find('No Data') >= 0:
         success = False
         plotUrl = ''
         dataUrl = ''
