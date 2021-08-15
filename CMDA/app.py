@@ -6,7 +6,8 @@
 #== setting_CMU
 #== crossdomain___
 #==def_assignUrl
-#== service_func__
+# def_serviceFunc(service):
+#== def_serviceFunc__
 #== correlationMap__
 #== universalPlotting3b__   for universalPlotting
 #== universalPlotting6b__   
@@ -218,7 +219,7 @@ def convertPres(var1, pres1):
     fac = 100
   return str(int(pres1)*fac)
 
-#== service_func__
+#== def_serviceFunc__
 # This is for opennex api
 # used by:
 #   universalPlotting3b

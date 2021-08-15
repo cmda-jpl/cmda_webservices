@@ -2943,21 +2943,27 @@ a.lonMethod[ii],
     # filter out invalid
     temp1 = np.ma.arange(5)
     valid1 = np.ones( data1.shape, dtype=bool )
+    isMask = 0
     if type(data1) == type(temp1):
-      if data1.mask is not None:
+      if data1.count() < data1.shape[0]*data1.shape[1] :
+        isMask = 1
         valid1 = ~( data1.mask )
+        print('data1.count() < np.prod(data1.shape) :', data1.count(), np.prod(data1.shape) )
 
+    print('isMask: ', isMask)
     # remove time of most invalid
-    temp3 = valid1.sum(axis=1)
-    valid1b = temp3>temp3.mean()*0.1
-    if valid1b.sum()<data1.shape[0]:
-      data1 = data1[valid1b,:]
-      valid1 = valid1[valid1b,:]
-      time1 = time1[valid1b]
- 
+    if isMask:
+      temp3 = valid1.sum(axis=1)
+      #valid1b = temp3>temp3.mean()*0.1
+      valid1b = temp3>temp3.mean()*0.5
+      if valid1b.sum()<data1.shape[0]:
+        data1 = data1[valid1b,:]
+        valid1 = valid1[valid1b,:]
+        time1 = time1[valid1b]
+  
     # invalid times and grid:
     temp2 = valid1.sum(axis=0)
-    valid1a = temp2==data1.shape[0]
+    valid = temp2==data1.shape[0]  # valid lat/lon points
 
     if 0:
       for jj in (10000,20000,30000,40000):
@@ -2975,7 +2981,6 @@ a.lonMethod[ii],
       print('valid1.sum(): ', valid1.sum())
       print('valid1a.sum(): ', valid1a.sum())
 
-    valid = valid1a 
     if valid.sum()<data1.shape[1]:
       data1c = data1[:, valid]
       weight1 = weight1[valid]

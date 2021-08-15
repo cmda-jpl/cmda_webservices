@@ -5,7 +5,7 @@
 --access-logfile access.log \
 --log-file output.log \
 --daemon \
--w6 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:8080 app:app
+-w10 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:8080 app:app
 
 #-w6 --reload --timeout 300 --graceful-timeout 600 -p app.pid -b 0.0.0.0:8080 app:app
 
