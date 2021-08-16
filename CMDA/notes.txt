@@ -1,3 +1,14 @@
+20210815:
+len(dict2), after
+1384
+dimLen:
+0: 18
+1: 17
+2: 2
+3: 977
+4: 382
+5: 6
+
 20210715:
 - remember to change to env FERRET before start.sh
 
