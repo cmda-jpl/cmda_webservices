@@ -206,7 +206,7 @@ function processQS5() {
             k1 = a1 + 'Method';
             v1 = fetchQValue(queries, k1);
             if (v1 !== false){
-							subs2[k1] = v1;
+							subs2[k1] = v1.split(',')[i];
             } else {
               continue;
             }
@@ -215,16 +215,16 @@ function processQS5() {
             v1 = fetchQValue(queries, k1);
             if (v1 !== false){
               if (subs2[a1+'Method']=='1') {
-								subs2[k1+'1'] = v1;
+								subs2[k1+'1'] = v1.split(',')[i];
               } else {
-								subs2[k1+'23'] = v1;
+								subs2[k1+'23'] = v1.split(',')[i];
               }
             }
 
             k1 = a1 + 'E';
             v1 = fetchQValue(queries, k1);
             if (v1 !== false){
-							subs2[k1] = v1;
+							subs2[k1] = v1.split(',')[i];
             }
 
 					}

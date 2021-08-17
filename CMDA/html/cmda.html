@@ -152,7 +152,7 @@ cmac/html/codeStorage.html
 <link rel="stylesheet" href="common.css">
 <script src='js2/varList.js'></script>
 <script src='js2/fileList.js?1011'></script>
-<script src='js2/common-v6c.js?322'></script>
+<script src='js2/common-v6c.js?32222'></script>
 
 <title>Universal Analysis Service</title>
 
@@ -726,7 +726,7 @@ Select Datasets and Variables
 </div> <!-- row -->
 
 <!-- chose_time_range -->
-<div class="row">
+<div class="row" v-if="moreFilter==1">
  <div class="col-sm-4 right1">
  Filter by Time Range:
  </div>
@@ -737,7 +737,7 @@ Select Datasets and Variables
 </div> <!-- row -->
 
 <!-- chose_source -->
-<div class="row">
+<div class="row" v-if="moreFilter==1">
  <div class="col-sm-4 right1">
  Filter by Data Sources:
  </div>
@@ -751,7 +751,7 @@ Select Datasets and Variables
 </div> <!-- row -->
 
 <!-- chose_providers -->
-<div class="row">
+<div class="row" v-if="moreFilter==1">
  <div class="col-sm-4 right1">
  Filter by Data Providers:
  </div>
@@ -765,7 +765,7 @@ Select Datasets and Variables
 </div> <!-- row -->
 
 <!-- chose_model -->
-<div class="row">
+<div class="row" v-if="moreFilter==1">
  <div class="col-sm-4 right1">
  Filter by Model/Instrument Names:
  </div>
@@ -1287,6 +1287,7 @@ var vueApp = new Vue({
     fileDict: fileDict,
     fileList: Object.keys(fileDict),
     datasetFiltered: [],
+    moreFilter: 0,
 
     searchText: searchText,
     searchTextList: Object.keys(searchText),
@@ -1826,47 +1827,51 @@ var vueApp = new Vue({
       //console.log(this.var2Subset);
       //console.log(this.fileDict[this.dataset2Subset].varDict[this.var2Subset]);
 
-      console.log('in changedBeingSubsetted');
-      this.dataset2Subset = this.datasetSelected[Number(this.which2Subset)-1];
-      this.var2Subset = this.varSelected[Number(this.which2Subset)-1];
+      if (this.datasetSelected.length > 0 ) {
+        console.log('in changedBeingSubsetted');
+        //console.log('which2Subset: ' + this.which2Subset);
+        //console.log('this.datasetSelected: ' + this.datasetSelected.length);
+        this.dataset2Subset = this.datasetSelected[Number(this.which2Subset)-1];
+        this.var2Subset = this.varSelected[Number(this.which2Subset)-1];
 
-      var dataset9 = this.fileDict[this.dataset2Subset];
-      var var8 = dataset9.varDict;
-      var var9 = dataset9.varDict[this.var2Subset];
+        var dataset9 = this.fileDict[this.dataset2Subset];
+        var var8 = dataset9.varDict;
+        var var9 = dataset9.varDict[this.var2Subset];
 
-      // get dim2
-      this.dim2 = var9.dim2;
-      if (typeof this.dim2 === 'undefined') {
-        this.dim2 = [];
-      }
-      
-      // get zVar
-      var zIndex = this.dim2.indexOf('z');
-      if (zIndex>-1) {
-        this.zVar = dataset9.varDict[ var9.dim[zIndex] ];
-      }
-
-      // get timeVar
-      var timeIndex = this.dim2.indexOf('time');
-      if (timeIndex>-1) {
-        this.timeVar = dataset9.varDict[ var9.dim[timeIndex] ];
-
-        if (this.nDataset==1) {
-          this.time4All = true;
-          this.timeSLimAll = this.timeVar.min;
-          this.timeELimAll = this.timeVar.max;
+        // get dim2
+        this.dim2 = var9.dim2;
+        if (typeof this.dim2 === 'undefined') {
+          this.dim2 = [];
         }
+        
+        // get zVar
+        var zIndex = this.dim2.indexOf('z');
+        if (zIndex>-1) {
+          this.zVar = dataset9.varDict[ var9.dim[zIndex] ];
+        }
+
+        // get timeVar
+        var timeIndex = this.dim2.indexOf('time');
+        if (timeIndex>-1) {
+          this.timeVar = dataset9.varDict[ var9.dim[timeIndex] ];
+
+          if (this.nDataset==1) {
+            this.time4All = true;
+            this.timeSLimAll = this.timeVar.min;
+            this.timeELimAll = this.timeVar.max;
+          }
+        }
+
+        this.subs2 = var9.subs2;
+        if (this.timeMethod0) {
+          this.subs2.timeMethod = this.timeMethod0;
+        }
+
+        // I spent 3 hours debugging this. I was using try. Somehow, even a failed statement can still assign something.
+
+        // ?
+        this.timeMethodChange();
       }
-
-      this.subs2 = var9.subs2;
-      if (this.timeMethod0) {
-        this.subs2.timeMethod = this.timeMethod0;
-      }
-
-      // I spent 3 hours debugging this. I was using try. Somehow, even a failed statement can still assign something.
-
-      // ?
-      this.timeMethodChange();
     },
 
     // changed when var changes. to make timeSLimAll
@@ -1912,20 +1917,30 @@ var vueApp = new Vue({
             }
           }
         }
+        // timeV0 to store timeVar so they don't have to be re-calc
         this.timeV0 = jQuery.extend(true, {}, this.timeV);
 
         this.time4All = true;
         this.timeSLimAll = 10000000;
         this.timeELimAll = 90000000;
         var this2 = this;  // .each has its own this.
+        var min1 = '';
+        var max1 = '';
         $.each(this2.timeV, function(k,v) {
           if (v=== ' ') {
             this2.time4All = false;
             return false;
           } else {
-            this2.timeSLimAll = Math.max( Number(v.min), this2.timeSLimAll );
-            this2.timeELimAll = Math.min( Number(v.max), this2.timeELimAll );
+            min1 = v.min;
+            max1 = v.max;
+            if (max1.slice(0,4) === '0000') { max1 = '9999' + min1.slice(4) }
+            if (min1.length==6) { min1 = min1 + '15' }
+            if (max1.length==6) { max1 = max1 + '15' }
+            this2.timeSLimAll = Math.max( Number(min1), this2.timeSLimAll );
+            this2.timeELimAll = Math.min( Number(max1), this2.timeELimAll );
           }
+          //console.log('max1: ' + v.max);
+          //console.log('timeELimAll ' + this2.timeELimAll);
         });
       }
 

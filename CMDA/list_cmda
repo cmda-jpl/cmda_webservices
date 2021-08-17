@@ -1,7 +1,7 @@
 #== html__
 #== js2__
-#== src_universalPlotting
 #== src_universalPlotting6b
+#== src_universalPlotting
 
 start.sh   ###
 app.py     ###
@@ -20,8 +20,8 @@ temp1
 access.log
 
 == html__
+html/cmda.html   ####
 html/anomaly.html
-html/cmda.html
 html/CMDA_intro.html
 html/cmda_services.html
 html/common.css
@@ -32,6 +32,7 @@ html/universalPlotting6c.html
 == js2__
 html/js2/
 html/js2/fileList_cloud_full.js    #####
+html/js2/common-v6c.js  ####
 html/js2/axios.js
 html/js2/axios.min.js
 html/js2/bootstrap.min.css
@@ -44,7 +45,6 @@ html/js2/common-v5a.js
 html/js2/common-v5b.js
 html/js2/common-v5.js
 html/js2/common-v6b.js
-html/js2/common-v6c.js
 html/js2/common-v6.js
 html/js2/common_zhai.js
 html/js2/dataList1.js
