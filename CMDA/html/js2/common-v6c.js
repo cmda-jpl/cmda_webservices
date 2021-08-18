@@ -291,6 +291,13 @@ function makeQueryStr(toServer) {
   return temp1;
 }
 
+// makeServiceUrl__
+function makeServiceUrl(backEngin) {
+  //var service1 = "universalPlotting6b";
+  //vueApp.browserUrl = "https://jpl-cmda.org/svc/" + service1 + "?" + makeQueryStr(true);
+  vueApp.browserUrl = document.location.href.split('org')[0] + "org/svc/" + backEngin + "?" + makeQueryStr();
+}
+
 // makeBrowserUrl__
 function makeBrowserUrl() {
   vueApp.browserUrl = document.location.href.split('?')[0] + "?" + makeQueryStr();

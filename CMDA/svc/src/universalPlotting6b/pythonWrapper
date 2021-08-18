@@ -10,6 +10,21 @@ rsync8022 /home/btang/projects/cmac/git2/CMDA0/JPL_CMDA/services/svc/svc/src/uni
 
 zzzz  questions
 
+kk src
+nn1=universalPlotting6b/pythonWrapper
+nn2=cmda1/pythonWrapper
+rsync -av $nn2 $nn1
+
+kk web
+nn1=cmda.html
+nn2=cmda1.html
+#rsync -av $nn2 $nn1
+
+kk web
+cd js2
+nn1=common-v6c.js
+nn2=common-cmda1.js
+#rsync -av $nn2 $nn1
 
  fn2 = '%s/filesDict9.js'%outDir
   dict2 = yaml.safe_load( open(fn2).read() )
@@ -775,14 +790,22 @@ def ferretBasin(runF, basinName, nData, var1a):
   temp1 = 'use "http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NODC/.WOA05/.Masks/.basin/dods"'
   runF(temp1)
 
-  temp1 = 'let mask1 = if basin[k=1] eq %d then 1'%(iBasin)
+  temp1 = 'let basin9 = basin[k=1]'
+  runF(temp1)
+
+  temp1 = 'let mask9 = if basin9 eq %d then 1'%(iBasin)
   runF(temp1)
 
   for ii in range(nData):
     var1t = var1a[ii]+'_A'
-    temp1 = 'let %s = %s *  mask1[gxy=%s]'%(var1t, var1a[ii], var1a[ii])
+    temp1 = 'let %s = %s[gxy=basin9] * mask9'%(var1t, var1a[ii])
     runF(temp1)
     var1a[ii] = var1t
+
+    #var1t = var1a[ii]+'_A'
+    #temp1 = 'let %s = %s *  mask1[gxy=%s]'%(var1t, var1a[ii], var1a[ii])
+    #runF(temp1)
+    #var1a[ii] = var1t
 
 #== def_ferretAnomaly(runF, indexStr, varName, d, varNameOut):
 def ferretAnomaly(runF, indexStr, affix1, varName, varNameOut):

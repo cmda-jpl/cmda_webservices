@@ -1,6 +1,7 @@
 == datasets__
 == service_calling_sequence
 == check_parameters__
+== cmda1_2_cmda
 == notes_latest_
 
 == temp__
@@ -76,6 +77,15 @@ cmda.html : ajaxCall
 - # of variables
 - # of dimensions
 - # time or 
+
+
+== cmda1_2_cmda
+- cp pythonWrapper from cmda1 to universalPlotting6b
+- cp cmda1.html to cmda.html, 
+ - change vueApp.backEngin from cmda1 to universalPlotting6b
+ - change common-cmda1 to common-v6c
+- cp common-cmda1.js to common-v6c.js
+
 == notes_latest_
 
 == temp__

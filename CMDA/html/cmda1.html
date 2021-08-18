@@ -98,6 +98,7 @@ rsync8022 js2/common-v6c.js $cmda4:/home/svc/new_github/CMDA/JPL_CMDA/frontend/p
     //changeSearchText__: function() {
     // openNewWindow__
     // changeService__
+    // makeServiceUrlV__
     // makeBrowserUrlV__
     // copyBrowserUrlV__
     // moveFerretLevel__
@@ -152,7 +153,9 @@ cmac/html/codeStorage.html
 <link rel="stylesheet" href="common.css">
 <script src='js2/varList.js'></script>
 <script src='js2/fileList.js?1011'></script>
-<script src='js2/common-v6c.js?2211'></script>
+<!-- <script src='js2/common-v6c.js?22111'></script>  -->
+<!-- <script src='js2/common-cmda1.js?22111'></script>  -->
+<script src='js2/common-cmda1.js?221111'></script>
 
 <title>Universal Analysis Service</title>
 
@@ -530,7 +533,7 @@ $(document).ready(function(){
 
   // action1_click
   $("#action1").click(function(event) {
-    ajaxCall("cmda1");
+    ajaxCall(vueApp.backEngin);
   });
 
   // onlineFileCheck_click
@@ -1150,7 +1153,8 @@ Parameters for the correlationMap service
   </div>
 
   <div class="col-sm-6 right1">
-    <button v-on:click="makeBrowserUrlV()" class="btn btn-default">Refresh</button>  
+    <button v-on:click="makeServiceUrlV(backEngin)" class="btn btn-default">Service URL</button>  
+    <button v-on:click="makeBrowserUrlV()" class="btn btn-default">Browser URL</button>  
     <button class="btn btn-default" v-on:click="openNewWindow()">Open a page with the browserUrl</button> 
 
     <!-- <a class="btn btn-default" v-bind:href="browserUrl" target="_blank">Open a page with the browserUrl</a>  -->
@@ -1203,6 +1207,7 @@ var vueApp = new Vue({
   data: {
 
     // vue_data_para
+    backEngin: 'cmda1',
     datasets: '',
     vars: '',
     //
@@ -1682,6 +1687,11 @@ var vueApp = new Vue({
 
       //this.title = this.service9.title;
       //this.description = this.service9.description;
+    },
+
+    // makeServiceUrlV__
+    makeServiceUrlV: function(backEngin) {
+      makeServiceUrl(backEngin);
     },
 
     // makeBrowserUrlV__
