@@ -1,3 +1,13 @@
+== datasets__
+== service_calling_sequence
+== check_parameters__
+== notes_latest_
+
+== temp__
+== modify_services_for new cmda
+
+
+== datasets__
 20210815:
 len(dict2), after
 1384
@@ -12,6 +22,7 @@ dimLen:
 20210715:
 - remember to change to env FERRET before start.sh
 
+== modify_services_for new cmda
 == universalPlotting3
 - universalPlotting6c.html, not need to change 
 -- common-v5b.js -- need to change http or https, and port,
@@ -43,4 +54,29 @@ dimLen:
 - Did a system octave install. Good:
 sudo apt install octave
 
-https://jpl-cmda.org/cmda.html?vars=precip,pr&datasets=/mnt/data/data_clean/cmip5/users/ksuselj/MPwdm_4K_v1.nc,/mnt/data/data_clean/cmip5/wrf/mp-wdm/pr_Amon_wrf_mp-wdm_200401-200412.nc&lonMethod=3,3&lonS=0,0&lonE=360,360&latMethod=3,3&latS=-90,-90&latE=90,90&presMethod=0,0&presS=500,500&presE=800,800&timeMethod=2,2&timeS=2004-01-15,2004-01-15&timeE=2004-12-15,2004-12-15&ferretLevel=10,10,10&colorMap=rainbow,rainbow,rainbow&plotTitle=,,&anomaly=0&climatology=undefined&timeMean=&purpose=&service=diffPlot&basin=&userId=&serviceId=&dataUrl=https%3A//jpl-cmda.org/static/universalPlotting6b/d85fcd571bac136e457167fcdcef624e/data.nc&plotUrl=https%3A//jpl-cmda.org/static/universalPlotting6b/d85fcd571bac136e457167fcdcef624e/plot.png
+20210817:
+- created cmda1 service, a working copy of cmda,
+
+== service_calling_sequence
+-- call:
+cmda.html 
+-> cmda.html : ajaxCall
+-> app.py : serviceFunc
+-> call_universalPlotting : display
+-> cmda/wrapper : pythonWrapper
+
+-- Return:
+cmda/wrapper : pythonWrapper     -> stdOut, errOut
+call_universalPlotting : display -> (message, imgFile, dataFile)
+app.py : serviceFunc             -> json(success, message, url, dataUrl)
+cmda.html : ajaxCall 
+
+== check_parameters__
+- for each service
+- # of variables
+- # of dimensions
+- # time or 
+== notes_latest_
+
+== temp__
+https://jpl-cmda.org/cmda1.html?vars=sst&datasets=/mnt/data/data_clean/cmip5/others/tos_era5.nc&lonMethod=3&lonS=0&lonE=360&latMethod=3&latS=-90&latE=90&presMethod=0&presS=500&presE=800&timeMethod=3&timeS=2000-01-15&timeE=2005-12-15&ferretLevel=10&colorMap=rainbow&plotTitle=&anomaly=0&climatology=undefined&timeMean=&purpose=&service=anomaly&basin=&userId=&serviceId=&dataUrl=https%3A//jpl-cmda.org/static/plottingFailed.png&plotUrl=https%3A//jpl-cmda.org/static/plottingFailed.png

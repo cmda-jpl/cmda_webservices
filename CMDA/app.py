@@ -6,11 +6,11 @@
 #== setting_CMU
 #== crossdomain___
 #==def_assignUrl
-# def_serviceFunc(service):
 #== def_serviceFunc__
 #== correlationMap__
 #== universalPlotting3b__   for universalPlotting
 #== universalPlotting6b__   
+#== cmda1__   
 #== static_html
 
 '''
@@ -304,6 +304,11 @@ def serviceFunc(service):
       # chdir back
       os.chdir(current_dir)
 
+      print('qqqq', message)
+      failedCheck = 0    
+      if message.find('failedCheck')>-1:
+        failedCheck = 1    
+
       ind1 = message.find('No Data')
       if ind1>0:
         message1 = message[ind1:(ind1+200)]
@@ -363,7 +368,7 @@ def serviceFunc(service):
       print(('message: ', message))
 
       #if len(message) == 0 or message.find('Error') >= 0 or message.find('error:') >= 0 or message.find('No Data') >= 0:
-      if len(message) == 0 or message.find('No Data') >= 0:
+      if failedCheck or (len(message) == 0) or (message.find('No Data') >= 0):
         success = False
         plotUrl = ''
         dataUrl = ''
@@ -440,6 +445,11 @@ def displayUniversalPlotting3b():
 def displayUniversalPlotting6b():
     return serviceFunc('universalPlotting6b')
 
+#== cmda1__   
+@app.route('/svc/cmda1', methods=["GET"])
+#@crossdomain(origin='*')
+def displayCmda1():
+    return serviceFunc('cmda1')
 
 #== static_html
 from flask import send_from_directory

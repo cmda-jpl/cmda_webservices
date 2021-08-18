@@ -389,34 +389,42 @@ function ajaxCall(service) {
     data: null,
     success: function(data, textStatus, xhr) {
       Response = data;
+      var message1 = data.message;
+      var text = JSON.stringify(data, null, 4);
+
+      console.log(data.success);
       if (data.success == false) {
-        Response = null;
-        var text = JSON.stringify(data, null, 4);
+        console.log(data.message);
+        if (data.message.search('failed')>-1) {
+          message1 = data.message.slice(14);
+        } 
+        console.log(data.message);
 
-        if (text.indexOf("No Data") != -1) {
-          //vueApp.imageHtml = "No Data";
-          $("#image").html("No Data.");
-          vueApp.dataUrl = "No Data";
-          vueApp.responseHtml = "No Data";
-          vueApp.action1Disabled = false;
-          return;
-        }
+          //if (text.indexOf("No Data") != -1) {
+          //  //vueApp.imageHtml = "No Data";
+          //  $("#image").html("No Data.");
+          //  vueApp.dataUrl = "No Data";
+          //  vueApp.responseHtml = data.message;
+          //  vueApp.action1Disabled = false;
+          //  return;
+          //}
 
-        text = "Error in backend: <br>" + text; 
-        text = "<span style='color:red'>" + text + "</span>";
-        vueApp.responseHtml = text;
+          //text = "Error in backend: <br>" + text; 
+          //text = "<span style='color:red'>" + text + "</span>";
+          //vueApp.responseHtml = text;
+        //} // if message.slice(0,2)=='99'
+
+        
+        vueApp.responseHtml = message1;
+        //vueApp.plotUrl = "";
         vueApp.dataUrl = "No data file due to backend error.";
         vueApp.action1Disabled = false;
         return;
       }  // if (data.success == false)
 
-      var text = JSON.stringify(data, null, 4);
       // alert(text);
-      vueApp.responseHtml = "<pre>"+text+"</pre>";
+      vueApp.responseHtml = message1;
       vueApp.plotUrl = data.url;
-      //$("#image").html( "<img src='"+data.url+"?" + new Date().getTime() + "'>");
-      //vueApp.imageHtml = "<img src='"+data.url+"?" + new Date().getTime() + "'/>";
-      //var html = "<img src='"+data.url+"' width='820'/>";
 
       // post dataUrl to textarea and enable download button
       vueApp.dataUrl = data.dataUrl;
@@ -432,7 +440,7 @@ function ajaxCall(service) {
         vueApp.action1Disabled = false;
         // alert("xhr.status: "+xhr.status);
         // alert("error status: "+textStatus);
-    },
+    }, // success: function()
     complete: function(xhr, textStatus) {
         //alert("complete status: "+textStatus);
     },

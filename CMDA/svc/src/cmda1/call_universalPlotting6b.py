@@ -4,7 +4,7 @@ import subprocess
 import os
 from os.path import basename
 
-class call_universalPlotting:
+class call_universalPlotting6b:
     def __init__(self, pFile):
         self.pFile = pFile
 
@@ -36,16 +36,13 @@ class call_universalPlotting:
         command = './wrapper ' + self.pFile
         print(command) 
         cmd = command.split(' ')
-        #cmdstring = string.join(cmd, ' ')
-        cmdstring = ' '.join(cmd)
+        cmdstring = string.join(cmd, ' ')
         #print 'cmd: ', cmd
         #if 1:
         try:
           proc=subprocess.Popen(cmd, cwd='.', stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True)
           # wait for the process to finish
           stdout_value, stderr_value = proc.communicate()
-          stdout_value = stdout_value.decode()
-          stderr_value = stderr_value.decode()
           print('stdout_value: ', stdout_value)
           print('stderr_value: ', stderr_value)
 
@@ -64,11 +61,6 @@ class call_universalPlotting:
 
           lines = stdout_value.split('\n')
           for line in lines:
- 
-            if line.find('failedCheck') >= 0:
-              #checkMsg = line[14:]
-              return (line, '', '')
-
             ### print '*****: ', line
             if line.find('figFile: ') >= 0:
               print('***** line: ', line)
@@ -77,32 +69,12 @@ class call_universalPlotting:
             if line.find('dataFile: ') >= 0:
               print('***** line: ', line)
               data_filename = line[l2:]
-          print('2 files: ') 
-          print(image_filename)
-          print(data_filename)
-
-          isImg = os.path.isfile(image_filename)
-          isData = os.path.isfile(data_filename)
-
-          fileThere = 1
-          msg2 = ''
-          if not isImg: 
-            fileThere = 0
-            msg2 += '!!!!!!! Image file not found. !!!!!!\n'
-          if not isData: 
-            fileThere = 0
-            msg2 += '!!!!!!!  Data file not found. !!!!!!\n'
-
-          if fileThere==0:
-            return (msg2, '', '')
 
           image_filename = os.path.basename(image_filename)
           print('image_filename: ', image_filename)
           data_filename = os.path.basename(data_filename)
           print('data_filename: ', data_filename)
-
           return (stdout_value, image_filename, data_filename)
-
         #if 0:
         except OSError as e:
           err_mesg = 'The subprocess "%s" returns with an error: %s.' % (cmdstring, e)
