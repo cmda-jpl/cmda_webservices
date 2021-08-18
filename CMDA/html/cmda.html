@@ -152,7 +152,7 @@ cmac/html/codeStorage.html
 <link rel="stylesheet" href="common.css">
 <script src='js2/varList.js'></script>
 <script src='js2/fileList.js?1011'></script>
-<script src='js2/common-v6c.js?32222'></script>
+<script src='js2/common-v6c.js?2211'></script>
 
 <title>Universal Analysis Service</title>
 
@@ -182,7 +182,7 @@ plotP0.plotTitle = 'plotTitle=';
 var services = {};
 var obj1 = {};
 
-obj1.name = 'color plot';
+obj1.name = 'Color Plot';
 obj1.nDataset = 1;
 obj1.nDim = 2;
 obj1.nPlot = 1;
@@ -191,7 +191,7 @@ obj1.title = 'Plot';
 obj1.description = 'Make plots from data';
 services.plot = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'contour plot';
+obj1.name = 'Contour Plot';
 obj1.nDataset = 1;
 obj1.nDim = 2;
 obj1.nPlot = 1;
@@ -200,7 +200,7 @@ obj1.title = 'Contour Plot';
 obj1.description = 'Contour Plot';
 services.contour = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'contour plot overlaying a color plot';
+obj1.name = 'Contour Plot Overlaying a Color Plot';
 obj1.nDataset = 2;
 obj1.nDim = 2;
 obj1.nPlot = 2;
@@ -218,16 +218,16 @@ obj1.title = 'Subset and Download';
 obj1.description = 'Subset and Download';
 services.subsetDownload = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'Download Original';
-obj1.nDataset = 1;
-obj1.nDim = 3;
-obj1.nPlot = 1;
-obj1.plotP = repeatPlotP(plotP,obj1.nPlot);
-obj1.title = 'Download Original';
-obj1.description = 'Download Original';
-services.downloadOriginal = jQuery.extend(true, {}, obj1);
+//obj1.name = 'Download Original';
+//obj1.nDataset = 1;
+//obj1.nDim = 3;
+//obj1.nPlot = 1;
+//obj1.plotP = repeatPlotP(plotP,obj1.nPlot);
+//obj1.title = 'Download Original';
+//obj1.description = 'Download Original';
+//services.downloadOriginal = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'EOF';
+obj1.name = 'EOF: Empirical Orthogonal Functions';
 obj1.nDataset = 1;
 obj1.nDim = 3;
 obj1.nPlot = 1;
@@ -236,7 +236,7 @@ obj1.title = 'EOF';
 obj1.description = 'Empirical Orthogonal Function';
 services.EOF = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'random forest, feature importance';
+obj1.name = 'Random Forest, Feature Importance';
 obj1.nDataset = 11;
 obj1.nDim = 2;
 obj1.nPlot = 1;
@@ -245,7 +245,7 @@ obj1.title = 'Random Forest';
 obj1.description = 'Random Forest';
 services.randomForest = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'Linear combination of multiple variables';
+obj1.name = 'Linear Combination of Multiple Variables';
 obj1.nDataset = 10;
 obj1.nDim = 2;
 obj1.nPlot = 1;
@@ -255,7 +255,7 @@ obj1.description = 'Linear combination of multiple variables';
 services.linear = jQuery.extend(true, {}, obj1);
 
 obj1.name = 'Time Series Plots';
-obj1.nDataset = 5;
+obj1.nDataset = 6;
 obj1.nDim = 1;
 obj1.nPlot = 1;
 obj1.plotP = repeatPlotP(plotP,obj1.nPlot);
@@ -272,16 +272,16 @@ obj1.title = ' ';
 obj1.description = 'Map View of Multiple Variables';
 services.mapView = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'anomaly calculation';
-obj1.nDataset = 1;
-obj1.nDim = 3;
-obj1.nPlot = 1;
-obj1.plotP = repeatPlotP(plotP,obj1.nPlot);
-obj1.title = 'Anomaly Calculation';
-obj1.description = 'Anomaly Calculation';
-services.anomaly = jQuery.extend(true, {}, obj1);
+//obj1.name = 'Anomaly Calculation';
+//obj1.nDataset = 1;
+//obj1.nDim = 3;
+//obj1.nPlot = 1;
+//obj1.plotP = repeatPlotP(plotP,obj1.nPlot);
+//obj1.title = 'Anomaly Calculation';
+//obj1.description = 'Anomaly Calculation';
+//services.anomaly = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'scatter plot of two fields';
+obj1.name = 'Scatter Plot of Two Fields';
 obj1.nDataset = 2;
 obj1.nDim = 2;
 obj1.nPlot = 3;
@@ -290,7 +290,7 @@ obj1.title = 'Scatter Plot of Two Fields';
 obj1.description = 'Scatter Plot of Two Fields';
 services.scatterPlot = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'difference of two fields';
+obj1.name = 'Difference of Two Fields';
 obj1.nDataset = 2;
 obj1.nDim = 2;
 obj1.nPlot = 3;
@@ -299,7 +299,7 @@ obj1.title = 'Difference of Two Fields';
 obj1.description = 'Difference of Two Fields';
 services.diffPlot = jQuery.extend(true, {}, obj1);
 
-obj1.name = 'lagged correlation of two fields';
+obj1.name = 'Lagged Correlation of Two Fields';
 obj1.nDataset = 2;
 obj1.nDim = 2;
 obj1.nPlot = 1;
@@ -627,7 +627,7 @@ $(document).ready(function(){
 
 
 <!-- open_upload_file -->
-<div class="row">
+<div class="row" v-show="1==0">
  <div class="col-sm-4 right1">
  </div>
   <div class="col-sm-8 left1">

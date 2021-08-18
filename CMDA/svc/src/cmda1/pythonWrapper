@@ -350,9 +350,9 @@ def plotTser2(time9, tser,i1,i2,max1):
   for i in range(i1,i2+1):
     print(time9.shape, tser[i,:].shape)
     Mat.plot_date(time9, tser[i,:], '-')
-    Mat.hold('on')
+    #Mat.hold('on')
     ii += 1
-  Mat.hold('off')
+  #Mat.hold('off')
   Mat.xlim(time9[0], time9[-1])
   Mat.ylim(-max1, max1)
 
@@ -1586,7 +1586,7 @@ class SUBSET_REGION():
     nMonth = ncVar1.shape[0]
  
     # how many points to take each month
-    nSampleM = self.nSample/nMonth + 1 
+    nSampleM = int(self.nSample/nMonth + 1)
 
     # hold data for scatter plot
     dataAll1 = []
@@ -1703,9 +1703,9 @@ class SUBSET_REGION():
     Mat.ylim(min2a,max2a)
     Mat.xlim(min1a,max1a)
     if self.var1[0]==self.var1[1]:
-      Mat.hold('on')
+      #Mat.hold('on')
       Mat.plot([min1, max1], [min1, max1], 'r-')
-      Mat.hold('off')
+      #Mat.hold('off')
 
     Mat.xlabel('%s (%s)'%(self.var1[0], self.units[0]))
     Mat.ylabel('%s (%s)'%(self.var1[1], self.units[1]))
@@ -1786,6 +1786,7 @@ class SUBSET_REGION():
       Mat.ylim(0, histMax*1.1)
 
     # output png file
+    print('save scatter plot.')
     Mat.savefig(a.figFile, dpi=100)
 
   # def_diffPlot4   # this is one used
@@ -2325,13 +2326,13 @@ if cr['command_arg']       == 1:
       if a.service in ['plot', 'contour', 'plotContour']:
         a.timeMethod = [2,] * a.nData
       elif a.service in [
-'EOF', 
-'randomForest',
-'diffPlot', 
-'correlationMap',
-'anomaly',
-'basinMask',
-]:
+           'EOF', 
+           'randomForest',
+           'diffPlot', 
+           'correlationMap',
+           'anomaly',
+           'basinMask',
+           ]:
         a.timeMethod = [3,] * a.nData
 
     a.anomaly = int(a.anomaly)
@@ -2510,6 +2511,7 @@ if cr['check_parameters']       == 1:
   s = SERVICE()
   s.key = key1
   s.nData = (2,)
+  s.nDim = (3,)
   s.tMethod = '01234'
   s.zMethod = '0124'
   s.yMethod = '3'
@@ -2520,6 +2522,7 @@ if cr['check_parameters']       == 1:
   s = SERVICE()
   s.key = key1
   s.nData = (2,)
+  s.nDim = (3,)
   s.tMethod = '01234'
   s.zMethod = '0124'
   s.yMethod = '3'
@@ -2749,7 +2752,7 @@ if cr['services__']       == 1:
     for ii in range(a.nData):
       indexStr4 = a.getSubsetIndex4(ii)
       var1aa = a.var1a[ii] + '_A'
-      affix1 = '%d'%(i+1)
+      affix1 = '%d'%(ii+1)
       #cmac.ferretAnomaly(runF, indexStr4, a.var1a[ii], 0, var1aa)
       ferretAnomaly(runF, indexStr4, affix1, a.var1a[ii], var1aa)
       a.var1a[ii] = var1aa

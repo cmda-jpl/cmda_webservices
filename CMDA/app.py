@@ -309,12 +309,12 @@ def serviceFunc(service):
       if message.find('failedCheck')>-1:
         failedCheck = 1    
 
-      ind1 = message.find('No Data')
-      if ind1>0:
-        message1 = message[ind1:(ind1+200)]
-        message1a = message1.split('\n')
-        print((message1a[0]))
-        print((message1a[1]))
+      #ind1 = message.find('No Data')
+      #if ind1>0:
+      #  message1 = message[ind1:(ind1+200)]
+      #  message1a = message1.split('\n')
+      #  print((message1a[0]))
+      #  print((message1a[1]))
      
       #hostname, port = get_host_port2("host.cfg")
       #hostname, port = '127.0.0.1', '5000'
@@ -348,47 +348,37 @@ def serviceFunc(service):
       #print(('backend_url: ', backend_url))
       print(('imgFileName: ', imgFileName))
       #plotUrl = 'http://' + hostname + ':' + port + '/static/%s/'%service + tag + '/' + imgFileName
-      plotUrl = '%s://'%httpStr + hostname + portSep + port + '/static/%s/'%service + tag + '/' + imgFileName
+      if imgFileName:
+        plotUrl = '%s://'%httpStr + hostname + portSep + port + '/static/%s/'%service + tag + '/' + imgFileName
+      else:
+        plotUrl = ''
+
       print(('plotUrl: ', plotUrl))
       #dataUrl = 'http://' + hostname + ':' + port + '/static/%s/'%service + tag + '/' + dataFileName
-      dataUrl = '%s://'%httpStr + hostname + portSep + port + '/static/%s/'%service + tag + '/' + dataFileName
+      if dataFileName:
+        dataUrl = '%s://'%httpStr + hostname + portSep + port + '/static/%s/'%service + tag + '/' + dataFileName
+      else:
+        dataUrl = ''
       print(('dataUrl: ', dataUrl))
 
       failedImgUrl = '%s://'%httpStr + hostname + portSep + port + '/static/plottingFailed.png'
       #print 'failedImgUrl: ', failedImgUrl
 
-      if imgFileName is '' or not os.path.exists(output_dir+'/'+imgFileName):
-        print(('****** Error: %s not exist' % imgFileName))
-        plotUrl = failedImgUrl
+      #if imgFileName is '' or not os.path.exists(output_dir+'/'+imgFileName):
+      #  print(('****** Error: %s not exist' % imgFileName))
+      #  plotUrl = failedImgUrl
 
-      if dataFileName is '' or not os.path.exists(output_dir+'/'+dataFileName):
-        print(('****** Error: %s not exist' % dataFileName))
-        dataUrl = failedImgUrl
+      #if dataFileName is '' or not os.path.exists(output_dir+'/'+dataFileName):
+      #  print(('****** Error: %s not exist' % dataFileName))
+      #  dataUrl = failedImgUrl
 
       print(('message: ', message))
 
-      #if len(message) == 0 or message.find('Error') >= 0 or message.find('error:') >= 0 or message.find('No Data') >= 0:
-      if failedCheck or (len(message) == 0) or (message.find('No Data') >= 0):
+      #if failedCheck or (len(message) == 0) or (message.find('No Data') >= 0):
+      if failedCheck:
         success = False
         plotUrl = ''
         dataUrl = ''
-
-    if 0:
-    #except ValueError, e:
-        # chdir to current_dir in case the dir is changed to where the app is in the try block
-        os.chdir(current_dir)
-        print(('change dir back to: ', current_dir))
-
-        success = False
-        message = str(e)
-    #except Exception, e:
-        # chdir to current_dir in case the dir is changed to where the app is in the try block
-        os.chdir(current_dir)
-        print(('change dir back to: ', current_dir))
-
-        success = False
-        ### message = str("Error caught in displayScatterPlot2V()")
-        message = str(e)
 
     executionEndTime = int(time.time())
 

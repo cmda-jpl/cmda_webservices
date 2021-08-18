@@ -10,6 +10,11 @@ rsync8022 /home/btang/projects/cmac/git2/CMDA0/JPL_CMDA/services/svc/svc/src/uni
 
 zzzz  questions
 
+
+ fn2 = '%s/filesDict9.js'%outDir
+  dict2 = yaml.safe_load( open(fn2).read() )
+
+
 '''
 HOME='/home/svc'
 
@@ -24,7 +29,7 @@ cr = {
 #== def_plotPattern
 # def_runF(temp1):
 # def_combineImage(files, outFile):
-# def_combineImage2(files, nCol, outFile):
+# def_combineImage2(files, nCol, outFile):  for now only works for nCol=2
 # def_time2YearMonth(time1):
 # basin_list
 # basin_list2
@@ -59,13 +64,19 @@ cr = {
     #-- set_viewport
 'init_class':           1,   # 1  1
 'command_arg':          1,   # 1  1
+'figure_out_dim':       1,
+# def_checkSync
+# class_SERVICE():
+'check_parameters':     1,   # 1
+  #== services_configure
+  #== check_para
 'services__':           1,   # 1  1  # use agg data set
   # plotType__
   #== download_original
   #== open_files
   #-- init_ferret
   # fig_data_filenames
-  # set_region_
+  # set_region_  not used
   # open_data and regrid to the first dataset
   # calc_anomaly
   # calc_time mean
@@ -79,7 +90,7 @@ cr = {
   #== timeSeries__
   #== linear__
   #== scatter__
-  #== anomaly__
+  #== anomaly__  not used
   #== basinMask__  not needed
   #== randomForest__
     # RF_import
@@ -339,9 +350,9 @@ def plotTser2(time9, tser,i1,i2,max1):
   for i in range(i1,i2+1):
     print(time9.shape, tser[i,:].shape)
     Mat.plot_date(time9, tser[i,:], '-')
-    Mat.hold('on')
+    #Mat.hold('on')
     ii += 1
-  Mat.hold('off')
+  #Mat.hold('off')
   Mat.xlim(time9[0], time9[-1])
   Mat.ylim(-max1, max1)
 
@@ -453,7 +464,7 @@ def combineImage(files, outFile):
 
       result.save(outFile)
 
-# def_combineImage2(files, nCol, outFile):
+# def_combineImage2(files, nCol, outFile):  for now only works for nCol=2
 def combineImage2(files, nCol, outFile):
       from PIL import Image
 
@@ -1211,7 +1222,7 @@ class SUBSET_REGION():
       lonStr = ''
       if self.lonMethod[i]==1:
         lonStr = 'x=%.2f,'%(self.lonS[i])
-      else:
+      elif self.lonMethod[i] in (2,3,4):
         #lonStr = 'x=%.2f:%.2f@ave,'%(self.lonS[i], self.lonE[i])
         lonStr = 'x=%.2f:%.2f,'%(self.lonS[i], self.lonE[i])
       indexStr += lonStr
@@ -1220,7 +1231,7 @@ class SUBSET_REGION():
       latStr = ''
       if self.latMethod[i]==1:
         latStr = 'y=%.2f,'%(self.latS[i])
-      else:
+      elif self.latMethod[i] in (2,3,4):
         #latStr = 'y=%.2f:%.2f@ave,'%(self.latS[i], self.latE[i])
         latStr = 'y=%.2f:%.2f,'%(self.latS[i], self.latE[i])
       indexStr += latStr
@@ -1229,7 +1240,7 @@ class SUBSET_REGION():
       presStr = ''
       if self.presMethod[i]==1:
         presStr = 'z=%.2f,'%(self.presS[i])
-      else:
+      elif self.presMethod[i] in (2,3,4):
         #presStr = 'z=%.2f:%.2f@ave,'%(self.presS[i], self.presE[i])
         presStr = 'z=%.2f:%.2f,'%(self.presS[i], self.presE[i])
       indexStr += presStr
@@ -1239,7 +1250,7 @@ class SUBSET_REGION():
       if self.timeMethod[i]==1:
         timeStr = 't="%02d-%s-%04d",' \
           %(self.dayS[i], num2month[self.monthS[i]], self.yearS[i])
-      else:
+      elif self.timeMethod[i] in (2,3,4):
         #timeStr = 't="%02d-%s-%04d":"%02d-%s-%04d"@ave,' \
         timeStr = 't="%02d-%s-%04d":"%02d-%s-%04d",' \
           %(self.dayS[i], num2month[self.monthS[i]], self.yearS[i], 
@@ -1575,7 +1586,7 @@ class SUBSET_REGION():
     nMonth = ncVar1.shape[0]
  
     # how many points to take each month
-    nSampleM = self.nSample/nMonth + 1 
+    nSampleM = int(self.nSample/nMonth + 1)
 
     # hold data for scatter plot
     dataAll1 = []
@@ -1692,9 +1703,9 @@ class SUBSET_REGION():
     Mat.ylim(min2a,max2a)
     Mat.xlim(min1a,max1a)
     if self.var1[0]==self.var1[1]:
-      Mat.hold('on')
+      #Mat.hold('on')
       Mat.plot([min1, max1], [min1, max1], 'r-')
-      Mat.hold('off')
+      #Mat.hold('off')
 
     Mat.xlabel('%s (%s)'%(self.var1[0], self.units[0]))
     Mat.ylabel('%s (%s)'%(self.var1[1], self.units[1]))
@@ -1775,6 +1786,7 @@ class SUBSET_REGION():
       Mat.ylim(0, histMax*1.1)
 
     # output png file
+    print('save scatter plot.')
     Mat.savefig(a.figFile, dpi=100)
 
   # def_diffPlot4   # this is one used
@@ -2314,13 +2326,13 @@ if cr['command_arg']       == 1:
       if a.service in ['plot', 'contour', 'plotContour']:
         a.timeMethod = [2,] * a.nData
       elif a.service in [
-'EOF', 
-'randomForest',
-'diffPlot', 
-'correlationMap',
-'anomaly',
-'basinMask',
-]:
+           'EOF', 
+           'randomForest',
+           'diffPlot', 
+           'correlationMap',
+           'anomaly',
+           'basinMask',
+           ]:
         a.timeMethod = [3,] * a.nData
 
     a.anomaly = int(a.anomaly)
@@ -2368,6 +2380,236 @@ if cr['command_arg']       == 1:
     if a.service!='downloadOriginal':
       print('dataFile: %s'%dataFile)
 
+if cr['figure_out_dim']       == 1:
+  dimMethod = []
+  for ii in range(len(a.timeMethod)):
+    a1 = '%d%d%d%d'%(
+a.timeMethod[ii], 
+a.presMethod[ii], 
+a.latMethod[ii], 
+a.lonMethod[ii], 
+)
+    print('dimMethod: ', a1)
+    dimMethod.append(a1)
+
+  a.dimMethod = dimMethod
+
+  # plotType__
+  # 3 plotType, for 2d, 1d, and 0d: shade, plot, stats
+  a.nDim = a.dimMethod[0].count('3')
+
+# def_checkSync
+def checkSync(para1, a, t0, checkMsg):
+  #temp1 = "t0 = a.%s"%para1
+  #print(temp1)
+  #exec(temp1)
+  nData = a.nData
+  # t1 = a.lonS.split(',')
+  if [t0[0],]*nData != t0:
+    checkMsg += 'Elments in %s=%s need to be the same.\n'%(para1, str(t0))
+
+
+# class_SERVICE():
+class SERVICE():
+  #== def___init__
+  def __init__(self):
+    self.key = 'plot'
+    self.nData = (1,)
+    self.nDim = (2,)
+    self.nPlot = (1,)
+    self.sync = 1
+    self.tMethod = '1234'
+    self.zMethod = '01234'
+    self.yMethod = '1234'
+    self.xMethod = '1234'
+
+'''
+  s.key = 'plot'
+  s.nData = (1,)
+  s.nDim = (2,)
+  s.nPlot = (1,)
+  s.sync = 1
+  s.tMethod = '1234'
+  s.zMethod = '01234'
+  s.yMethod = '1234'
+  s.xMethod = '1234'
+'''
+
+if cr['check_parameters']       == 1:
+  #== services_configure
+  services = {}
+
+  key1 = 'plot'
+  s = SERVICE()
+  s.key = key1
+  s.nDim = (0,1,2)
+  services[key1] = s
+
+  key1 = 'contour'
+  s = SERVICE()
+  s.key = key1
+  services[key1] = s
+
+  key1 = 'plotContour'
+  s = SERVICE()
+  s.key = key1
+  s.nData = (2,)
+  services[key1] = s
+
+  key1 = 'subsetDownload'
+  s = SERVICE()
+  s.key = key1
+  s.nDim = (1,2,3,4)
+  services[key1] = s
+
+  key1 = 'EOF'
+  s = SERVICE()
+  s.key = key1
+  s.nDim = (3,)
+  s.tMethod = '3'
+  services[key1] = s
+
+  key1 = 'randomForest'
+  s = SERVICE()
+  s.key = key1
+  s.nData = list(range(2,12))
+  s.nDim = (1,2,3,4)
+  services[key1] = s
+
+  key1 = 'timeSeries'
+  s = SERVICE()
+  s.key = key1
+  s.nData = list(range(1,7))
+  s.nDim = (1,)
+  s.sync = 0
+  s.tMethod = '3'
+  s.zMethod = '0124'
+  s.yMethod = '124'
+  s.xMethod = '124'
+  services[key1] = s
+
+  key1 = 'mapView'
+  s = SERVICE()
+  s.key = key1
+  s.nData = list(range(1,11))
+  s.nDim = (1,2,)
+  s.sync = 0
+  services[key1] = s
+
+  
+  key1 = 'anomaly'
+  s = SERVICE()
+  s.key = key1
+  s.nDim = (3,)
+  s.tMethod = '3'
+  s.zMethod = '0124'
+  s.yMethod = '3'
+  s.xMethod = '3'
+  services[key1] = s
+
+  key1 = 'scatterPlot'
+  s = SERVICE()
+  s.key = key1
+  s.nData = (2,)
+  s.nDim = (3,)
+  s.tMethod = '01234'
+  s.zMethod = '0124'
+  s.yMethod = '3'
+  s.xMethod = '3'
+  services[key1] = s
+
+  key1 = 'diffPlot'
+  s = SERVICE()
+  s.key = key1
+  s.nData = (2,)
+  s.nDim = (3,)
+  s.tMethod = '01234'
+  s.zMethod = '0124'
+  s.yMethod = '3'
+  s.xMethod = '3'
+  services[key1] = s
+
+  key1 = 'correlationMap'
+  s = SERVICE()
+  s.key = key1
+  s.nData = (2,)
+  s.tMethod = '01234'
+  s.zMethod = '0124'
+  s.yMethod = '3'
+  s.xMethod = '3'
+  services[key1] = s
+
+  key1 = 'plotContour'
+  s = SERVICE()
+  s.key = key1
+  services[key1] = s
+
+  key1 = 'plotContour'
+  s = SERVICE()
+  s.key = key1
+  services[key1] = s
+
+  #== check_para
+  checkMsg = '\nservice: %s\n'%a.service
+   
+  #-- check nData
+  if a.nData not in services[a.service].nData:
+    checkMsg += 'nData: Number of datasets needs to be among %s\n'%str(services[a.service].nData)
+
+  #-- check nDim
+  if a.nDim not in services[a.service].nDim:
+    checkMsg += 'nDim: Number of dimensions needs to be among %s\n'%str(services[a.service].nDim)
+
+  print('a.lonS: ', a.lonS)
+  #-- check sync
+  if services[a.service].sync==1:
+    checkSync('lonS',  a, a.lonS, checkMsg)
+    checkSync('lonE',  a, a.lonE, checkMsg)
+    checkSync('latS',  a, a.latE, checkMsg)
+    checkSync('latE',  a, a.latE, checkMsg)
+    checkSync('timeS', a, a.timeE, checkMsg)
+    checkSync('timeE', a, a.timeE, checkMsg)
+
+  #-- check axisMethod
+    #for ii in a.dimMethod[i]:
+  tzyx = {
+      0: 'time',
+      1: 'vertical',
+      2: 'latitude',
+      3: 'longitude',
+  }
+  methods1 = {
+    0: '',
+    1: 'Pick a value',
+    2: 'Average over', 
+    3: 'Form an axis', 
+    4: 'Sum over', 
+  }
+  for iD in range(4):
+    if iD==0: 
+      t1 = services[a.service].tMethod
+    elif iD==1: 
+      t1 = services[a.service].zMethod
+    elif iD==2: 
+      t1 = services[a.service].yMethod
+    elif iD==3: 
+      t1 = services[a.service].xMethod
+
+    for i in range(a.nData):
+      if a.dimMethod[i][iD] not in t1:
+        t2 = list(t1)
+        t3 = ['%s'%methods1[int(ii)] for ii in t2]
+        t3 = tuple(t3)
+        checkMsg += 'For dataset %d, The %s subset method needs to be among %s \n'%(i+1, tzyx[iD], str(t3))
+
+  print('checkMsg: ', checkMsg)
+
+  if len(checkMsg)<50:
+    print('checkMsg: ', checkMsg)
+  else:
+    checkMsg1 = '<h3 style="background-color:Orange;">WARNING: Parameter Checking Failed<h3>' + checkMsg.replace('\n', '<br>') + '<br><br>'
+    print('failedCheck: ', checkMsg1)
+    sys.exit(0)
 
 if cr['services__']       == 1:
   # init_ferret
@@ -2385,24 +2627,6 @@ if cr['services__']       == 1:
   #temp1 = 'show data'
   #print temp1
   #pf.run(temp1)
-
-  # figure out dim
-  dimMethod = []
-  for ii in range(len(a.timeMethod)):
-    a1 = '%d%d%d%d'%(
-a.timeMethod[ii], 
-a.presMethod[ii], 
-a.latMethod[ii], 
-a.lonMethod[ii], 
-)
-    print('dimMethod: ', a1)
-    dimMethod.append(a1)
-
-  a.dimMethod = dimMethod
-
-  # plotType__
-  # 3 plotType, for 2d, 1d, and 0d: shade, plot, stats
-  a.nDim = a.dimMethod[0].count('3')
 
   if a.service in ['plot', 'contour', 'plotContour', 'linear','subsetDownload']:
     # those service cannot deal with nDim>2
@@ -2528,7 +2752,7 @@ a.lonMethod[ii],
     for ii in range(a.nData):
       indexStr4 = a.getSubsetIndex4(ii)
       var1aa = a.var1a[ii] + '_A'
-      affix1 = '%d'%(i+1)
+      affix1 = '%d'%(ii+1)
       #cmac.ferretAnomaly(runF, indexStr4, a.var1a[ii], 0, var1aa)
       ferretAnomaly(runF, indexStr4, affix1, a.var1a[ii], var1aa)
       a.var1a[ii] = var1aa
@@ -2565,23 +2789,127 @@ a.lonMethod[ii],
 
   #== mapView__
   if a.service=='mapView':
-    for i in range(a.nData):
-      pass
+    if a.isGetFromNc==0:
+      a.setAspect()
 
-      #-- set_pallette
-      temp1 = str( 'palette %s'%a.colorMap[0] )
+    plotCmd = 'shade'   
+
+    #-- set_pallette
+    temp1 = str( 'palette %s'%a.colorMap[0] )
+    runF(temp1)
+
+    #-- set_level
+    if len(a.ferretLevel[0])>0:
+      vminStr = '/level=%s'%(a.ferretLevel[0])
+    else:
+      vminStr = ''
+
+    for i in range(a.nData):
+      if a.timeMethod[i]==3:
+        temp1 =  '%s%s  %s[t=@ave]'%(plotCmd, vminStr, a.var1a[i]) 
+      else:
+        temp1 =  '%s%s  %s'%(plotCmd, vminStr, a.var1a[i]) 
       runF(temp1)
 
-      #-- set_level
-      if len(a.ferretLevel[0])>0:
-        vminStr = '/level=%s'%(a.ferretLevel[0])
-      else:
-        vminStr = ''
+      temp1 = 'go land'
+      runF(temp1)
 
+      temp1 = 'frame /file="%s/plot%d.png"'%(a.outDir, i+1)
+      runF(temp1)
+
+    #-- combine
+    files = ['%s/plot%d.png'%(a.outDir, ii+1) for ii in range(a.nData)]
+
+    #files = [
+    #  '%s/plot1.png'%a.outDir,
+    #  '%s/plot2.png'%a.outDir,
+    #  '%s/plot3.png'%a.outDir,
+    #]
+    combineImage2(files, 2, figFile)
+  
+    #-- save_first_data
+    temp1 = 'save/clobber/file="%s" %s'%(dataFile, a.var1a[0])
+    runF(temp1)
+
+    sys.exit()
 
   #== timeSeries__
   if a.service=='timeSeries':
-    pass
+
+    temp1 = 'set window/outline=0.5/aspect=%f '%(0.4)
+    runF(temp1)
+
+    if 0:
+      for i in range(a.nData):
+        if i==0:
+          temp1 = 'plot/title="1" %s '%(a.var1a[0] )
+        else:
+          temp1 = 'plot/over/title="%d"  %s'%(i+1, a.var1a[i] )
+        runF(temp1)
+
+    if 1:
+      for i in range(a.nData):
+        if i==0:
+          title1 = 'dataset_1:black'
+        elif i==1:
+          title1 += ', dataset_2:red'
+        elif i==2:
+          title1 += ', dataset_3:green'
+        elif i==3:
+          title1 += ', dataset_4:blue'
+        elif i==4:
+          title1 += ', dataset_5:cyan'
+        elif i==5:
+          title1 += ', dataset_6:magenta'
+
+      for i in range(a.nData):
+        #temp1 = 'plot/symbol=1/line %s'%(a.var1a[i]) 
+        if i==0:
+          temp1 = 'go multi_yaxis_plot1 %s %d "@ac%s"'%(a.var1a[0], a.nData-1, title1 )
+        else:
+          temp1 = 'go multi_yaxis_overlay  %s %d "-" " " "%d" '%(a.var1a[i], i, i+1 )
+        runF(temp1)
+
+    temp1 = 'frame/xpixel=3000/file="%s"'%a.figFile 
+    runF(temp1)
+
+    #-- save_first_data
+    temp1 = 'save/clobber/file="%s" %s'%(dataFile, a.var1a[0])
+    runF(temp1)
+
+    sys.exit()
+
+
+  '''
+  plot/over/i=1:100/title="short two-line<nl>title for the overlay line" i*sin(i/8)
+plot/over/i=1:100/title="here is the key for the<nl>second overlay line" i*sin(i/4)
+
+plot/i=1:100/title="@p2TWO-LINE<NL>RED TITLE"/set i*cos(i/8)
+ppl ylab "A four-line y label.<nl>second line<nl>third line<NL>fourth line"
+ppl xlab "a two-line X label. <nl>Not good together with a multi-line title"
+ppl plot
+
+plot/title="multi-line key labels"/i=1:100 i*sin(i/12)
+plot/over/i=1:100/title="Three-lines<nl>second line<nl>overlay 1" i*sin(i/6)
+plot/over/i=1:100/title="Two-lines<nl>overlay 2" i*cos(i/6)
+plot/over/i=1:100/title="Three-lines<nl>second line<nl>overlay 3" -1*cos(i/10)
+plot/over/i=1:100/title="One-line" i*cos(i/8)
+plot/over/i=1:100/title="Three-line<nl>second<nl>overlay5" i*cos(i/14)
+plot/over/i=1:100/title="Two-line<nl>overlay6" i*cos(i/20)
+plot/over/i=1:100/title="Three-line<nl>second<nl>overlay7" i*sin(i/12)
+ 
+go multi_yaxis_overlay  salt    ! quick and dirty multi-axis overlay
+go multi_yaxis_overlay  dens 2  ! "2" indicating a second overlay
+
+go multi_yaxis_plot1 temp 2             ! "2" variables to follow
+go multi_yaxis_overlay salt 1 "-"       ! overlay #1 left of axis ("-")
+go multi_yaxis_overlay dens 2 "-"       ! overlay #2 left of axis ("-")
+
+go multi_yaxis_plot1 temp 3 "0.21  @CRPlot With Customized Axes"
+go multi_yaxis_overlay salt 1 "-" "33,36,0.5" "My Salinity" 0.25 1.5
+go multi_yaxis_overlay dens 2 "-" " " @CI"Density" .3 1.5  ",1,,,.13,(1PG10.3)"
+
+'''
 
   #== linear__
   if a.service=='linear':
@@ -2660,68 +2988,83 @@ a.lonMethod[ii],
   #== anomaly__
   if a.service=='anomaly':
 
-    temp1 = 'USE climatological_axes'
-    runF(temp1)
-    temp1 = 'CANCEL DATA climatological_axes'
-    runF(temp1)
+    if 0:
+      temp1 = 'USE climatological_axes'
+      runF(temp1)
+      temp1 = 'CANCEL DATA climatological_axes'
+      runF(temp1)
 
-    # not used?
-    d2Str = 'd=1'
+      # not used?
+      d2Str = 'd=1'
 
-    indexStr = a.getSubsetIndex4(0)
-    temp1 = 'define axis/%s:30.436875/units=days tax1'%indexStr
-    runF(temp1)
+      indexStr = a.getSubsetIndex4(0)
+      temp1 = 'define axis/%s:30.436875/units=days tax1'%indexStr
+      runF(temp1)
 
-    # not needed?
-    temp1 = 'define axis/%s:30.436875/units=days tax2'%indexStr
-    runF(temp1)
+      # not needed?
+      #temp1 = 'define axis/%s:30.436875/units=days tax2'%indexStr
+      #runF(temp1)
 
-    refStr = 'GT=month_reg@MOD'
+      refStr = 'GT=month_reg@MOD'
 
-    # regrid to monthly
-    temp1 = 'let dd1 = data01[d=1, gt=tax1]'
-    runF(temp1)
+      # regrid to monthly
+      temp1 = 'let dd1 = data01[gt=tax1]'
+      runF(temp1)
 
-    # regrid to monthly climatology
-    temp1 = 'let dd2c = dd1[%s]'%refStr
-    runF(temp1)
+      # regrid to monthly climatology
+      temp1 = 'let dd2c = dd1[%s]'%refStr
+      runF(temp1)
 
-    #temp1 = 'let dd1b = dd1[t=@ave]'
-    #runF(temp1)
+      #temp1 = 'let dd1b = dd1[t=@ave]'
+      #runF(temp1)
 
-    # regrid the climatology to monthly
-    temp1 = 'let dd2ca = dd2c[gt=tax1]'
-    runF(temp1)
+      # regrid the climatology to monthly
+      temp1 = 'let dd2ca = dd2c[gt=tax1]'
+      runF(temp1)
 
-    # calc anomaly
-    temp1 = 'let dd1a = dd1 - dd2ca'
-    runF(temp1)
+      # calc anomaly
+      temp1 = 'let dd1a = dd1 - dd2ca'
+      runF(temp1)
 
-    # save
-    temp1 = 'define var/bad=-9999.0/title="anomaly" data = dd1a'
-    runF(temp1)
+      # save
+      temp1 = 'define var/bad=-9999.0/title="anomaly" data = dd1a'
+      runF(temp1)
 
-    temp1 = 'save/clobber/file="%s" data'%dataFile
-    runF(temp1)
+      temp1 = 'save/clobber/file="%s" data'%dataFile
+      runF(temp1)
+
+    if 1:
+      indexStr4 = a.getSubsetIndex4(0)
+      var1aa = a.var1a[0] + '_A'
+      affix1 = '%d'%(1)
+      ferretAnomaly(runF, indexStr4, affix1, a.var1a[0], var1aa)
+      a.var1a[0] = var1aa
+
+      # save
+      temp1 = 'define var/bad=-9999.0/title="anomaly" data = %s'%a.var1a[0]
+      runF(temp1)
+
+      temp1 = 'save/clobber/file="%s" data'%dataFile
+      runF(temp1)
 
     # plot
-    temp1 = 'set viewport upper'
-    runF(temp1)
+    #temp1 = 'set viewport upper'
+    #runF(temp1)
 
-    temp1 = 'shade dd1[l=1]'
-    runF(temp1)
-
-    temp1 = 'go land'
-    runF(temp1)
-
-    temp1 = 'set viewport lower'
-    runF(temp1)
-
-    temp1 = 'shade dd1a[l=1]'
+    temp1 = 'shade data[l=1]'
     runF(temp1)
 
     temp1 = 'go land'
     runF(temp1)
+
+    #temp1 = 'set viewport lower'
+    #runF(temp1)
+
+    #temp1 = 'shade dd1a[l=1]'
+    #runF(temp1)
+
+    #temp1 = 'go land'
+    #runF(temp1)
 
     temp1 = 'frame /file="%s"'%figFile
     runF(temp1)

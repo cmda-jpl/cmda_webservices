@@ -395,7 +395,7 @@ function ajaxCall(service) {
       console.log(data.success);
       if (data.success == false) {
         console.log(data.message);
-        if (data.message.search('failed')>-1) {
+        if (data.message.search('failedCheck')>-1) {
           message1 = data.message.slice(14);
         } 
         console.log(data.message);
@@ -417,21 +417,22 @@ function ajaxCall(service) {
         
         vueApp.responseHtml = message1;
         //vueApp.plotUrl = "";
-        vueApp.dataUrl = "No data file due to backend error.";
+        //vueApp.dataUrl = "No data file due to backend error.";
+        vueApp.dataUrl = "";
         vueApp.action1Disabled = false;
+        vueApp.downloadDataDisabled = true;
         return;
       }  // if (data.success == false)
 
       // alert(text);
       vueApp.responseHtml = message1;
       vueApp.plotUrl = data.url;
-
-      // post dataUrl to textarea and enable download button
       vueApp.dataUrl = data.dataUrl;
       vueApp.action1Disabled = false;
       vueApp.downloadDataDisabled = false;
-
-      //displayUrl4a();
+      if (data.dataUrl==="") {
+        vueApp.downloadDataDisabled = true;
+      }
 
     }, // success: function(data, textStatus, xhr)
     error: function(xhr, textStatus, errorThrown) {

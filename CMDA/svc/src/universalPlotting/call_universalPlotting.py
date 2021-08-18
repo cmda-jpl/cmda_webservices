@@ -84,22 +84,19 @@ class call_universalPlotting:
           isImg = os.path.isfile(image_filename)
           isData = os.path.isfile(data_filename)
 
-          fileThere = 1
-          msg2 = ''
           if not isImg: 
-            fileThere = 0
-            msg2 += '!!!!!!! Image file not found. !!!!!!\n'
+            print('!!!!!!! Image file not found. !!!!!!')
+            image_filename = ''
+          else:    
+            print('image_filename: ', image_filename)
+            image_filename = os.path.basename(image_filename)
+
           if not isData: 
-            fileThere = 0
-            msg2 += '!!!!!!!  Data file not found. !!!!!!\n'
-
-          if fileThere==0:
-            return (msg2, '', '')
-
-          image_filename = os.path.basename(image_filename)
-          print('image_filename: ', image_filename)
-          data_filename = os.path.basename(data_filename)
-          print('data_filename: ', data_filename)
+            print('!!!!!!!  Data file not found. !!!!!!\n')
+            data_filename = ''
+          else:    
+            print('data_filename: ', data_filename)
+            data_filename = os.path.basename(data_filename)
 
           return (stdout_value, image_filename, data_filename)
 
