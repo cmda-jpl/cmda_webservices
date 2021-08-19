@@ -2520,6 +2520,17 @@ if cr['check_parameters']       == 1:
   services[key1] = s
 
   
+  key1 = 'linear'
+  s = SERVICE()
+  s.key = key1
+  s.nDim = (3,)
+  s.nData = list(range(1,11))
+  s.tMethod = '01234'
+  s.zMethod = '0124'
+  s.yMethod = '3'
+  s.xMethod = '3'
+  services[key1] = s
+
   key1 = 'anomaly'
   s = SERVICE()
   s.key = key1
@@ -2556,6 +2567,7 @@ if cr['check_parameters']       == 1:
   s = SERVICE()
   s.key = key1
   s.nData = (2,)
+  s.nDim = (3,)
   s.tMethod = '01234'
   s.zMethod = '0124'
   s.yMethod = '3'

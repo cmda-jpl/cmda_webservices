@@ -2,6 +2,8 @@
 == service_calling_sequence
 == check_parameters__
 == cmda1_2_cmda
+
+== todo_20210818
 == notes_latest_
 
 == temp__
@@ -85,6 +87,12 @@ cmda.html : ajaxCall
  - change vueApp.backEngin from cmda1 to universalPlotting6b
  - change common-cmda1 to common-v6c
 - cp common-cmda1.js to common-v6c.js
+
+== todo_20210818
+- corr map, to the low resolution
+- tar file for kay
+- Terry's 
+- test para checker
 
 == notes_latest_
 
