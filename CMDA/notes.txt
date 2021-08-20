@@ -108,10 +108,13 @@ Change steps:
 - cp common-cmda1.js to common-v6c.js
 
 == todo_20210818
--5 tar file for kay
--5 Terry's 
+/-5 tar file for kay
+/-5 Terry's 
 - corr map, to the low resolution
-- test para checker
+- test para checker, review
+- opendap
+- test more
+- less message display
 
 == notes_latest_
 
