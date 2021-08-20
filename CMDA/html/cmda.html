@@ -155,7 +155,7 @@ cmac/html/codeStorage.html
 <script src='js2/fileList.js?1011'></script>
 <!-- <script src='js2/common-v6c.js?22111'></script>  -->
 <!-- <script src='js2/common-cmda1.js?22111'></script>  -->
-<script src='js2/common-v6c.js?21111'></script>
+<script src='js2/common-v6c.js?11dfddf'></script>
 
 <title>Universal Analysis Service</title>
 
@@ -721,10 +721,11 @@ Select Datasets and Variables
 <!-- chose_filename -->
 <div class="row">
  <div class="col-sm-4 right1" >
- Search Filename/varNames/title: <a href="#" data-html='true' data-toggle="tooltip" title="The match is case insensitive. Multiple words are separated by commas. The list of words can be divided by the word 'or'. A word can be preceded by the word 'not'. <br>Here is an example: The search string 'gldas,mrso3,or,coads,or,not,zo,grace' produces a list of datasets that contain both 'gldas' and 'mrso3', or contain 'coads', or contain 'grace' but not 'zo'.">(info)</a>
+ Search Filename/varNames/title: <a href="#" data-html='true' data-toggle="tooltip" data-placement="bottom" title="The match is case insensitive. Multiple words are separated by commas. The list of words can be divided by the word 'or'. A word can be preceded by the word 'not'. <br>Here is an example: The search string 'gldas,mrso3,or,coads,or,not,zo,grace' produces a list of datasets that contain both 'gldas' and 'mrso3', or contain 'coads', or contain 'grace' but not 'zo'.">(info)</a>
  </div>
  <div class="col-sm-8 left1">
-  <input type='checkbox' v-model='fnStr9Ch'> <input type='text' v-model="fnStr9" v-on:keyup.enter="filterFile" class="selectf">
+  <!-- <input type='checkbox' v-model='fnStr9Ch'>  -->
+  <input type='text' v-model="fnStr9" v-on:keyup.enter="filterFile" class="selectf">
  </div>
 </div> <!-- row -->
 
@@ -936,7 +937,7 @@ Data Subsetting
 
 <!-- timeWidget_ -->
 <div v-if="dim2.indexOf('time')>-1">
-<div class="row" v-if="dim2.indexOf('time')>-1">
+<div class="row">
   <div class="col-sm-4 right1">
     Time (year-month-day):
   </div>
@@ -953,12 +954,28 @@ Data Subsetting
       <input v-show="subs2.timeMethod!='1'" v-model="subs2.timeS23" size=10>
       <input v-show="subs2.timeMethod!='1'" v-model="subs2.timeE" size=10>
       <span v-show="subs2.timeMethod=='3'">
-      <span v-show="!api9.hideAnomaly">
-      <label class="checkbox-inline"><input type="checkbox" v-model="anomaly0" unchecked >Use Anomaly</label>
       </span>
-      </span>
-      <button class="btn btn-default" v-show="subs2.timeMethod!='1'" v-on:click="setTimeFullRangeV()">Use Full Range</button>
-      <span>Time Range: {{timeDashV(this.timeSLimAll) + ' to ' + timeDashV(this.timeELimAll)}} </span>
+  </div>
+</div> <!-- row -->
+
+<div class="row">
+  <div class="col-sm-4 right1">
+    Preset Time Range:
+  </div>
+  <div class="col-sm-8 left1">
+    <div v-show="subs2.timeMethod!='1'">
+    <button class="btn btn-default"  v-on:click="yN=1;yNFix=0; yNChange+=1">One Year</button> 
+    <button class="btn btn-default"  v-on:click="yN+=1;yNFix=1; yNChange+=1">Add 1 Year</button> 
+    <button class="btn btn-default"  v-on:click="yN-=1;yNFix=1; yNChange+=1">Reduce 1 Year</button> 
+    <button class="btn btn-default"  v-on:click="yN=-1;yNFix=0; yNChange+=1">Full Range</button> 
+    </div>
+
+    <div v-show="subs2.timeMethod=='1'">
+    <button class="btn btn-default"  v-on:click="yM=0;yMGo=0; yMChange+=1">At Beginning</button> 
+    <button class="btn btn-default"  v-on:click="yMGo=1; yMChange+=1">+1 year</button> 
+    <button class="btn btn-default"  v-on:click="yMGo=-1; yMChange+=1">-1 year</button> 
+    <button class="btn btn-default"  v-on:click="yM=10;yMGo=0; yMChange+=1">At End</button> 
+    </div>
   </div>
 </div> <!-- row -->
 
@@ -968,11 +985,26 @@ Data Subsetting
     Time Procession:
   </div>
   <div class="col-sm-8 left1">
+
+      <span v-show="!api9.hideAnomaly">
+      <label class="checkbox-inline"><input type="checkbox" v-model="anomaly0" unchecked >Use Anomaly</label>
+      </span>
+
 <!-- should not use on:click. it was too early to fire -->
     <label class="checkbox-inline"><input type="checkbox" v-model="yearMean" v-on:change="yearMeanClick" unchecked >Yearly Mean</label>
     <label class="checkbox-inline"><input type="checkbox" v-model="quarterMean" v-on:change="quarterMeanClick()" unchecked >Quarterly Mean</label>
   </div>
 </div> <!-- row -->
+
+<div class="row">
+  <div class="col-sm-4 right1">
+    Dataset Time Range:
+  </div>
+      <span><b>{{timeDashV(this.timeSLimAll) + ' to ' + timeDashV(this.timeELimAll)}}</b> </span>
+  <div class="col-sm-8 left1">
+  </div>
+</div> <!-- row -->
+
 </div> <!-- v-show -->
 
 </div> <!-- if time -->
@@ -1318,6 +1350,13 @@ var vueApp = new Vue({
     timeELim: 20001215,
     timeSLimAll: 20000115,
     timeELimAll: 20001215,
+    yN: 0,  // number of years in time range
+    yNChange: -10000,  // triger for yN
+    yNFix: 0,  // whether to fix the endtime
+    yM: 0,  // where to pick a time
+    yMGo: 0,  // 
+    yMChange: -10000,  // triger for yN
+
 
     dataset2Subset: '',
     var2Subset: '',
@@ -1466,7 +1505,8 @@ var vueApp = new Vue({
 
       // filter_by_fn
       var words0 = this.fnStr9.split(',');
-      if (words0.length>0 && this.fnStr9Ch) {
+      //if (words0.length>0 && this.fnStr9Ch) {
+      if (words0.length>0 ) {
         change1 = 1;
 
         var text1 = [];
@@ -1721,6 +1761,10 @@ var vueApp = new Vue({
     // setTimeFullRangeV__
     setTimeFullRangeV: function() {
       setTimeFullRange();
+    },
+
+    setTimePickV: function() {
+      setTimePick();
     },
 
     // timeDashV__
@@ -2010,7 +2054,19 @@ var vueApp = new Vue({
       this.insertImage();
     },
 
+    yNChange: function() {
+      //console.log('yN: ' + this.yN);
+      //console.log('yNChange: ' + this.yNChange);
+      this.setTimeFullRangeV();
+    },
+
+    yMChange: function() {
+      console.log('yM: ' + this.yM);
+      console.log('yMChange: ' + this.yMChange);
+      this.setTimePickV();
+    },
   },
+
 
   // computed__
   computed: {

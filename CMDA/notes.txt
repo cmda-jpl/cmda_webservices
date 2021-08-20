@@ -81,7 +81,26 @@ cmda.html : ajaxCall
 - # time or 
 
 
-== cmda1_2_cmda
+#== cmda1_2_cmda
+# commands:
+
+kk src
+nn1=universalPlotting6b/pythonWrapper
+nn2=cmda1/pythonWrapper
+rsync -av $nn2 $nn1
+
+kk web
+nn1=cmda.html
+nn2=cmda1.html
+#rsync -av $nn2 $nn1
+
+kk web
+cd js2
+nn1=common-v6c.js
+nn2=common-cmda1.js
+rsync -av $nn2 $nn1
+
+Change steps:
 - cp pythonWrapper from cmda1 to universalPlotting6b
 - cp cmda1.html to cmda.html, 
  - change vueApp.backEngin from cmda1 to universalPlotting6b
@@ -89,9 +108,9 @@ cmda.html : ajaxCall
 - cp common-cmda1.js to common-v6c.js
 
 == todo_20210818
+-5 tar file for kay
+-5 Terry's 
 - corr map, to the low resolution
-- tar file for kay
-- Terry's 
 - test para checker
 
 == notes_latest_

@@ -319,8 +319,41 @@ function copyBrowserUrl() {
 // function_setTimeFullRange__() {
 function setTimeFullRange() {
   if (vueApp.timeELim>= vueApp.timeSLim) {
-    vueApp.subs2.timeS23 = timeDash(vueApp.timeSLim);
-    vueApp.subs2.timeE = timeDash(vueApp.timeELim);
+    if (vueApp.yN<0) {
+      vueApp.subs2.timeS23 = timeDash(vueApp.timeSLim);
+      vueApp.subs2.timeE = timeDash(vueApp.timeELim);
+      vueApp.yN = Math.round((vueApp.timeELim - vueApp.timeSLim)/10000);
+      console.log('yN in fun: ' + vueApp.yN);
+      
+    } else {
+      if (vueApp.yNFix==0) {
+        var time9 = vueApp.timeELim;
+        vueApp.subs2.timeE = timeDash(time9);
+      } else {
+        var time9 = Number(vueApp.subs2.timeE.replaceAll("-",""));
+      }
+      var time1 = time9 - vueApp.yN * 10000;
+      console.log(vueApp.timeSLim);
+      console.log('time1: ' +  time1);
+      time1 = Math.max( time1, vueApp.timeSLim);
+      vueApp.subs2.timeS23 = timeDash(time1);
+      console.log('time1: ' +  time1);
+    }
+  }
+}
+
+function setTimePick() {
+  if (vueApp.timeELim>= vueApp.timeSLim) {
+    if (vueApp.yMGo==0) {
+      if (vueApp.yM==0) {
+        var time9 = vueApp.timeSLim;
+      } else if (vueApp.yM==10) {
+        var time9 = vueApp.timeELim;
+      }
+    } else {
+      var time9 = Number(vueApp.subs2.timeS1.replaceAll("-","")) + vueApp.yMGo * 10000;
+    }
+    vueApp.subs2.timeS1 = timeDash(time9);
   }
 }
 
@@ -330,7 +363,6 @@ function timeDash(t1) {
     return t2.slice(0,4) + "-" + t2.slice(4,6) 
   }
   return t2.slice(0,4) + "-" + t2.slice(4,6) + "-" + t2.slice(6,8)
-
 }
 
 // addDataList_(ID) {

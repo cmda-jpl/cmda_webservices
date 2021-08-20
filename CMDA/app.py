@@ -372,7 +372,7 @@ def serviceFunc(service):
       #  print(('****** Error: %s not exist' % dataFileName))
       #  dataUrl = failedImgUrl
 
-      print(('message: ', message))
+      #print(('message: ', message))
 
       #if failedCheck or (len(message) == 0) or (message.find('No Data') >= 0):
       if failedCheck:
@@ -415,6 +415,7 @@ def serviceFunc(service):
     return jsonify({
         'success': success,
         'message': message,
+        #'message': 'Jos is done. No further message.',
         'url': plotUrl,
         'dataUrl': dataUrl
     })

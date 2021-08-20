@@ -10,22 +10,6 @@ rsync8022 /home/btang/projects/cmac/git2/CMDA0/JPL_CMDA/services/svc/svc/src/uni
 
 zzzz  questions
 
-kk src
-nn1=universalPlotting6b/pythonWrapper
-nn2=cmda1/pythonWrapper
-rsync -av $nn2 $nn1
-
-kk web
-nn1=cmda.html
-nn2=cmda1.html
-#rsync -av $nn2 $nn1
-
-kk web
-cd js2
-nn1=common-v6c.js
-nn2=common-cmda1.js
-#rsync -av $nn2 $nn1
-
  fn2 = '%s/filesDict9.js'%outDir
   dict2 = yaml.safe_load( open(fn2).read() )
 
@@ -123,11 +107,13 @@ cr = {
     #== calc_min_max, before putting in lat/lon grid
     #== plot_variance
     #== save_eof
-    #== plot_tser_ferret
-    #== plot_tser_python
+    #== plot_tser_ferret  # not used
+    #== plot_tser_ferret2  # using multi_view
+    #== plot_tser_python  # not used
     #== plot_patterns_python
     #== plot_patterns_ferret
     #== concatenate_plots
+  #== eof__2  in development
   #== diffPlot__
     #-- plot_data1
     #-- plot_data2
@@ -2556,7 +2542,7 @@ if cr['check_parameters']       == 1:
   s = SERVICE()
   s.key = key1
   s.nData = (2,)
-  s.nDim = (3,)
+  s.nDim = (2,3,)
   s.tMethod = '01234'
   s.zMethod = '0124'
   s.yMethod = '3'
@@ -3342,6 +3328,8 @@ go multi_yaxis_overlay dens 2 "-" " " @CI"Density" .3 1.5  ",1,,,.13,(1PG10.3)"
  
     dims1 = ncVar1.dimensions
     time1 = nc1.variables[dims1[0]][:]
+    print('time1: ',time1)
+
     timeUnits = nc1.variables[dims1[0]].units
     lon1 = nc1.variables[dims1[-1]][:]
     lat1 = nc1.variables[dims1[-2]][:]
@@ -3548,15 +3536,515 @@ go multi_yaxis_overlay dens 2 "-" " " @CI"Density" .3 1.5  ",1,,,.13,(1PG10.3)"
         NC1.axislib0['t']['unit'] = timeUnits
 
         NC1.save2nc(
-  p1.tser[:nPlot], 
-  format='NETCDF3_CLASSIC',
-  name='tser',
+            p1.tser[:nPlot], 
+            format='NETCDF3_CLASSIC',
+            name='tser',
+            ncfile=tempFile9,
+            missing_value=missingV, 
+            newfile=1, 
+            axisorder='it', 
+            axisarray=[ii, time1]
+            )
+
+      # ferret window
+      runF('set window/xinches=%.1f/yinches=%.1f'
+         %(tserW, tserH*nPlot))
+
+      # define viewports
+      for i in range(nPlot):
+        dY = 1./nPlot
+        runF( 'DEFINE VIEWPORT/XLIMITS=0.,1/yLIMITS=%.2f,%.2f v%02d'
+            %(i*dY, (i+1)*dY, nPlot-i) )
+
+      # open in ferret
+      runF( 'use "%s"'%fn )
+      runF( 'show data' )
+ 
+      # plot
+      #for i in ():
+      for i in range(nPlot):
+        runF( 'set view v%02d'%(i+1 ) )
+        runF( 'go margins 0.5' )
+        runF( 'plot/hgrat=(DASH,COLOR=lightblue)/vgrat=(DASH,COLOR=lightblue)/set tser[k=%d]'%(i+1) )
+        runF( 'ppl list labels ' )
+        runF( 'ppl title "EOF %d"'%(i+1) )
+        runF( 'ppl ylab ' )
+        runF( 'go unlabel 1' )
+        runF( 'go unlabel 2' )
+        runF( 'ppl plot ' )
+
+      # save
+      print('save tser png')
+      figFileTser = '%s/tser.png'%a.outDir
+      runF( 'frame/file="%s"/ypixels=%d'%(figFileTser, tserH*nPlot*100) )
+
+    #== plot_tser_ferret2
+    if 1:
+      print('in tser_ferret2')
+      if 1:
+        sys.path.insert(0, '../py')
+        import NC_btang_v4 as NC1
+
+        print('time1, p1.tser: ', time1.shape, p1.tser.shape)
+        # save to nc file
+        missingV = -9999.0
+        tempFile9 = tempfile.mkstemp(suffix='.nc', dir=a.outDir)[1]
+        print("EOF tser to: ", tempFile9)
+        ii = (np.arange(nPlot)+1).astype('i')
+
+        NC1.axislib0['t']['unit'] = timeUnits
+
+        NC1.save2nc(
+            p1.tser[:nPlot], 
+            format='NETCDF3_CLASSIC',
+            name='tser',
+            ncfile=tempFile9,
+            missing_value=missingV, 
+            newfile=1, 
+            axisorder='it', 
+            axisarray=[ii, time1]
+            )
+
+      tserW = 12
+      tserH = 6.6  # 3300 pixel height
+
+      # open in ferret
+      runF( 'use "%s"'%tempFile9 )
+      runF( 'show data' )
+
+       # ferret window
+      runF('set window/xinches=%.1f/yinches=%.1f'
+         %(tserW, tserH*nPlot))
+
+      # define viewports
+      #temp1 = 'go multi_view 5,1'
+      temp1 = 'go multi_view 5,1, 0.8, 0.1, ,   0.10, 0.1, 0.08'
+      runF(temp1)
+
+      # plot
+      #for i in ():
+      for i in range(nPlot):
+        runF( 'set view v%d1'%(i+1 ) )
+        #runF( 'go margins 0.5' )
+        runF( 'plot/hgrat=(DASH,COLOR=lightblue)/vgrat=(DASH,COLOR=lightblue)/set tser[m=%d]'%(i+1) )
+        runF( 'ppl list labels ' )
+        runF( 'ppl title "EOF %d"'%(i+1) )
+        runF( 'ppl ylab ' )
+        runF( 'go unlabel 1' )
+        runF( 'go unlabel 2' )
+        runF( 'ppl plot ' )
+
+      # save
+      figFileTser = '%s/tser.png'%a.outDir
+      runF( 'frame/file="%s"/ypixels=%d'%(figFileTser, tserH*nPlot*100) )
+
+
+    #== plot_tser_python
+    if 0:
+      tserW = 8
+      tserH = 6
+
+      fig1 = Mat.figure(figsize=(tserW,tserH*nPlot))
+      Mat.clf()
+
+      min1 = p1.tser.min()
+      max1 = p1.tser.max()
+      max1 = max(max1, np.abs(min1))
+
+      try:
+        time9 = convertTime(time1, timeUnits)
+      except:
+        time9 = None   
+
+      for i in range(nPlot):
+        ax = Mat.subplot(nPlot,1,i+1)
+        if time9 is None:
+          plotTser(p1.tser, i,i, max1)
+        else:
+          plotTser2(time9, p1.tser, i,i, max1)
+
+      figFileTser = '%s/tser.png'%a.outDir
+      Mat.savefig(figFileTser, dpi=100)
+
+    #== plot_patterns_python
+    if 0:
+      from mpl_toolkits.basemap import Basemap
+      patternH = 6.0
+
+      aspect1 = (lat1[-1]-lat1[0]) / (lon1[-1]-lon1[0])
+      patternW = min( patternH/aspect1, 12)
+
+      Mat.clf()
+      xPlot = 1
+      yPlot = ((nPlot-1)/xPlot+1)
+      f1 =Mat.figure(figsize=(patternW*xPlot, patternH*yPlot))
+
+      lon2 = find_bound(lon1)
+      lat2 = find_bound(lat1)
+
+      lat2[0] = max(-90, lat2[0])
+      lat2[-1] = min(90, lat2[-1])
+
+      m = Basemap(lon2[0], lat2[0], lon2[-1], lat2[-1], resolution='c', suppress_ticks=False)
+
+      for i in range(nPlot):
+        ax = Mat.subplot(yPlot,xPlot,i+1)
+        plotPattern(i, min2, max2)
+
+      figFilePattern = '%s/pattern.png'%a.outDir
+      Mat.savefig(figFilePattern, dpi=100)
+
+    #== plot_patterns_ferret
+    if 1:
+      if 0:
+        sys.path.insert(0, '../py')
+        import NC_btang_v4 as NC1
+
+        # save to nc file
+        missingV = -9999.0
+        try:
+          pattern2 = pattern1[:nPlot].filled(missingV)
+        except:
+          pattern2 = pattern1[:nPlot]
+        print('pattern2.shape: ', pattern2.shape, nPlot)
+        print('lon1, lat1: ', lon1.shape, lat1.shape)
+        tempFile9 = tempfile.mkstemp(suffix='.nc', dir=a.outDir)[1]
+        print("EOF patterns to: ", tempFile9)
+        ii = (np.arange(nPlot)+1).astype('i')
+
+        NC1.save2nc(
+  pattern2, 
+  name='pattern',
   ncfile=tempFile9,
   missing_value=missingV, 
   newfile=1, 
-  axisorder='it', 
-  axisarray=[ii, time1]
+  axisorder='iyx', 
+  axisarray=[ii, lat1, lon1]
   )
+
+      # ferret window
+      patternH = 6.0  # 6.0 * 5 * 100 = 3000 pixel height
+      import math
+      dLat = float(a.latE[0] - a.latS[0])
+      mLat = (a.latE[0] + a.latS[0])/2.0
+      dLon = float(a.lonE[0] - a.lonS[0]) * math.cos(mLat/180.0*math.pi)
+      aspect1 = max(min(nPlot*1.2*dLat/dLon,20),0.4)
+      
+      runF('set window/outline=0.5/aspect=%.3f/yinches=%.1f'
+         %(aspect1, patternH*nPlot))
+
+      runF( 'palette %s'%a.colorMap[0] )
+      if len(a.ferretLevel[0])>0:
+        levelStr = '/level=%s'%a.ferretLevel[0]
+      else:
+        levelStr = ''
+
+      # define viewports
+      for i in range(nPlot):
+        dY = 1./nPlot
+        runF( 'DEFINE VIEWPORT/XLIMITS=0.,1/yLIMITS=%.2f,%.2f v%02d'
+            %(i*dY, (i+1)*dY, nPlot-i) )
+
+      # open in ferret
+      runF( 'use "%s"'%fn )
+      runF( 'show data' )
+      
+      # plot
+      for i in range(nPlot):
+        runF( 'set view v%02d'%(i+1 ) )
+        runF( 'go margins 0.5' )
+        runF( 'shade/set%s pattern[k=%d]'%(levelStr, i+1 ) )
+        runF( 'ppl xlab EOF %d'%(i+1) )
+        runF( 'ppl ylab ' )
+        runF( 'ppl title ' )
+        runF( 'go unlabel 1' )
+        runF( 'go unlabel 2' )
+        runF( 'ppl shade ' )
+        runF( 'go land ' )
+
+      # save
+      figFilePattern = '%s/pattern.png'%a.outDir
+      runF( 'frame/file="%s"/ypixels=%d'%(figFilePattern, patternH*nPlot*100) )
+
+    #== concatenate_plots
+    if 1:
+      from PIL import Image
+      import PIL
+
+      print('files--')
+      files = [
+        figFileVariance, 
+        figFileTser, 
+        figFilePattern, 
+        ]
+      print(files)
+
+      images = list(map(Image.open, files))
+      for i in images:
+        print(i.size)
+
+      # no need now, as both plots are 3000 height
+      if 0:  # resize tser plot to match the patern plot height.
+        h2 = images[2].size[1]
+        w1 = images[1].size[0]
+        h1 = images[1].size[1]
+        new1 = (int((h2/h1)*w1), h2)
+        print('new size: ', new1)
+        images[1] = images[1].resize(new1,resample=PIL.Image.BILINEAR)
+        print('new size: ', images[1].size)
+
+      w1 = images[1].size[0]
+      h1 = images[1].size[1]
+      images[1] = images[1].crop((0,200, w1, h1-100))
+
+      w = images[1].size[0] + images[2].size[0] 
+      h = images[0].size[1] + max( images[1].size[1], images[2].size[1] )
+
+      result = Image.new("RGBA", (w, h))
+
+      result.paste( images[0], (0, 0) )
+      result.paste( images[1], (0, images[0].size[1]) )
+      result.paste( images[2], (images[1].size[0], images[0].size[1]) )
+
+      result.save(figFile)
+
+    sys.exit()
+
+  #== eof__2
+  if a.service=='EOF':
+    import xarray as xr
+
+    temp1 = 'save/clobber/file="%s/temp9.nc" %s'%(a.outDir, a.var1a[0]) 
+    runF(temp1)
+
+    
+    nc1 = xr.open_dataset('%s/temp9.nc'%(a.outDir))
+    ncVar1 = nc1.variables[a.var1a[0]]
+    data1 = ncVar1[:]
+    print('data1: ', data1.shape)
+ 
+    dims1 = ncVar1.dimensions
+    time1 = nc1.variables[dims1[0]][:]
+    print('time1: ',time1)
+
+    timeUnits = nc1.variables[dims1[0]].units
+    lon1 = nc1.variables[dims1[-1]][:]
+    lat1 = nc1.variables[dims1[-2]][:]
+    nc1.close()
+
+    nLon = len(lon1)
+    nLat = len(lat1)
+
+    # import__
+    cwd2 = os.getcwd()
+    os.chdir(cwd1)
+
+    from netCDF4 import Dataset
+    import netCDF4 as nC4
+    sys.path.insert(0, '../py')
+    import NC_btang_v4 as NC1
+    import pca_v4 as pca
+
+    import matplotlib 
+    matplotlib.use('Agg')  
+    import matplotlib.pylab as Mat
+    Mat.ioff()
+    #from mpl_toolkits.basemap import NetCDFFile
+    from mpl_toolkits.basemap import Basemap
+
+    import matplotlib as mpl
+    mpl.rcParams['image.cmap'] = 'gist_rainbow'
+
+    os.chdir(cwd2)
+
+    print('data1.shape: ', data1.shape)
+    data1.shape = data1.shape[0], nLon*nLat
+
+    weightLat = np.cos(lat1*np.pi/180.)
+    weight1 = np.ones( (nLat, nLon), dtype=np.float32 )
+    weight1.shape = nLon*nLat, 
+
+    # filter out invalid
+    temp1 = np.ma.arange(5)
+    valid1 = np.ones( data1.shape, dtype=bool )
+    isMask = 0
+    if type(data1) == type(temp1):
+      if data1.count() < data1.shape[0]*data1.shape[1] :
+        isMask = 1
+        valid1 = ~( data1.mask )
+        print('data1.count() < np.prod(data1.shape) :', data1.count(), np.prod(data1.shape) )
+
+    print('isMask: ', isMask)
+    # remove time of most invalid
+    if isMask:
+      temp3 = valid1.sum(axis=1)
+      #valid1b = temp3>temp3.mean()*0.1
+      valid1b = temp3>temp3.mean()*0.5
+      if valid1b.sum()<data1.shape[0]:
+        data1 = data1[valid1b,:]
+        valid1 = valid1[valid1b,:]
+        time1 = time1[valid1b]
+  
+    # invalid times and grid:
+    temp2 = valid1.sum(axis=0)
+    valid = temp2==data1.shape[0]  # valid lat/lon points
+
+    if 0:
+      for jj in (10000,20000,30000,40000):
+        print(jj)
+        print((temp2[jj]))
+        for i in range(data1.shape[0]): print((int(valid1[i,jj])), end=' ')
+        print(' ')
+
+      #print('np.isfortran:')
+      #print(np.isfortran(data1))
+      print('data1.shape')
+      print((data1.shape))
+      print('temp2')
+      print(temp2)
+      print('valid1.sum(): ', valid1.sum())
+      print('valid1a.sum(): ', valid1a.sum())
+
+    if valid.sum()<data1.shape[1]:
+      data1c = data1[:, valid]
+      weight1 = weight1[valid]
+      isGap = 1
+    else:
+      data1c = data1
+      isGap = 0
+
+    data1c = np.array(data1c)
+    mean1 = data1c.mean(axis=0)
+    data1c = data1c - mean1[np.newaxis, :]
+    print('data1c.shape: ', data1c.shape)
+    nPoint = len(data1c)
+    nFeature = data1c.shape[1]
+
+    # calc_PCA
+    nKeepMax = min(nPoint, nFeature)
+    nKeep = min(10, nKeepMax)
+    #weight1 = None
+    p1= pca.PCA(data1c,missingvalue=None, nkeep=nKeep, mask=None, weight=weight1)
+    p1.calculate2()
+
+    # labels for the variables
+    lab = [' ',]
+    #for i in range(a.nVar):
+    #  if a.pres[i]>0:
+    #    pStr = '[p=%.0f]'%a.pres[i]
+    #  else:
+    #    pStr = ''
+    #  lab.append( '%s_%s:%s%s'%(a.center[i], a.model[i], a.varName[i], pStr) )
+
+    #nPlot = nKeep
+    nPlot = 5
+
+    #== calc_min_max, before putting in lat/lon grid
+    min2 = p1.pattern.min()
+    max2 = p1.pattern.max()
+
+    # fill lat/lon
+    if isGap:
+      pattern1 = np.ma.ones( (nPlot, nLon*nLat), dtype = np.float32 ) * np.ma.masked
+      pattern1[:, valid] = p1.pattern[:nPlot, :]
+    else:
+      pattern1 = p1.pattern[:nPlot, :]
+  
+    pattern1.shape = nPlot, nLat, nLon
+
+    #== save_eof
+    sys.path.insert(0, '../py')
+    import NC_btang_v4 as NC1
+
+    fn = '%s/data.nc'%a.outDir
+    index1 = np.arange(nPlot).astype('i') + 1
+    index1a = np.arange(nKeep).astype('i') + 1
+
+    # save pattern
+    print(' save pattern ')
+    missingV = -9999.0
+    try:
+      pattern2 = pattern1[:nPlot].filled(missingV)
+    except:
+      pattern2 = pattern1[:nPlot]
+
+    NC1.save2nc(
+      pattern2,
+      ncfile=fn, 
+      name='pattern',
+      newfile=1,
+      format='NETCDF3_CLASSIC',
+      missing_value=missingV,
+      axisorder='zyx', 
+      axisarray=[index1, lat1, lon1])
+
+    # save tser
+    print(' save tser ')
+    NC1.axislib0['t']['unit'] = timeUnits
+    NC1.save2nc(
+      p1.tser[:nPlot], 
+      format='NETCDF3_CLASSIC',
+      name='tser',
+      ncfile=fn,
+      missing_value=missingV, 
+      newfile=0, 
+      axisorder='zt', 
+      axisarray=[index1, time1])
+
+    # save varP
+    print(' save varP ')
+    NC1.save2nc(
+      p1.varP[:nPlot], 
+      ncfile=fn, 
+      name='varP',
+      newfile=0,
+      format='NETCDF3_CLASSIC',
+      missing_value=missingV,
+      axisorder='z', 
+      axisarray=[index1])
+ 
+    #== plot_variance
+    if 1:
+      fig1 = Mat.figure(figsize=(10,6))
+      Mat.clf()
+      #varP[0] = 0.
+      Mat.plot(np.arange(1,nKeep+1), p1.varP[:nKeep]*100, 'o')
+      Mat.xlim(0.5, nKeep+0.5)
+      Mat.grid()
+      Mat.ylabel('Percentage of Variance')
+      Mat.title('Variances of the First %d EOFs, for %s'%(nKeep, lab[0]) )
+
+      figFileVariance = '%s/variance.png'%a.outDir
+      Mat.savefig(figFileVariance, dpi=100)
+
+    #== plot_tser_ferret
+    if 0:
+      tserW = 8
+      tserH = 6
+
+      if 0:
+        sys.path.insert(0, '../py')
+        import NC_btang_v4 as NC1
+
+        print('time1, p1.tser: ', time1.shape, p1.tser.shape)
+        # save to nc file
+        missingV = -9999.0
+        tempFile9 = tempfile.mkstemp(suffix='.nc', dir=a.outDir)[1]
+        print("EOF tser to: ", tempFile9)
+        ii = (np.arange(nPlot)+1).astype('i')
+
+        NC1.axislib0['t']['unit'] = timeUnits
+
+        NC1.save2nc(
+            p1.tser[:nPlot], 
+            format='NETCDF3_CLASSIC',
+            name='tser',
+            ncfile=tempFile9,
+            missing_value=missingV, 
+            newfile=1, 
+            axisorder='it', 
+            axisarray=[ii, time1]
+            )
 
       # ferret window
       runF('set window/xinches=%.1f/yinches=%.1f'
