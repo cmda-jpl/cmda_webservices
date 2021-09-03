@@ -1,0 +1,294 @@
+#!/home/btang/install/bin/python25
+
+'''
+exec(open('/home/ubuntu/CMDA0/svc/src/tools/shtpy192a').read())
+
+kk sp
+sshec2 shtpy192a $ecw1:/home/ubuntu/CMDA0/svc/src/tools
+
+sshec2 $ecw1:/home/ubuntu/CMDA0/svc/src/tools/shtpy192a  .
+
+'''
+codeNum = '192a'
+import os
+HOME = '/home/bytang'
+homeby = HOME
+
+cr = {
+#                              1  2   3  4
+'import_':              1,   # 0  1   1  0
+#parameters_':  
+#parameters__':
+'command_arg':          0,   # 1  1
+# class_FIX_NC:
+'correct1_':            0,   # 1  1   1  0
+'kubar_2021':           0,   # 1  1
+'trmm_lon':             1,   # 1  1
+'':        0,   # 1  1
+'':        0,   # 1  1
+'':        0,   # 1  1
+'':        0,   # 1  1
+}
+
+#if cr['']       == 1:
+#if cr['']       == 1:
+
+# 1 -- 
+# 
+
+if cr['import_']       == 1:
+  # Python
+  import os, sys, string, time, glob
+  #import pickle
+  #sys.path.append('%s/bin/py'%homeby)
+  #import btang
+  
+  import netCDF4
+  from netCDF4 import Dataset
+  import numpy as np
+
+  import xarray as xr
+
+  #sys.path.append('/home/svc/new_github/CMDA/JPL_CMDA/services/svc/svc/src/py')
+  #import  checkNc2
+  #reload(checkNc2)
+
+  '''
+fns = [
+#"/mnt/data/data_clean/cmip5/users/ksuselj/MPmor_4K_v1.nc",
+"/mnt/data/data_clean/cmip5/users/ksuselj/COkf_4K_v1.nc",
+"/mnt/data/data_clean/cmip5/users/ksuselj/COtie_4K_v1.nc",
+"/mnt/data/data_clean/cmip5/users/ksuselj/MPwdm_4K_v1.nc",
+"/mnt/data/data_clean/cmip5/users/ksuselj/PBLnn2_4K_v1.nc",
+"/mnt/data/data_clean/cmip5/users/ksuselj/PBLysu_4K_v1.nc",
+"/mnt/data/data_clean/cmip5/users/ksuselj/RAcam_4K_v1.nc",
+"/mnt/data/data_clean/cmip5/users/ksuselj/St_4K_v1.nc",
+]
+'''
+  # numpy
+  import numpy as np
+
+  # netCDF
+  if 0:
+    import Scientific.IO.NetCDF as NC
+    import NC_btang as NC1
+
+    from netCDF4 import Dataset
+
+    import Nio
+
+
+if 0:
+  pass
+  #reload( jplsvm)
+
+#btang.tee(HOME + '/outputs/shtpy%s_%s'%(codeNum, time.strftime('%Y%m%d_%H%M%S')))
+
+t00 = time.time()
+print('======================')
+print('beginning: shtpy%s'%codeNum, time.ctime(time.time()))
+print('======================\n')
+
+# parameters_
+mainDir = '/hosts/ourocean2/data9/btang/blending_02/spectrum'
+dataDir = mainDir
+outDir = mainDir
+
+#fn = '/hosts/ourocean2/data9/btang/blending_02/data/blended/200901_atlantic.nc'
+dataDir = ''
+
+#os.chdir(mainDir)
+# parameters__
+
+if 'beenCalled' in dir():
+  if beenCalled==1:
+    print('=== using dataDir_z plotAffix_z ==')
+    time.sleep(2)
+    dataDir = dataDir_z
+
+if cr['command_arg']       == 1:
+  if len(sys.argv)>1:
+    argv = sys.argv
+    year   = int(argv[1])
+    month  = int(argv[2])
+    day    = int(argv[3])
+
+# 
+# class_FIX_NC:
+class FIX_NC:
+  def __init__(self): 
+    self.timeName = 'time'
+    self.lonName = 'lon'
+    self.latName = 'lat'
+    self.doWhat = []
+
+  def ncdump(self):
+    temp1 = 'ls -l %s'%self.fn
+    os.system(temp1)
+
+    temp1 = 'ncdump -c %s'%self.fn
+    os.system(temp1)
+
+  def open(self):
+    nc = Dataset(self.fn, 'r+')
+    keys = nc.variables.keys()
+    print('doing file: %s '%self.fn)
+    for k in keys:
+      print('%s: '%k),
+      print(nc.variables[k].shape),
+      try:
+        print(nc.variables[k].units),
+      except:
+        print('')
+        print('There is no att units')
+        print(traceback.format_exc()) 
+      print('')
+
+    return nc 
+
+if cr['correct1_']       == 1:
+  fnc = FIX_NC()
+
+  if 1:
+    fnc.fn='/home/svc/install/pyferret-7.0.0/fer_dsets/data/coads_climatology.cdf'
+    fnc.fn='/mnt/data/data_clean/cmip5/users/ksuselj/COkf_4K_v1.nc'
+    fnc.fn='/home/svc/temp2.nc'
+    #fnc.fn='/mnt/data/data_clean/cmip5/users/tkubar/output_monthly_misr_terra_l3_cloud_top_height_dist_apr2002_jan2019.nc'
+    #fnc.ncdump()
+    nc = fnc.open()
+
+  '''
+  def fix_climatology(self):
+    if 1 in doWhat:  # 
+      time0 = nc.variables[]
+      a1 = np.arange(12)
+      time0.units = 'day since 0000-01-01 00:00:00'
+      time0.time_origin = '1-JAN-0000 00:00:00'
+      time0[:] = np.round( a1*30.417 + 14 )
+      time0.modulo = " "
+      time0.calendar = "365_day"
+      time0[:]
+
+  for fn in fns.keys():
+    print('doing %s'%fnc.fn)
+    nc = Dataset(fnc.fn, 'r+')
+
+    doWhat = fns[fn]
+
+
+    # climatology_time
+    if 1 in doWhat:  # 
+      time0 = nc.variables['time']
+      a1 = np.arange(12)
+      time0.units = 'day since 0000-01-01 00:00:00'
+      time0.time_origin = '1-JAN-0000 00:00:00'
+      time0[:] = np.round( a1*30.417 + 14 )
+      time0.modulo = " "
+      time0.calendar = "365_day"
+      time0[:]
+
+    nc.variables['longitude'].units = 'degrees_east'
+    nc.variables['longitude'].modulo = ' '
+    nc.variables['latitude'].units = 'degrees_north'
+    nc.variables['pressure'].positive = 'down'
+    nc.variables['precip'].long_name = 'Precipitation Flux'
+    nc.variables['lwupt'].long_name = 'TOA Outgoing Longwave Radiation'
+    nc.variables['swupt'].long_name = 'TOA Outgoing Shortwave Radiation'
+    nc.variables['th'].long_name = 'Potential Temperature'
+    nc.variables['cc'].long_name = 'Cloud Area Fraction'
+    nc.variables['u'].long_name = 'Eastward Wind'
+    nc.variables['v'].long_name = 'Northward Wind'
+    nc.variables['w'].long_name = 'Vertical Wind Velocity'
+    nc.variables['qv'].long_name = 'Specific Humidity'
+    nc.close()
+
+
+  try:
+    ok1 = checkNc2.checkNc(k, dict1, overwrite=0, allowOverwrite=0)
+    print 'ok1: ', ok1
+  except:
+    ok1 = 99
+    failedData[k] = 99
+    print('ok1 = 99')
+    print(traceback.format_exc()) 
+    continue
+'''
+
+if cr['kubar_2021']       == 1:
+  if 1:
+    fn0 = "era5_high_level_cloud_cover_197901_202107.nc"
+    varN = 'hcc'
+
+  if 0:
+    fn0 = "era5_low_level_cloud_cover_197901_202107.nc"
+    varN = 'lcc'
+    
+  if 0:
+    fn0 = "era5_mid_level_cloud_cover_197901_202107.nc"
+    varN = 'mcc'
+
+  if 0:
+    fn0 = "era5_uwind_10m_197901_202107.nc"
+    varN = 'u10'
+
+  if 0:
+    #fn0 = "era5_sea_level_pressure_197901_202107.nc"
+    varN = 'msl'
+
+  fn1 = "/mnt/gateway/tmp/%s"%fn0
+  ds = xr.open_dataset(fn1)
+  print(ds)
+
+  if 1:
+    # subset expver, save to fn2
+
+    msl1 = ds.hcc.isel(expver=0,time=slice(0,509))   
+    #msl1 = ds.lcc.isel(expver=0,time=slice(0,509))   
+    #msl1 = ds.mcc.isel(expver=0,time=slice(0,509))   
+    #msl1 = ds.u10.isel(expver=0,time=slice(0,509))   # uwind
+    #msl1 = ds.msl.isel(expver=0,time=slice(0,509))   # sea level
+
+    print(msl1.isel(longitude=120,latitude=0,time=slice(490,509)))
+    fn2 = '/home/ubuntu/tmp1/temp2.nc'
+    msl1.to_netcdf(fn2)
+    
+    #msl2 = ds.msl.isel(expver=0,time=slice(500,511))
+    #print(msl2.isel(longitude=120,latitude=0))
+    
+    #msl2 = msl1.isel(time=slice(0,509))
+
+  if 1:
+    # remove var expver
+    fn3 = '/home/ubuntu/tmp1/temp3.nc'
+    temp1 = 'ncks -C -O -x -v expver %s -o %s'%(fn2,fn3)
+    print(temp1)
+    os.system(temp1)
+
+  if 1:
+    # remove coordindates, save to fn3
+    fn4 = '/home/ubuntu/tmp1/%s'%fn0
+    temp1 = 'ncatted -O -a coordinates,%s,m,c,"" %s -o %s'%(varN,fn3, fn4)
+    print(temp1)
+    os.system(temp1)
+
+if cr['trmm_lon']       == 1:
+  if 1:
+    nn0 = 'pr_TRMM_199801-201803.nc'
+    nn1 = '/mnt/gateway/data_clean/cmip5/nasa/trmm/%s'%nn0
+    nn2 = '/home/ubuntu/tmp2/%s'%nn0
+    nn3 = '/home/ubuntu/tmp2/_%s'%nn0
+
+    #temp1 = "ncks -O --msa -d 'lon,-180.,-0.1' -d lon,0.,180.0  %s %s "%(nn1,nn2)
+    temp1 = "ncks -O --msa_usr_rdr -d lon,0.,180.0 -d 'lon,-180.,-0.1'  %s %s "%(nn1,nn2)
+    print(temp1)
+    os.system(temp1)
+
+    #temp1 = "ncap2 -O -s 'where(lon>180) lon=lon-360' %s %s "%(nn1,nn2)
+    temp1 = "ncap2 -O -s 'where(lon<0) lon=lon+360' %s %s "%(nn2,nn3)
+    print(temp1)
+    os.system(temp1)
+
+
+print('time lapse: ', time.time() - t00 )
+print('ending: ', time.ctime(time.time()))
+#btang.detee()
