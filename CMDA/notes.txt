@@ -1,9 +1,14 @@
 == datasets__
 == service_calling_sequence
 == check_parameters__
-== cmda1_2_cmda
 
+== cmda1_2_cmda_src
+== cmda1_2_cmda_js2
+== cmda1_2_cmda_html
+
+============================================
 == todo_20210818
+== auto_refresh_sourced script. good trick
 == notes_latest_
 
 == temp__
@@ -11,6 +16,16 @@
 
 
 == datasets__
+len(dict2), before
+1387
+dimLen:
+0: 18
+1: 17
+2: 2
+3: 982
+4: 382
+5: 6
+
 20210815:
 len(dict2), after
 1384
@@ -82,18 +97,21 @@ cmda.html : ajaxCall
 
 
 #== cmda1_2_cmda
-# commands:
 
+== cmda1_2_cmda_src
 kk src
 nn1=universalPlotting6b/pythonWrapper
 nn2=cmda1/pythonWrapper
 rsync -av $nn2 $nn1
 
+== cmda1_2_cmda_html
 kk web
 nn1=cmda.html
 nn2=cmda1.html
-#rsync -av $nn2 $nn1
+rsync -av $nn2 $nn1
+#vimdiff  $nn2 $nn1
 
+== cmda1_2_cmda_js2
 kk web
 cd js2
 nn1=common-v6c.js
@@ -115,7 +133,16 @@ Change steps:
 - opendap
 - test more
 - less message display
+- check request data size
 
+- Terry's 4 files
+-rw-r--r-- 1 svc users 2122174420 Aug 21 06:41 era5_high_level_cloud_cover_197901_202107.nc
+-rw-r--r-- 1 svc users 2122174424 Aug 21 06:42 era5_mid_level_cloud_cover_197901_202107.nc
+-rw-r--r-- 1 svc users 2122174420 Aug 21 06:43 era5_low_level_cloud_cover_197901_202107.nc
+-rwx------ 1 svc users 2122174432 Aug 21 14:24 era5_uwind_10m_197901_202107.nc*
+
+== auto_refresh_sourced script. good trick
+https://stackoverflow.com/questions/118884/how-to-force-the-browser-to-reload-cached-css-and-javascript-files
 == notes_latest_
 
 == temp__

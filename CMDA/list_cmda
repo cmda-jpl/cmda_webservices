@@ -7,6 +7,7 @@
 start.sh   ###
 app.py     ###
 notes.txt
+.ferret
 
 app.py.bak
 host.cfg_80
@@ -36,6 +37,8 @@ html/js2/
 html/js2/fileList_cloud_full.js    #####
 html/js2/common-v6c.js  ####
 html/js2/common-cmda1.js  ####
+html/js2/dataList9.js
+html/js2/varList.js
 html/js2/axios.js
 html/js2/axios.min.js
 html/js2/bootstrap.min.css
@@ -52,7 +55,6 @@ html/js2/common-v6.js
 html/js2/common_zhai.js
 html/js2/dataList1.js
 html/js2/dataList2.js
-html/js2/dataList9.js
 html/js2/dataList.js
 html/js2/dataTable.csv
 html/js2/fileList_500_readable.js
@@ -74,7 +76,6 @@ html/js2/three.min.js
 html/js2/TrackballControls.js
 html/js2/uploadr.js
 html/js2/varList9.js
-html/js2/varList.js
 html/js2/varName.csv
 html/js2/vue.js
 html/js2/svc/__init__.py

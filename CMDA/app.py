@@ -232,7 +232,7 @@ def serviceFunc(service):
 
     count0 += 1
     print(timeStr())
-    print('####################### count=%d #############################xxxx'%count0)
+    print('###################zzzz count=%d #############################xxxx'%count0)
 
     with open('count','w') as f:
         f.write('%d'%count0)
@@ -266,7 +266,10 @@ def serviceFunc(service):
     except:
       pass
 
-    purpose = json2['purpose']
+    try:
+      purpose = json2['purpose']
+    except:
+      purpose = ''
 
     # get where the input file and output file are
     #current_dir = os.getcwd()

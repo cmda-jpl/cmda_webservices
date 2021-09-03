@@ -152,10 +152,17 @@ cmac/html/codeStorage.html
 <!-- cmac related -->
 <link rel="stylesheet" href="common.css">
 <script src='js2/varList.js'></script>
-<script src='js2/fileList.js?1011'></script>
-<!-- <script src='js2/common-v6c.js?22111'></script>  -->
-<!-- <script src='js2/common-cmda1.js?22111'></script>  -->
-<script src='js2/common-v6c.js?11dfddf'></script>
+<script>document.write('<script src="js2/fileList.js?dev=' + Math.floor(Math.random()*100) + '"\><\/script>');</script>
+
+<script>document.write('<script src="js2/common-v6c.js?dev=' + Math.floor(Math.random()*100) + '"\><\/script>');</script>
+<!-- 
+xxxx
+<script src='js2/fileList.js?dev='></script>
+<script src='js2/common-v6c.js?22111'></script>  
+<script src='js2/common-cmda1.js?22111'></script>  
+
+<script>document.write('<script src="js2/common-cmda1.js?dev=' + Math.floor(Math.random()*100) + '"\><\/script>');</script>
+-->
 
 <title>Universal Analysis Service</title>
 
@@ -175,7 +182,7 @@ function repeatPlotP(plotP, n) {
   return t1;
 }
 
-// for generating queryStr
+// for generating queryStr. not used?
 var plotP0 = {};
 plotP0.ferretLevel = 'ferretLevel=';
 plotP0.colorMap = 'colorMap=';
@@ -993,6 +1000,7 @@ Data Subsetting
 <!-- should not use on:click. it was too early to fire -->
     <label class="checkbox-inline"><input type="checkbox" v-model="yearMean" v-on:change="yearMeanClick" unchecked >Yearly Mean</label>
     <label class="checkbox-inline"><input type="checkbox" v-model="quarterMean" v-on:change="quarterMeanClick()" unchecked >Quarterly Mean</label>
+
   </div>
 </div> <!-- row -->
 
@@ -1261,9 +1269,11 @@ var vueApp = new Vue({
     latE: '90',
     basin: '',
     anomaly0: false,
+
     timeMean: '',
     yearMean: false,
     quarterMean: false,
+
     timeFullRange: false,  // not used.
 
     ferretLevel0: '10',
@@ -1297,7 +1307,7 @@ var vueApp = new Vue({
     timeMethod0: '',
 
     whichPlot: "1",
-    plotP2: {},
+    plotP2: {},  // used in current plot setting
     plotP9: {},
 
     aaa1: '',  // to store temp object for debugging
@@ -1351,11 +1361,11 @@ var vueApp = new Vue({
     timeSLimAll: 20000115,
     timeELimAll: 20001215,
     yN: 0,  // number of years in time range
-    yNChange: -10000,  // triger for yN
+    yNChange: 0,  // triger for yN
     yNFix: 0,  // whether to fix the endtime
     yM: 0,  // where to pick a time
     yMGo: 0,  // 
-    yMChange: -10000,  // triger for yN
+    yMChange: 0,  // triger for yN
 
 
     dataset2Subset: '',
@@ -2065,6 +2075,27 @@ var vueApp = new Vue({
       console.log('yMChange: ' + this.yMChange);
       this.setTimePickV();
     },
+
+    yearMean: function() {
+      console.log('yearMean: ' + this.yearMean);
+      if (this.yearMean) {
+        this.quarterMean = false; 
+        this.timeMean = 'y';
+      } else {
+        this.timeMean = '';
+      }
+    },
+
+    quarterMean: function() {
+      console.log('quarterMean: ' + this.quarterMean);
+      if (this.quarterMean) {
+        this.yearMean = false; 
+        this.timeMean = 'q';
+      } else {
+        this.timeMean = '';
+      }
+    },
+
   },
 
 
@@ -2112,7 +2143,7 @@ inputAll['base'] = {
 'plotP': ['', 'urlPlotP'],
 'anomaly': ['anomaly', 'urlDirect'],
 'climatology': ['climatology', 'urlDirect'],
-'timeMean': ['timeMean', 'urlDirect'],
+'timeMean': ['timeMean', 'urlTimeMean'],
 //
 //
 'purpose': ['purpose', 'url2escape'],

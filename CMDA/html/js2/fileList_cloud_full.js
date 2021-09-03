@@ -8594,14 +8594,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -8620,14 +8620,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -16560,6 +16560,118 @@ fileDict =
       }
     }
   },
+  "/mnt/data/data_clean/cmip5/csiro/mk3.6/amip/ua_Amon_CSIRO-Mk3-6-0_amip_r1i1p1_*-*.nc":{
+    "nFile":2,
+    "run":"r1i1p1",
+    "title":"CSIRO-Mk3-6-0 model output prepared for CMIP5 AMIP",
+    "varList":[
+      "ua"
+    ],
+    "summary":"CSIRO-Mk3-6-0 2010 atmosphere: AGCM v7.3.9 (T63 spectral, 1.875 degrees EW x approx. 1.875 degrees NS, 18 levels); ocean: GFDL MOM2.2 (1.875 degrees EW x approx. 0.9375 degrees NS, 31 levels)Experiment spanned 1949-2009: 1949-1978 (spinup period) and 1979-2009 (AMIP period).Model's native pressure level data were vertically interpolated to prescribed pressure levels using linear interpolation. Data at the 1000 hPa level were extrapolated (with the aforementioned method) using data at the (approx.) 978 and 995 hPa model levels; all other data were interpolated. The missing value was assigned to locations where the pressure surface is underground. 2012-03-28T02:27:11Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
+    "dim2":[
+      "lat",
+      "z",
+      "lon",
+      "time"
+    ],
+    "dimList":[
+      "lat",
+      "plev",
+      "lon",
+      "time"
+    ],
+    "varListLong":[
+      "Eastward Wind"
+    ],
+    "experiment":"amip",
+    "frequency":"monthly",
+    "source":"staged",
+    "provider":"CSIRO",
+    "ok":0,
+    "model":"CSIRO-MK3-6-0",
+    "varDict":{
+      "time_bnds":{
+        "units":"",
+        "dim":[
+          "time",
+          "bnds"
+        ],
+        "longName":"_"
+      },
+      "plev":{
+        "dim":[
+          "plev"
+        ],
+        "what":"z",
+        "min":"500.0",
+        "units":"Pa",
+        "max":"100000.0",
+        "longName":"pressure"
+      },
+      "lat_bnds":{
+        "units":"",
+        "dim":[
+          "lat",
+          "bnds"
+        ],
+        "longName":"_"
+      },
+      "lon":{
+        "dim":[
+          "lon"
+        ],
+        "what":"lon",
+        "min":"0.0",
+        "units":"degrees_east",
+        "max":"358.125",
+        "longName":"longitude"
+      },
+      "lon_bnds":{
+        "units":"",
+        "dim":[
+          "lon",
+          "bnds"
+        ],
+        "longName":"_"
+      },
+      "time":{
+        "dim":[
+          "time"
+        ],
+        "what":"time",
+        "min":"19781216",
+        "units":"days since 1850-01-01 00:00:00",
+        "max":"20091107",
+        "longName":"time"
+      },
+      "lat":{
+        "dim":[
+          "lat"
+        ],
+        "what":"lat",
+        "min":"-88.5721664429",
+        "units":"degrees_north",
+        "max":"88.5721664429",
+        "longName":"latitude"
+      },
+      "ua":{
+        "units":"m s-1",
+        "dim":[
+          "time",
+          "plev",
+          "lat",
+          "lon"
+        ],
+        "dim2":[
+          "time",
+          "z",
+          "lat",
+          "lon"
+        ],
+        "longName":"Eastward Wind"
+      }
+    }
+  },
   "/mnt/data/data_clean/cmip5/bcc/csm1-1/historical/hurs_Amon_bcc-csm1-1_historical_r1i1p1_185001-201212.nc":{
     "nFile":1,
     "run":"r1i1p1",
@@ -17299,6 +17411,80 @@ fileDict =
       }
     }
   },
+  "/mnt/gateway/data_clean/cmip5/users/era5/era5_high_level_cloud_cover_197901_202107.nc":{
+    "nFile":1,
+    "run":"_",
+    "title":"",
+    "varList":[
+      "hcc"
+    ],
+    "summary":"Tue Aug 24 17:04:02 2021: ncatted -O -a coordinates,hcc,m,c, /home/ubuntu/tmp1/temp3.nc -o /home/ubuntu/tmp1/era5_high_level_cloud_cover_197901_202107.nc\nTue Aug 24 17:03:52 2021: ncks -C -O -x -v expver /home/ubuntu/tmp1/temp2.nc -o /home/ubuntu/tmp1/temp3.nc",
+    "dim2":[
+      "lat",
+      "lon",
+      "time"
+    ],
+    "dimList":[
+      "latitude",
+      "longitude",
+      "time"
+    ],
+    "varListLong":[
+      "High cloud cover"
+    ],
+    "experiment":"_",
+    "frequency":"",
+    "source":"staged",
+    "provider":"_",
+    "ok":0,
+    "model":"_",
+    "varDict":{
+      "latitude":{
+        "dim":[
+          "latitude"
+        ],
+        "what":"lat",
+        "min":"-90.0",
+        "units":"degrees_north",
+        "max":"90.0",
+        "longName":"latitude"
+      },
+      "hcc":{
+        "units":"(0 - 1)",
+        "dim":[
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dim2":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "longName":"High cloud cover"
+      },
+      "longitude":{
+        "dim":[
+          "longitude"
+        ],
+        "what":"lon",
+        "min":"0.0",
+        "units":"degrees_east",
+        "max":"359.75",
+        "longName":"longitude"
+      },
+      "time":{
+        "dim":[
+          "time"
+        ],
+        "what":"time",
+        "min":"19790101",
+        "units":"hours since 1900-01-01",
+        "max":"20210501",
+        "longName":"time"
+      }
+    }
+  },
   "/mnt/data/data_clean/cmip5/ukmo/hadgem2-es/historical/rldscs_Amon_HadGEM2-ES_historical_r1i1p1_199501-200511.nc":{
     "nFile":1,
     "run":"r1i1p1",
@@ -17497,6 +17683,104 @@ fileDict =
         "units":"degrees_north",
         "max":"90.0",
         "longName":"latitude"
+      }
+    }
+  },
+  "/mnt/data/data_clean/cmip5/csiro/mk3.6/amip/rlds_Amon_CSIRO-Mk3-6-0_amip_r1i1p1_197901-200912.nc":{
+    "nFile":1,
+    "run":"r1i1p1",
+    "title":"CSIRO-Mk3-6-0 model output prepared for CMIP5 AMIP",
+    "varList":[
+      "rlds"
+    ],
+    "summary":"CSIRO-Mk3-6-0 2010 atmosphere: AGCM v7.3.9 (T63 spectral, 1.875 degrees EW x approx. 1.875 degrees NS, 18 levels); ocean: GFDL MOM2.2 (1.875 degrees EW x approx. 0.9375 degrees NS, 31 levels)Experiment spanned 1949-2009: 1949-1978 (spinup period) and 1979-2009 (AMIP period). 2011-12-18T03:10:06Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
+    "dim2":[
+      "lat",
+      "lon",
+      "time"
+    ],
+    "dimList":[
+      "lat",
+      "lon",
+      "time"
+    ],
+    "varListLong":[
+      "Surface Downwelling Longwave Radiation"
+    ],
+    "experiment":"amip",
+    "frequency":"monthly",
+    "source":"staged",
+    "provider":"CSIRO",
+    "ok":0,
+    "model":"CSIRO-MK3-6-0",
+    "varDict":{
+      "time_bnds":{
+        "units":"",
+        "dim":[
+          "time",
+          "bnds"
+        ],
+        "longName":"_"
+      },
+      "time":{
+        "dim":[
+          "time"
+        ],
+        "what":"time",
+        "min":"19781216",
+        "units":"days since 1850-01-01 00:00:00",
+        "max":"20091107",
+        "longName":"time"
+      },
+      "lat":{
+        "dim":[
+          "lat"
+        ],
+        "what":"lat",
+        "min":"-88.5721664429",
+        "units":"degrees_north",
+        "max":"88.5721664429",
+        "longName":"latitude"
+      },
+      "lat_bnds":{
+        "units":"",
+        "dim":[
+          "lat",
+          "bnds"
+        ],
+        "longName":"_"
+      },
+      "lon":{
+        "dim":[
+          "lon"
+        ],
+        "what":"lon",
+        "min":"0.0",
+        "units":"degrees_east",
+        "max":"358.125",
+        "longName":"longitude"
+      },
+      "lon_bnds":{
+        "units":"",
+        "dim":[
+          "lon",
+          "bnds"
+        ],
+        "longName":"_"
+      },
+      "rlds":{
+        "units":"W m-2",
+        "dim":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dim2":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "longName":"Surface Downwelling Longwave Radiation"
       }
     }
   },
@@ -20021,14 +20305,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -20047,14 +20331,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -45337,6 +45621,80 @@ fileDict =
       }
     }
   },
+  "/mnt/gateway/data_clean/cmip5/users/era5/era5_mid_level_cloud_cover_197901_202107.nc":{
+    "nFile":1,
+    "run":"_",
+    "title":"",
+    "varList":[
+      "mcc"
+    ],
+    "summary":"Tue Aug 24 17:00:24 2021: ncatted -O -a coordinates,mcc,m,c, /home/ubuntu/tmp1/temp3.nc -o /home/ubuntu/tmp1/era5_mid_level_cloud_cover_197901_202107.nc\nTue Aug 24 17:00:14 2021: ncks -C -O -x -v expver /home/ubuntu/tmp1/temp2.nc -o /home/ubuntu/tmp1/temp3.nc",
+    "dim2":[
+      "lat",
+      "lon",
+      "time"
+    ],
+    "dimList":[
+      "latitude",
+      "longitude",
+      "time"
+    ],
+    "varListLong":[
+      "Medium cloud cover"
+    ],
+    "experiment":"_",
+    "frequency":"",
+    "source":"staged",
+    "provider":"_",
+    "ok":0,
+    "model":"_",
+    "varDict":{
+      "latitude":{
+        "dim":[
+          "latitude"
+        ],
+        "what":"lat",
+        "min":"-90.0",
+        "units":"degrees_north",
+        "max":"90.0",
+        "longName":"latitude"
+      },
+      "mcc":{
+        "units":"(0 - 1)",
+        "dim":[
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dim2":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "longName":"Medium cloud cover"
+      },
+      "longitude":{
+        "dim":[
+          "longitude"
+        ],
+        "what":"lon",
+        "min":"0.0",
+        "units":"degrees_east",
+        "max":"359.75",
+        "longName":"longitude"
+      },
+      "time":{
+        "dim":[
+          "time"
+        ],
+        "what":"time",
+        "min":"19790101",
+        "units":"hours since 1900-01-01",
+        "max":"20210501",
+        "longName":"time"
+      }
+    }
+  },
   "/mnt/data/data_clean/cmip5/cccma/canam4/amip/hur_Amon_CanAM4_amip_r1i1p1_195001-200912.nc":{
     "nFile":1,
     "run":"r1i1p1",
@@ -66568,115 +66926,77 @@ fileDict =
       }
     }
   },
-  "/mnt/data/data_clean/cmip5/ukmo/hadgem2-a/amip/hus_Amon_HadGEM2-A_amip_r1i1p1_*-*.nc":{
-    "nFile":14,
-    "run":"r1i1p1",
-    "title":"HadGEM2-A model output prepared for CMIP5 AMIP",
+  "/mnt/gateway/data_clean/cmip5/users/era5/era5_sea_level_pressure_197901_202107.nc":{
+    "nFile":1,
+    "run":"_",
+    "title":"",
     "varList":[
-      "hus"
+      "msl"
     ],
-    "summary":"HadGEM2-A (2009) atmosphere: HadGAM2 (N96L38);  land-surface/vegetation: MOSES2Mon Jul 29 11:43:36 2013: ncea -F -d time,197,208 /export/data1/data/cmip5/ukmo/hadgem2-a/original/hus_Amon_HadGEM2-A_amip_r1i1p1_197809-200811.nc /export/data1/data/cmip5/ukmo/hadgem2-a/break/hus_Amon_HadGEM2-A_amip_r1i1p1_199501-199512.nc\nMon Apr 11 17:06:13 2011: ncatted -a cell_measures,hus,d,, -a associated_files,hus,o,c,baseURL: http://cmip-pcmdi.llnl.gov/CMIP5/dataLocation gridspecFile: gridspec_atmos_fx_HadGEM2-A_amip_r0i0p0.nc /data/local3/ar5/data/CMIP5/MOHC/HadGEM2-A/amip/r1i1p1/nc/hus_Amon_HadGEM2-A_amip_r1i1p1_197809-200811.nc\nMOHC pp to CMOR/NetCDF convertor (version 1.7.1) 2011-04-11T13:03:46Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
+    "summary":"Tue Aug 24 16:31:13 2021: ncatted -O -a coordinates,msl,m,c, /home/ubuntu/tmp1/temp3.nc -o /home/ubuntu/tmp1/era5_sea_level_pressure_197901_202107.nc\nTue Aug 24 16:31:10 2021: ncks -C -O -x -v expver /home/ubuntu/tmp1/temp2.nc -o /home/ubuntu/tmp1/temp3.nc",
     "dim2":[
       "lat",
-      "z",
       "lon",
       "time"
     ],
     "dimList":[
-      "lat",
-      "plev",
-      "lon",
+      "latitude",
+      "longitude",
       "time"
     ],
     "varListLong":[
-      "Specific Humidity"
+      "Mean sea level pressure"
     ],
-    "experiment":"amip",
-    "frequency":"monthly",
+    "experiment":"_",
+    "frequency":"",
     "source":"staged",
-    "provider":"UKMO",
+    "provider":"_",
     "ok":0,
-    "model":"HadGEM2-A",
+    "model":"_",
     "varDict":{
-      "time_bnds":{
-        "units":"",
+      "latitude":{
         "dim":[
-          "time",
-          "bnds"
+          "latitude"
         ],
-        "longName":"_"
+        "what":"lat",
+        "min":"-90.0",
+        "units":"degrees_north",
+        "max":"90.0",
+        "longName":"latitude"
       },
-      "plev":{
-        "dim":[
-          "plev"
-        ],
-        "what":"z",
-        "min":"1000.0",
+      "msl":{
         "units":"Pa",
-        "max":"100000.0",
-        "longName":"pressure"
-      },
-      "lat_bnds":{
-        "units":"",
-        "dim":[
-          "lat",
-          "bnds"
-        ],
-        "longName":"_"
-      },
-      "hus":{
-        "units":"1",
         "dim":[
           "time",
-          "plev",
-          "lat",
-          "lon"
+          "latitude",
+          "longitude"
         ],
         "dim2":[
           "time",
-          "z",
           "lat",
           "lon"
         ],
-        "longName":"Specific Humidity"
+        "longName":"Mean sea level pressure"
       },
-      "lon":{
+      "longitude":{
         "dim":[
-          "lon"
+          "longitude"
         ],
         "what":"lon",
-        "min":"0.9375",
+        "min":"0.0",
         "units":"degrees_east",
-        "max":"359.0625",
+        "max":"359.75",
         "longName":"longitude"
-      },
-      "lon_bnds":{
-        "units":"",
-        "dim":[
-          "lon",
-          "bnds"
-        ],
-        "longName":"_"
       },
       "time":{
         "dim":[
           "time"
         ],
         "what":"time",
-        "min":"19941022",
-        "units":"days since 1978-09-01",
-        "max":"20080610",
+        "min":"19790101",
+        "units":"hours since 1900-01-01",
+        "max":"20210501",
         "longName":"time"
-      },
-      "lat":{
-        "dim":[
-          "lat"
-        ],
-        "what":"lat",
-        "min":"-89.375",
-        "units":"degrees_north",
-        "max":"89.375",
-        "longName":"latitude"
       }
     }
   },
@@ -73674,15 +73994,15 @@ fileDict =
         "max":"100000",
         "longName":"pressure_level"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"19790101",
-        "units":"days since 1900-01-01 00:00:0.0",
-        "max":"20151201",
-        "longName":"time"
+        "what":"lon",
+        "min":"-180.0",
+        "units":"degrees_east",
+        "max":"178.5",
+        "longName":"longitude"
       },
       "ua":{
         "units":"m s**-1",
@@ -73700,15 +74020,15 @@ fileDict =
         ],
         "longName":"U component of wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"-180.0",
-        "units":"degrees_east",
-        "max":"178.5",
-        "longName":"longitude"
+        "what":"time",
+        "min":"19790101",
+        "units":"days since 1900-01-01 00:00:0.0",
+        "max":"20151201",
+        "longName":"time"
       }
     }
   },
@@ -74268,14 +74588,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -74294,14 +74614,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -82116,16 +82436,6 @@ fileDict =
     "ok":0,
     "model":"_",
     "varDict":{
-      "FNOCX":{
-        "dim":[
-          "FNOCX"
-        ],
-        "what":"lon",
-        "min":"20.0",
-        "units":"degrees_east",
-        "max":"377.5",
-        "longName":"_"
-      },
       "FNOCY":{
         "dim":[
           "FNOCY"
@@ -82136,19 +82446,25 @@ fileDict =
         "max":"90.0",
         "longName":"_"
       },
-      "VWND":{
-        "units":"M/S",
+      "FNOCX":{
         "dim":[
-          "TIME",
-          "FNOCY",
           "FNOCX"
         ],
-        "dim2":[
-          "time",
-          "lat",
-          "lon"
+        "what":"lon",
+        "min":"20.0",
+        "units":"degrees_east",
+        "max":"377.5",
+        "longName":"_"
+      },
+      "TIME":{
+        "dim":[
+          "TIME"
         ],
-        "longName":"MERIDIONAL WIND"
+        "what":"time",
+        "min":"19820116",
+        "units":"hour since 1980-01-14 14:00:00",
+        "max":"19921217",
+        "longName":"_"
       },
       "UWND":{
         "units":"M/S",
@@ -82164,15 +82480,19 @@ fileDict =
         ],
         "longName":"ZONAL WIND"
       },
-      "TIME":{
+      "VWND":{
+        "units":"M/S",
         "dim":[
-          "TIME"
+          "TIME",
+          "FNOCY",
+          "FNOCX"
         ],
-        "what":"time",
-        "min":"19820116",
-        "units":"hour since 1980-01-14 14:00:00",
-        "max":"19921217",
-        "longName":"_"
+        "dim2":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "longName":"MERIDIONAL WIND"
       }
     }
   },
@@ -87729,14 +88049,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -87755,14 +88075,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -88301,33 +88621,35 @@ fileDict =
       }
     }
   },
-  "/mnt/data/data_clean/cmip5/ipsl/cm5a-lr/amip/pr_Amon_IPSL-CM5A-LR_amip_r1i1p1_*-*.nc":{
-    "nFile":2,
+  "/mnt/data/data_clean/cmip5/ukmo/hadgem2-a/amip/hus_Amon_HadGEM2-A_amip_r1i1p1_*-*.nc":{
+    "nFile":14,
     "run":"r1i1p1",
-    "title":"IPSL-CM5A-LR model output prepared for CMIP5 AMIP",
+    "title":"HadGEM2-A model output prepared for CMIP5 AMIP",
     "varList":[
-      "pr"
+      "hus"
     ],
-    "summary":"IPSL-CM5A-LR (2010) : atmos : LMDZ4 (LMDZ4_v5, 96x95x39); ocean : ORCA2 (NEMOV2_3, 2x2L31); seaIce : LIM2 (NEMOV2_3); ocnBgchem : PISCES (NEMOV2_3); land : ORCHIDEE (orchidee_1_9_4_AR5)2011-03-11T14:00:12Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
+    "summary":"HadGEM2-A (2009) atmosphere: HadGAM2 (N96L38);  land-surface/vegetation: MOSES2Mon Jul 29 11:43:36 2013: ncea -F -d time,197,208 /export/data1/data/cmip5/ukmo/hadgem2-a/original/hus_Amon_HadGEM2-A_amip_r1i1p1_197809-200811.nc /export/data1/data/cmip5/ukmo/hadgem2-a/break/hus_Amon_HadGEM2-A_amip_r1i1p1_199501-199512.nc\nMon Apr 11 17:06:13 2011: ncatted -a cell_measures,hus,d,, -a associated_files,hus,o,c,baseURL: http://cmip-pcmdi.llnl.gov/CMIP5/dataLocation gridspecFile: gridspec_atmos_fx_HadGEM2-A_amip_r0i0p0.nc /data/local3/ar5/data/CMIP5/MOHC/HadGEM2-A/amip/r1i1p1/nc/hus_Amon_HadGEM2-A_amip_r1i1p1_197809-200811.nc\nMOHC pp to CMOR/NetCDF convertor (version 1.7.1) 2011-04-11T13:03:46Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
     "dim2":[
       "lat",
+      "z",
       "lon",
       "time"
     ],
     "dimList":[
       "lat",
+      "plev",
       "lon",
       "time"
     ],
     "varListLong":[
-      "Precipitation"
+      "Specific Humidity"
     ],
     "experiment":"amip",
     "frequency":"monthly",
     "source":"staged",
-    "provider":"IPSL",
+    "provider":"UKMO",
     "ok":0,
-    "model":"IPSL-CM5A-LR",
+    "model":"HadGEM2-A",
     "varDict":{
       "time_bnds":{
         "units":"",
@@ -88337,39 +88659,15 @@ fileDict =
         ],
         "longName":"_"
       },
-      "pr":{
-        "units":"kg m-2 s-1",
+      "plev":{
         "dim":[
-          "time",
-          "lat",
-          "lon"
+          "plev"
         ],
-        "dim2":[
-          "time",
-          "lat",
-          "lon"
-        ],
-        "longName":"Precipitation"
-      },
-      "time":{
-        "dim":[
-          "time"
-        ],
-        "what":"time",
-        "min":"19790116",
-        "units":"days since 1979-01-01 00:00:00",
-        "max":"20091208",
-        "longName":"time"
-      },
-      "lat":{
-        "dim":[
-          "lat"
-        ],
-        "what":"lat",
-        "min":"-90.0",
-        "units":"degrees_north",
-        "max":"90.0",
-        "longName":"latitude"
+        "what":"z",
+        "min":"1000.0",
+        "units":"Pa",
+        "max":"100000.0",
+        "longName":"pressure"
       },
       "lat_bnds":{
         "units":"",
@@ -88379,14 +88677,30 @@ fileDict =
         ],
         "longName":"_"
       },
+      "hus":{
+        "units":"1",
+        "dim":[
+          "time",
+          "plev",
+          "lat",
+          "lon"
+        ],
+        "dim2":[
+          "time",
+          "z",
+          "lat",
+          "lon"
+        ],
+        "longName":"Specific Humidity"
+      },
       "lon":{
         "dim":[
           "lon"
         ],
         "what":"lon",
-        "min":"0.0",
+        "min":"0.9375",
         "units":"degrees_east",
-        "max":"356.25",
+        "max":"359.0625",
         "longName":"longitude"
       },
       "lon_bnds":{
@@ -88396,6 +88710,26 @@ fileDict =
           "bnds"
         ],
         "longName":"_"
+      },
+      "time":{
+        "dim":[
+          "time"
+        ],
+        "what":"time",
+        "min":"19941022",
+        "units":"days since 1978-09-01",
+        "max":"20080610",
+        "longName":"time"
+      },
+      "lat":{
+        "dim":[
+          "lat"
+        ],
+        "what":"lat",
+        "min":"-89.375",
+        "units":"degrees_north",
+        "max":"89.375",
+        "longName":"latitude"
       }
     }
   },
@@ -105252,115 +105586,77 @@ fileDict =
       }
     }
   },
-  "/mnt/data/data_clean/cmip5/csiro/mk3.6/amip/ua_Amon_CSIRO-Mk3-6-0_amip_r1i1p1_*-*.nc":{
-    "nFile":2,
-    "run":"r1i1p1",
-    "title":"CSIRO-Mk3-6-0 model output prepared for CMIP5 AMIP",
+  "/mnt/gateway/data_clean/cmip5/users/era5/era5_uwind_10m_197901_202107.nc":{
+    "nFile":1,
+    "run":"_",
+    "title":"",
     "varList":[
-      "ua"
+      "u10"
     ],
-    "summary":"CSIRO-Mk3-6-0 2010 atmosphere: AGCM v7.3.9 (T63 spectral, 1.875 degrees EW x approx. 1.875 degrees NS, 18 levels); ocean: GFDL MOM2.2 (1.875 degrees EW x approx. 0.9375 degrees NS, 31 levels)Experiment spanned 1949-2009: 1949-1978 (spinup period) and 1979-2009 (AMIP period).Model's native pressure level data were vertically interpolated to prescribed pressure levels using linear interpolation. Data at the 1000 hPa level were extrapolated (with the aforementioned method) using data at the (approx.) 978 and 995 hPa model levels; all other data were interpolated. The missing value was assigned to locations where the pressure surface is underground. 2012-03-28T02:27:11Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
+    "summary":"Tue Aug 24 16:56:51 2021: ncatted -O -a coordinates,u10,m,c, /home/ubuntu/tmp1/temp3.nc -o /home/ubuntu/tmp1/era5_uwind_10m_197901_202107.nc\nTue Aug 24 16:53:36 2021: ncks -C -O -x -v expver /home/ubuntu/tmp1/temp2.nc -o /home/ubuntu/tmp1/temp3.nc",
     "dim2":[
       "lat",
-      "z",
       "lon",
       "time"
     ],
     "dimList":[
-      "lat",
-      "plev",
-      "lon",
+      "latitude",
+      "longitude",
       "time"
     ],
     "varListLong":[
-      "Eastward Wind"
+      "10 metre U wind component"
     ],
-    "experiment":"amip",
-    "frequency":"monthly",
+    "experiment":"_",
+    "frequency":"",
     "source":"staged",
-    "provider":"CSIRO",
+    "provider":"_",
     "ok":0,
-    "model":"CSIRO-MK3-6-0",
+    "model":"_",
     "varDict":{
-      "time_bnds":{
-        "units":"",
+      "latitude":{
+        "dim":[
+          "latitude"
+        ],
+        "what":"lat",
+        "min":"-90.0",
+        "units":"degrees_north",
+        "max":"90.0",
+        "longName":"latitude"
+      },
+      "u10":{
+        "units":"m s**-1",
         "dim":[
           "time",
-          "bnds"
+          "latitude",
+          "longitude"
         ],
-        "longName":"_"
-      },
-      "plev":{
-        "dim":[
-          "plev"
-        ],
-        "what":"z",
-        "min":"500.0",
-        "units":"Pa",
-        "max":"100000.0",
-        "longName":"pressure"
-      },
-      "lat_bnds":{
-        "units":"",
-        "dim":[
+        "dim2":[
+          "time",
           "lat",
-          "bnds"
-        ],
-        "longName":"_"
-      },
-      "lon":{
-        "dim":[
           "lon"
+        ],
+        "longName":"10 metre U wind component"
+      },
+      "longitude":{
+        "dim":[
+          "longitude"
         ],
         "what":"lon",
         "min":"0.0",
         "units":"degrees_east",
-        "max":"358.125",
+        "max":"359.75",
         "longName":"longitude"
-      },
-      "lon_bnds":{
-        "units":"",
-        "dim":[
-          "lon",
-          "bnds"
-        ],
-        "longName":"_"
       },
       "time":{
         "dim":[
           "time"
         ],
         "what":"time",
-        "min":"19781216",
-        "units":"days since 1850-01-01 00:00:00",
-        "max":"20091107",
+        "min":"19790101",
+        "units":"hours since 1900-01-01",
+        "max":"20210501",
         "longName":"time"
-      },
-      "lat":{
-        "dim":[
-          "lat"
-        ],
-        "what":"lat",
-        "min":"-88.5721664429",
-        "units":"degrees_north",
-        "max":"88.5721664429",
-        "longName":"latitude"
-      },
-      "ua":{
-        "units":"m s-1",
-        "dim":[
-          "time",
-          "plev",
-          "lat",
-          "lon"
-        ],
-        "dim2":[
-          "time",
-          "z",
-          "lat",
-          "lon"
-        ],
-        "longName":"Eastward Wind"
       }
     }
   },
@@ -105646,14 +105942,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -105672,14 +105968,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -106401,14 +106697,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -106427,14 +106723,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -110562,14 +110858,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -110588,14 +110884,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -121544,6 +121840,80 @@ fileDict =
       }
     }
   },
+  "/mnt/gateway/data_clean/cmip5/users/era5/era5_low_level_cloud_cover_197901_202107.nc":{
+    "nFile":1,
+    "run":"_",
+    "title":"",
+    "varList":[
+      "lcc"
+    ],
+    "summary":"Tue Aug 24 17:02:57 2021: ncatted -O -a coordinates,lcc,m,c, /home/ubuntu/tmp1/temp3.nc -o /home/ubuntu/tmp1/era5_low_level_cloud_cover_197901_202107.nc\nTue Aug 24 17:02:48 2021: ncks -C -O -x -v expver /home/ubuntu/tmp1/temp2.nc -o /home/ubuntu/tmp1/temp3.nc",
+    "dim2":[
+      "lat",
+      "lon",
+      "time"
+    ],
+    "dimList":[
+      "latitude",
+      "longitude",
+      "time"
+    ],
+    "varListLong":[
+      "Low cloud cover"
+    ],
+    "experiment":"_",
+    "frequency":"",
+    "source":"staged",
+    "provider":"_",
+    "ok":0,
+    "model":"_",
+    "varDict":{
+      "latitude":{
+        "dim":[
+          "latitude"
+        ],
+        "what":"lat",
+        "min":"-90.0",
+        "units":"degrees_north",
+        "max":"90.0",
+        "longName":"latitude"
+      },
+      "lcc":{
+        "units":"(0 - 1)",
+        "dim":[
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dim2":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "longName":"Low cloud cover"
+      },
+      "longitude":{
+        "dim":[
+          "longitude"
+        ],
+        "what":"lon",
+        "min":"0.0",
+        "units":"degrees_east",
+        "max":"359.75",
+        "longName":"longitude"
+      },
+      "time":{
+        "dim":[
+          "time"
+        ],
+        "what":"time",
+        "min":"19790101",
+        "units":"hours since 1900-01-01",
+        "max":"20210501",
+        "longName":"time"
+      }
+    }
+  },
   "/mnt/data/data_clean/cmip5/nasa/ceres/rldscs_CERES-EBAF_L3B_Ed2-6r_200003-201002.nc":{
     "nFile":1,
     "run":"_",
@@ -126574,14 +126944,14 @@ fileDict =
         "max":"100000.0",
         "longName":"_"
       },
-      "time":{
+      "lon":{
         "dim":[
-          "time"
+          "lon"
         ],
-        "what":"time",
-        "min":"20040116",
-        "units":"days since 2000-01-01 00:00:00",
-        "max":"20041216",
+        "what":"lon",
+        "min":"1.0",
+        "units":"degrees_east",
+        "max":"360.0",
         "longName":"_"
       },
       "ua":{
@@ -126600,14 +126970,14 @@ fileDict =
         ],
         "longName":"Eastward Wind"
       },
-      "lon":{
+      "time":{
         "dim":[
-          "lon"
+          "time"
         ],
-        "what":"lon",
-        "min":"1.0",
-        "units":"degrees_east",
-        "max":"360.0",
+        "what":"time",
+        "min":"20040116",
+        "units":"days since 2000-01-01 00:00:00",
+        "max":"20041216",
         "longName":"_"
       }
     }
@@ -142484,14 +142854,14 @@ fileDict =
       }
     }
   },
-  "/mnt/data/data_clean/cmip5/csiro/mk3.6/amip/rlds_Amon_CSIRO-Mk3-6-0_amip_r1i1p1_197901-200912.nc":{
-    "nFile":1,
+  "/mnt/data/data_clean/cmip5/ipsl/cm5a-lr/amip/pr_Amon_IPSL-CM5A-LR_amip_r1i1p1_*-*.nc":{
+    "nFile":2,
     "run":"r1i1p1",
-    "title":"CSIRO-Mk3-6-0 model output prepared for CMIP5 AMIP",
+    "title":"IPSL-CM5A-LR model output prepared for CMIP5 AMIP",
     "varList":[
-      "rlds"
+      "pr"
     ],
-    "summary":"CSIRO-Mk3-6-0 2010 atmosphere: AGCM v7.3.9 (T63 spectral, 1.875 degrees EW x approx. 1.875 degrees NS, 18 levels); ocean: GFDL MOM2.2 (1.875 degrees EW x approx. 0.9375 degrees NS, 31 levels)Experiment spanned 1949-2009: 1949-1978 (spinup period) and 1979-2009 (AMIP period). 2011-12-18T03:10:06Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
+    "summary":"IPSL-CM5A-LR (2010) : atmos : LMDZ4 (LMDZ4_v5, 96x95x39); ocean : ORCA2 (NEMOV2_3, 2x2L31); seaIce : LIM2 (NEMOV2_3); ocnBgchem : PISCES (NEMOV2_3); land : ORCHIDEE (orchidee_1_9_4_AR5)2011-03-11T14:00:12Z CMOR rewrote data to comply with CF standards and CMIP5 requirements.",
     "dim2":[
       "lat",
       "lon",
@@ -142503,14 +142873,14 @@ fileDict =
       "time"
     ],
     "varListLong":[
-      "Surface Downwelling Longwave Radiation"
+      "Precipitation"
     ],
     "experiment":"amip",
     "frequency":"monthly",
     "source":"staged",
-    "provider":"CSIRO",
+    "provider":"IPSL",
     "ok":0,
-    "model":"CSIRO-MK3-6-0",
+    "model":"IPSL-CM5A-LR",
     "varDict":{
       "time_bnds":{
         "units":"",
@@ -142520,14 +142890,28 @@ fileDict =
         ],
         "longName":"_"
       },
+      "pr":{
+        "units":"kg m-2 s-1",
+        "dim":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "dim2":[
+          "time",
+          "lat",
+          "lon"
+        ],
+        "longName":"Precipitation"
+      },
       "time":{
         "dim":[
           "time"
         ],
         "what":"time",
-        "min":"19781216",
-        "units":"days since 1850-01-01 00:00:00",
-        "max":"20091107",
+        "min":"19790116",
+        "units":"days since 1979-01-01 00:00:00",
+        "max":"20091208",
         "longName":"time"
       },
       "lat":{
@@ -142535,9 +142919,9 @@ fileDict =
           "lat"
         ],
         "what":"lat",
-        "min":"-88.5721664429",
+        "min":"-90.0",
         "units":"degrees_north",
-        "max":"88.5721664429",
+        "max":"90.0",
         "longName":"latitude"
       },
       "lat_bnds":{
@@ -142555,7 +142939,7 @@ fileDict =
         "what":"lon",
         "min":"0.0",
         "units":"degrees_east",
-        "max":"358.125",
+        "max":"356.25",
         "longName":"longitude"
       },
       "lon_bnds":{
@@ -142565,20 +142949,6 @@ fileDict =
           "bnds"
         ],
         "longName":"_"
-      },
-      "rlds":{
-        "units":"W m-2",
-        "dim":[
-          "time",
-          "lat",
-          "lon"
-        ],
-        "dim2":[
-          "time",
-          "lat",
-          "lon"
-        ],
-        "longName":"Surface Downwelling Longwave Radiation"
       }
     }
   },
@@ -146001,6 +146371,7 @@ fileDict =
   "cccma/canesm2/rcp45/ua_Amon_CanESM2_rcp45_r1i1p1_*-*.nc: v=ua v-long=Eastward Wind t=CanESM2 model output prepared for CMIP5 RCP4.5":"/mnt/data/data_clean/cmip5/cccma/canesm2/rcp45/ua_Amon_CanESM2_rcp45_r1i1p1_*-*.nc",
   "gfdl/cm3/historical/rsds_Amon_GFDL-CM3_historical_r1i1p1_*-*.nc: v=rsds_average_T1_average_T2_average_DT v-long=Surface Downwelling Shortwave Radiation__Start time for average period__End time for average period__Length of average period t=NOAA GFDL GFDL-CM3, historical (run 1) experiment output for CMIP5 AR5":"/mnt/data/data_clean/cmip5/gfdl/cm3/historical/rsds_Amon_GFDL-CM3_historical_r1i1p1_*-*.nc",
   "cnrm/cm5/amip/zg_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc: v=zg v-long=Geopotential Height t=CNRM-CM5 model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/cnrm/cm5/amip/zg_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc",
+  "p5/users/era5/era5_mid_level_cloud_cover_197901_202107.nc: v=mcc v-long=Medium cloud cover t=":"/mnt/gateway/data_clean/cmip5/users/era5/era5_mid_level_cloud_cover_197901_202107.nc",
   "cmcc/cm/amip/tauu_Amon_CMCC-CM_amip_r1i1p1_*-*.nc: v=tauu v-long=Surface Downward Eastward Wind Stress t=CMCC-CM model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/cmcc/cm/amip/tauu_Amon_CMCC-CM_amip_r1i1p1_*-*.nc",
   "gfdl/esm2g/rcp45/huss_Amon_GFDL-ESM2G_rcp45_r1i1p1_*-*.nc: v=average_DT_average_T1_average_T2_huss v-long=Length of average period__Start time for average period__End time for average period__Near-Surface Specific Humidity t=NOAA GFDL GFDL-ESM2G, RCP4.5 (run 1) experiment output for CMIP5 AR5":"/mnt/data/data_clean/cmip5/gfdl/esm2g/rcp45/huss_Amon_GFDL-ESM2G_rcp45_r1i1p1_*-*.nc",
   "csiro/mk3.6/historical/sic_OImon_CSIRO-Mk3-6-0_historical_r1i1p1_185001-200512.nc: v=sic v-long=Sea Ice Area Fraction t=CSIRO-Mk3-6-0 model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/csiro/mk3.6/historical/sic_OImon_CSIRO-Mk3-6-0_historical_r1i1p1_185001-200512.nc",
@@ -146142,6 +146513,7 @@ fileDict =
   "cnrm/cm5/amip/ts_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc: v=ts v-long=Surface Temperature t=CNRM-CM5 model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/cnrm/cm5/amip/ts_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc",
   "ipsl/cm5a-lr/amip/ccb_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc: v=ccb v-long=Air Pressure at Convective Cloud Base t=IPSL-CM5A-LR model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/ipsl/cm5a-lr/amip/ccb_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc",
   "csiro/mk3.6/amip/prc_Amon_CSIRO-Mk3-6-0_amip_r1i1p1_197901-200912.nc: v=prc v-long=Convective Precipitation t=CSIRO-Mk3-6-0 model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/csiro/mk3.6/amip/prc_Amon_CSIRO-Mk3-6-0_amip_r1i1p1_197901-200912.nc",
+  "p5/users/era5/era5_low_level_cloud_cover_197901_202107.nc: v=lcc v-long=Low cloud cover t=":"/mnt/gateway/data_clean/cmip5/users/era5/era5_low_level_cloud_cover_197901_202107.nc",
   "iap/fgoals-s2/amip/clw_Amon_FGOALS-s2_amip_r1i1p1_plevRegridded_197901-200812.nc: v=clw v-long=Mass Fraction of Cloud Liquid Water t=FGOALS-s2 model output prepared for CMIP5 amip":"/mnt/data/data_clean/cmip5/iap/fgoals-s2/amip/clw_Amon_FGOALS-s2_amip_r1i1p1_plevRegridded_197901-200812.nc",
   "others/argo_salinity.nc: v=ARGO_SALINITY_MEAN_ARGO_SALINITY_ANOMALY_BATHYMETRY_MASK_MAPPING_MASK v-long=ARGO SALINITY MEAN Jan 2004 - Dec 2018 (15.0 year) RG CLIMATOLOGY__ARGO SALINITY ANOMALY defined by Jan 2004 - Dec 2018 (15.0 year) RG CLIMATOLOGY__BATHYMETRY MASK__MAPPING MASK: pressure limits of mapping can be shallower than 2000dbar in marginal seas  t=":"/mnt/data/data_clean/cmip5/others/argo_salinity.nc",
   "inm/cm4/historical/clt_Amon_inmcm4_historical_r1i1p1_185001-200512.nc: v=clt v-long=Total Cloud Fraction t=inmcm4 model output prepared for CMIP5 Historical":"/mnt/data/data_clean/cmip5/inm/cm4/historical/clt_Amon_inmcm4_historical_r1i1p1_185001-200512.nc",
@@ -146465,6 +146837,7 @@ fileDict =
   "gfdl/esm2g/historical/zos_Omon_GFDL-ESM2G_historical_r1i1p1_regridded_*-*.nc: v=zos v-long=Sea Surface Height Above Geoid t=NOAA GFDL GFDL-ESM2G, historical (run 1) experiment output for CMIP5 AR5":"/mnt/data/data_clean/cmip5/gfdl/esm2g/historical/zos_Omon_GFDL-ESM2G_historical_r1i1p1_regridded_*-*.nc",
   "users/tkubar/output_monthly_misr_terra_l3_toa_albedo_restrictive_clouds_only_apr2002_jan2019.nc: v=toa_albedo_clouds_only_restrictive_total_record_broadband v-long=_ t=":"/mnt/data/data_clean/cmip5/users/tkubar/output_monthly_misr_terra_l3_toa_albedo_restrictive_clouds_only_apr2002_jan2019.nc",
   "tkubar/low-cloud-study/mse_ratio_CCCMA-CANAM4_200207-200512.nc: v=model_mse_ratio_700_1000mb v-long=_ t=":"/mnt/data/data_clean/cmip5/tkubar/low-cloud-study/mse_ratio_CCCMA-CANAM4_200207-200512.nc",
+  "p5/users/era5/era5_uwind_10m_197901_202107.nc: v=u10 v-long=10 metre U wind component t=":"/mnt/gateway/data_clean/cmip5/users/era5/era5_uwind_10m_197901_202107.nc",
   "cnrm/cm5/amip/wap_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc: v=wap v-long=omega (=dp/dt) t=CNRM-CM5 model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/cnrm/cm5/amip/wap_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc",
   "inm/cm4/historical/clivi_Amon_inmcm4_historical_r1i1p1_185001-200512.nc: v=clivi v-long=Ice Water Path t=inmcm4 model output prepared for CMIP5 Historical":"/mnt/data/data_clean/cmip5/inm/cm4/historical/clivi_Amon_inmcm4_historical_r1i1p1_185001-200512.nc",
   "ipsl/cm5a-lr/amip/tasmin_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc: v=tasmin v-long=Daily Minimum Near-Surface Air Temperature t=IPSL-CM5A-LR model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/ipsl/cm5a-lr/amip/tasmin_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc",
@@ -146521,7 +146894,7 @@ fileDict =
   "users/tkubar/output_monthly_misr_terra_l3_effective_emitting_height_apr2002_jan2019.nc: v=effective_emitting_height_misr_total_record_1x1 v-long=_ t=":"/mnt/data/data_clean/cmip5/users/tkubar/output_monthly_misr_terra_l3_effective_emitting_height_apr2002_jan2019.nc",
   "csiro/mk3.6/rcp45/ta_Amon_CSIRO-Mk3-6-0_rcp45_r1i1p1_*-*.nc: v=ta v-long=Air Temperature t=CSIRO-Mk3-6-0 model output prepared for CMIP5 RCP4.5":"/mnt/data/data_clean/cmip5/csiro/mk3.6/rcp45/ta_Amon_CSIRO-Mk3-6-0_rcp45_r1i1p1_*-*.nc",
   "csiro/mk3.6/rcp45/hurs_Amon_CSIRO-Mk3-6-0_rcp45_r1i1p1_*-*.nc: v=hurs v-long=Near-Surface Relative Humidity t=CSIRO-Mk3-6-0 model output prepared for CMIP5 RCP4.5":"/mnt/data/data_clean/cmip5/csiro/mk3.6/rcp45/hurs_Amon_CSIRO-Mk3-6-0_rcp45_r1i1p1_*-*.nc",
-  "ipsl/cm5a-lr/amip/psl_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc: v=psl v-long=Sea Level Pressure t=IPSL-CM5A-LR model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/ipsl/cm5a-lr/amip/psl_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc",
+  "tkubar/low-cloud-study/output_monthly_modis_terra_l3_cirrus_reflectance_mean_2000_2016.nc: v=cirrus_reflectance_mean_monthly_global v-long=_ t=":"/mnt/data/data_clean/cmip5/tkubar/low-cloud-study/output_monthly_modis_terra_l3_cirrus_reflectance_mean_2000_2016.nc",
   "gfdl/cm3/amip/rlds_Amon_GFDL-CM3_amip_r1i1p1_*-*.nc: v=rlds_average_T1_average_T2_average_DT v-long=Surface Downwelling Longwave Radiation__Start time for average period__End time for average period__Length of average period t=NOAA GFDL GFDL-CM3, AMIP (run 1) experiment output for CMIP5 AR5":"/mnt/data/data_clean/cmip5/gfdl/cm3/amip/rlds_Amon_GFDL-CM3_amip_r1i1p1_*-*.nc",
   "cccma/canesm2/historical/rsut_Amon_CanESM2_historical_r1i1p1_185001-200512.nc: v=rsut v-long=TOA Outgoing Shortwave Radiation t=CanESM2 model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/cccma/canesm2/historical/rsut_Amon_CanESM2_historical_r1i1p1_185001-200512.nc",
   "mri/cgcm3/historical/vas_Amon_MRI-CGCM3_historical_r2i1p1_185001-200512.nc: v=vas v-long=Northward Near-Surface Wind t=MRI-CGCM3 model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/mri/cgcm3/historical/vas_Amon_MRI-CGCM3_historical_r2i1p1_185001-200512.nc",
@@ -146530,7 +146903,7 @@ fileDict =
   "ncc/noresm1-m/historical/pr_Amon_NorESM1-M_historical_r1i1p1_199501-200512.nc: v=pr v-long=Precipitation t=NorESM1-M model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/ncc/noresm1-m/historical/pr_Amon_NorESM1-M_historical_r1i1p1_199501-200512.nc",
   "cccma/canam4/amip/hurs_Amon_CanAM4_amip_r1i1p1_195001-200912.nc: v=hurs v-long=Near-Surface Relative Humidity t=CanAM4 model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/cccma/canam4/amip/hurs_Amon_CanAM4_amip_r1i1p1_195001-200912.nc",
   "ncc/noresm1-m/amip/pr_Amon_NorESM1-M_amip_r1i1p1_*-*.nc: v=pr v-long=Precipitation t=NorESM1-M model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/ncc/noresm1-m/amip/pr_Amon_NorESM1-M_amip_r1i1p1_*-*.nc",
-  "tkubar/low-cloud-study/output_monthly_modis_terra_l3_cirrus_reflectance_mean_2000_2016.nc: v=cirrus_reflectance_mean_monthly_global v-long=_ t=":"/mnt/data/data_clean/cmip5/tkubar/low-cloud-study/output_monthly_modis_terra_l3_cirrus_reflectance_mean_2000_2016.nc",
+  "ipsl/cm5a-lr/amip/psl_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc: v=psl v-long=Sea Level Pressure t=IPSL-CM5A-LR model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/ipsl/cm5a-lr/amip/psl_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc",
   "mri/cgcm3/historical/ta_Amon_MRI-CGCM3_historical_r1i1p1_*-*.nc: v=ta v-long=Air Temperature t=MRI-CGCM3 model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/mri/cgcm3/historical/ta_Amon_MRI-CGCM3_historical_r1i1p1_*-*.nc",
   "ukmo/hadgem2-es/historical/vas_Amon_HadGEM2-ES_historical_r1i1p1_199501-200511.nc: v=vas v-long=Northward Near-Surface Wind t=HadGEM2-ES model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/ukmo/hadgem2-es/historical/vas_Amon_HadGEM2-ES_historical_r1i1p1_199501-200511.nc",
   "gfdl/cm3/amip/cl_Amon_GFDL-CM3_amip_r1i1p1_plevRegridded_*-*.nc: v=cl v-long=Cloud Area Fraction t=NOAA GFDL GFDL-CM3, AMIP (run 1) experiment output for CMIP5 AR5":"/mnt/data/data_clean/cmip5/gfdl/cm3/amip/cl_Amon_GFDL-CM3_amip_r1i1p1_plevRegridded_*-*.nc",
@@ -146585,6 +146958,7 @@ fileDict =
   "mri/cgcm3/historical/tos_Omon_MRI-CGCM3_historical_r1i1p1_regridded_197901-200512.nc: v=tos v-long=Sea Surface Temperature t=MRI-CGCM3 model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/mri/cgcm3/historical/tos_Omon_MRI-CGCM3_historical_r1i1p1_regridded_197901-200512.nc",
   "ncc/noresm1-m/rcp45/huss_Amon_NorESM1-M_rcp45_r1i1p1_*-*.nc: v=huss v-long=Near-Surface Specific Humidity t=NorESM1-M model output prepared for CMIP5 RCP4.5":"/mnt/data/data_clean/cmip5/ncc/noresm1-m/rcp45/huss_Amon_NorESM1-M_rcp45_r1i1p1_*-*.nc",
   "wrf/mp-wdm/va_Amon_wrf_mp-wdm_200401-200412.nc: v=va v-long=Northward Wind t=":"/mnt/data/data_clean/cmip5/wrf/mp-wdm/va_Amon_wrf_mp-wdm_200401-200412.nc",
+  "p5/users/era5/era5_high_level_cloud_cover_197901_202107.nc: v=hcc v-long=High cloud cover t=":"/mnt/gateway/data_clean/cmip5/users/era5/era5_high_level_cloud_cover_197901_202107.nc",
   "nasa/ceres/rlut_CERES-EBAF_L3B_Ed2-6r_200003-201206.nc: v=rlut v-long=TOA Outgoing Longwave Radiation t=Obs-CERES-EBAF model output prepared for obs4MIPs OBSERVATIONS":"/mnt/data/data_clean/cmip5/nasa/ceres/rlut_CERES-EBAF_L3B_Ed2-6r_200003-201206.nc",
   "bcc/csm1-1/historical/rsuscs_Amon_bcc-csm1-1_historical_r1i1p1_185001-201212.nc: v=rsuscs v-long=Surface Upwelling Clear-Sky Shortwave Radiation t=bcc-csm1-1 model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/bcc/csm1-1/historical/rsuscs_Amon_bcc-csm1-1_historical_r1i1p1_185001-201212.nc",
   "wrf/mp-mor/rsut_Amon_wrf_mp-mor_200401-200412.nc: v=rsut v-long=TOA Outgoing Shortwave Radiation t=":"/mnt/data/data_clean/cmip5/wrf/mp-mor/rsut_Amon_wrf_mp-mor_200401-200412.nc",
@@ -147218,6 +147592,7 @@ fileDict =
   "ecmwf/interim/gz_Amon_ECMWF_interim_197901-201512.nc: v=gz v-long=Geopotential t=":"/mnt/data/data_clean/cmip5/ecmwf/interim/gz_Amon_ECMWF_interim_197901-201512.nc",
   "giss/e2-r/amip/ci_Amon_GISS-E2-R_amip_r1i1p1_*-*.nc: v=ci v-long=Fraction of Time Convection Occurs t=GISS-E2-R model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/giss/e2-r/amip/ci_Amon_GISS-E2-R_amip_r1i1p1_*-*.nc",
   "ipsl/cm5a-lr/amip/clwvi_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc: v=clwvi v-long=Condensed Water Path t=IPSL-CM5A-LR model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/ipsl/cm5a-lr/amip/clwvi_Amon_IPSL-CM5A-LR_amip_r1i1p1_197901-200912.nc",
+  "p5/users/era5/era5_sea_level_pressure_197901_202107.nc: v=msl v-long=Mean sea level pressure t=":"/mnt/gateway/data_clean/cmip5/users/era5/era5_sea_level_pressure_197901_202107.nc",
   "gfdl/cm3/amip/rsus_Amon_GFDL-CM3_amip_r1i1p1_*-*.nc: v=rsus_average_T1_average_T2_average_DT v-long=Surface Upwelling Shortwave Radiation__Start time for average period__End time for average period__Length of average period t=NOAA GFDL GFDL-CM3, AMIP (run 1) experiment output for CMIP5 AR5":"/mnt/data/data_clean/cmip5/gfdl/cm3/amip/rsus_Amon_GFDL-CM3_amip_r1i1p1_*-*.nc",
   "cnrm/cm5/amip/tasmax_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc: v=tasmax v-long=Daily Maximum Near-Surface Air Temperature t=CNRM-CM5 model output prepared for CMIP5 AMIP":"/mnt/data/data_clean/cmip5/cnrm/cm5/amip/tasmax_Amon_CNRM-CM5_amip_r1i1p1_197901-200812.nc",
   "bcc/csm1-1/historical/prsn_Amon_bcc-csm1-1_historical_r1i1p1_185001-201212.nc: v=prsn v-long=Snowfall Flux t=bcc-csm1-1 model output prepared for CMIP5 historical":"/mnt/data/data_clean/cmip5/bcc/csm1-1/historical/prsn_Amon_bcc-csm1-1_historical_r1i1p1_185001-201212.nc",
@@ -147502,6 +147877,7 @@ varL =
   "fco2antt",
   "fco2nat",
   "gz",
+  "hcc",
   "hcfc22global",
   "hfls",
   "hfss",
@@ -147514,6 +147890,7 @@ varL =
   "lat",
   "lat_bounds",
   "lat_vertices",
+  "lcc",
   "lon",
   "lon_bounds",
   "lon_vertices",
@@ -147522,6 +147899,7 @@ varL =
   "lwupt",
   "MAPPING_MASK",
   "mc",
+  "mcc",
   "middle_height_cf_misr_total_record",
   "model_low_cf",
   "model_mse_ratio_700_1000mb",
@@ -147531,6 +147909,7 @@ varL =
   "mrso1",
   "mrso2",
   "mrso3",
+  "msl",
   "n2oglobal",
   "od550aer",
   "ohc2000",
@@ -147696,6 +148075,7 @@ varLongL =
   "Global Mean Mole Fraction of CH4",
   "Global Mean Mole Fraction of HCFC22",
   "Global Mean Mole Fraction of N2O",
+  "High cloud cover",
   "Ice Water Path",
   "ISCCP Cloud Area Fraction",
   "ISCCP Mean Cloud Albedo",
@@ -147710,9 +148090,12 @@ varLongL =
   "Liquid_Water_Equivalent_Thickness",
   "longitude boundaries",
   "longitude coordinate",
+  "Low cloud cover",
   "MAPPING MASK: pressure limits of mapping can be shallower than 2000dbar in marginal seas ",
   "Mass Fraction of Cloud Ice",
   "Mass Fraction of Cloud Liquid Water",
+  "Mean sea level pressure",
+  "Medium cloud cover",
   "MERIDIONAL WIND",
   "Mole Fraction of O3",
   "Near-Surface Air Temperature",

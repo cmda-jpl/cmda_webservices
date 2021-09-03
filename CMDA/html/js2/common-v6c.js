@@ -32,6 +32,7 @@
 // forMethod3__
 // subs2Url__
 // urlPlotP__
+// urlTimeMean___
 // urlAxisMethod__() {
 // urlDatasets__() {
 // urlVars__() {
@@ -50,8 +51,8 @@
 // urlNumber_() {
 // urlNumberCheck_() {
 
+console.log("reload common.js");
 var naValue = "-999999";
-
 // test3__
 function test3a() {
   vueApp.var1 = 'lai';
@@ -140,7 +141,7 @@ function processQS5() {
 
   var service0 = fetchQValue(queries,'service');
   if (service0 !== false) {
-    vueApp.service0 = service0;
+    //vueApp.service0 = service0;  // only if want to make individual service
     vueApp.service = service0;
     vueApp.changeService();
     vueApp.title = vueApp.service9.title;
@@ -233,7 +234,20 @@ function processQS5() {
     }
 
     if (key0 == 'plotP') {
-      continue;
+      var colorMap = fetchQValue(queries,'colorMap');
+      var ferretLevel = fetchQValue(queries,'ferretLevel');
+      var plotTitle = fetchQValue(queries,'plotTitle');
+      if (colorMap !== false && ferretLevel !==false) {
+        colorMap = colorMap.split(',');
+        ferretLevel = ferretLevel.split(',');
+        plotTitle = plotTitle.split(',');
+
+        for (var i=0; i<colorMap.length; i++){ 
+          vueApp.plotP9[i].colorMap = colorMap[i];
+          vueApp.plotP9[i].ferretLevel = ferretLevel[i].replace(/_C_/g, ','); 
+          vueApp.plotP9[i].plotTitle = unescape(unescape(plotTitle[i]));
+        }
+      }
     }
 
     vq = fetchQValue(queries, key0);
@@ -1018,6 +1032,29 @@ function urlPlotP() {
          + plotP1.plotTitle.slice(0,-1);
      //console.log(t1);
      return t1;
+  }
+}
+
+// urlTimeMean___
+function urlTimeMean() {
+  this.key0 = key99;
+  this.key1 = arg99[0];
+  this.key2 = arg99[2];
+  this.fromHtml = function(){
+    return this.key0 + '=' + vueApp[this.key1];
+  }
+  this.toHtml = function(vq){
+    vueApp[this.key1] = vq;
+    if (vq=='y') {
+      vueApp.yearMean = true;
+      vueApp.quarterMean = false;
+    } else if (vq=='q') {
+      vueApp.yearMean = false;
+      vueApp.quarterMean = true;
+    } else {
+      vueApp.yearMean = false;
+      vueApp.quarterMean = false;
+    }
   }
 }
 

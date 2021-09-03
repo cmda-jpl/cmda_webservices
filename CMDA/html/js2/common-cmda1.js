@@ -20,6 +20,7 @@
 
 // ==url_classes
 // urlDirect_() {
+// urlTo01__() {
 // urlYearMonthDay_() {
 // urlYearMonth_() {
 // urlEscape_() {
@@ -264,6 +265,12 @@ function processQS5() {
 
   //  vq = vq.trim();
   //  mapping[key0].toHtml(vq);
+  //}
+
+  //vueApp.anomaly0 = false;
+  //console.log(vueApp.anomaly+99);
+  //if (vueApp.anomaly=='1') {
+  //  vueApp.anomaly0 = true;
   //}
 
   if (paras.includes('datasets') && paras.includes('vars')) {
@@ -531,25 +538,43 @@ function urlDirect() {
   }
 }
 
+// urlTo01__() {
+function urlTo01() {
+  this.key0 = key99;
+  this.key1 = arg99[0];
+  this.fromHtml = function(){
+    return this.key0 + '=' + vueApp[this.key1]? "1":"0";
+  }
+  this.toHtml = function(vq){
+    vueApp[this.key1] = vq=="1";
+  }
+}
+
 // urlCheckbox_() {
 // it is the same as checkbox2num()
 function urlCheckbox() {
   this.key0 = key99;
   this.key1 = arg99[0];
   this.fromHtml = function(){
-    if ( document.getElementById(this.key1).checked ) {
-      return 1;
-    } else {
-      return 0;
-    }
+    var t1 = vueApp[this.key0]? "1":"0";    
+    console.log("key0: ", this.key0, " ", t1, this.key1);
+    return this.key0 + "=" + t1;
+    //if ( document.getElementById(this.key1).checked ) {
+    //  return this.key0 + '=1';
+    //} else {
+    //  return this.key0 + '=0';
+    //}
   }
   this.toHtml = function(vq){
-    if ( Number(vq)==1 ) {
-      $("#"+this.key1).prop('checked', true);
-      $("#"+this.key1).change();
-    } else {
-      $("#"+this.key1).prop('checked', false);
-    }
+    vueApp[this.key0] = vq ==="1";
+    console.log("vq: " + vq);
+    console.log(this.key1);
+    //if ( Number(vq)=="1" ) {
+    //  $("#"+this.key1).prop('checked', true);
+    //  $("#"+this.key1).change();
+    //} else {
+    //  $("#"+this.key1).prop('checked', false);
+    //}
   }
 }
 
